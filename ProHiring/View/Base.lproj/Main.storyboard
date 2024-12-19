@@ -264,15 +264,15 @@
         <!--View Controller-->
         <scene sceneID="eIO-Vq-j6c">
             <objects>
-                <viewController id="wZE-s9-nEh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QkF-47-W41">
+                <viewController id="wZE-s9-nEh" customClass="ViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="QkF-47-W41">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPR-2f-L12">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HPR-2f-L12">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lC5-p1-pH4">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lC5-p1-pH4">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeS-Tm-zCd">
@@ -778,21 +778,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rPS-Us-hsz">
-                                <rect key="frame" x="16" y="209" width="361" height="610"/>
+                                <rect key="frame" x="0.0" y="209" width="393" height="643"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="610" id="DEC-vX-N1f"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1Home" rowHeight="135" id="wG4-7K-gGf" customClass="Cell1" customModule="ProHiring" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="135"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wG4-7K-gGf" id="rZX-Xf-1If">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="135"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browse by category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICN-5m-WtW">
-                                                    <rect key="frame" x="20" y="11" width="321" height="25"/>
+                                                    <rect key="frame" x="20" y="11" width="353" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="hEY-2Y-SWP"/>
                                                     </constraints>
@@ -821,20 +818,20 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" rowHeight="155" id="ecf-Mk-B7v" customClass="Cell2" customModule="ProHiring" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="185" width="361" height="155"/>
+                                        <rect key="frame" x="0.0" y="185" width="393" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ecf-Mk-B7v" id="rU4-e7-oFr">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djy-II-oWo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="155"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="155"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggv-8p-aeB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="800" height="155"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="871" height="155"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-oP-QQv">
-                                                                    <rect key="frame" x="24" y="14" width="752" height="25"/>
+                                                                    <rect key="frame" x="24" y="14" width="823" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="zlV-ho-UPj"/>
                                                                     </constraints>
@@ -921,10 +918,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell3" rowHeight="243" id="ZLE-3P-9k9" customClass="Cell3" customModule="ProHiring" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="340" width="361" height="243"/>
+                                        <rect key="frame" x="0.0" y="340" width="393" height="243"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZLE-3P-9k9" id="VWQ-Pd-8bG">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="243"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="243"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get inspired" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHW-7O-JTw">
@@ -937,10 +934,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZyT-fX-Mmu">
-                                                    <rect key="frame" x="0.0" y="70" width="361" height="173"/>
+                                                    <rect key="frame" x="0.0" y="70" width="393" height="173"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWv-kL-Grt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="800" height="174"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="871" height="174"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvL-8q-XiF">
                                                                     <rect key="frame" x="25" y="10" width="200" height="155"/>
@@ -1071,20 +1068,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JMK-dK-NIk" firstAttribute="top" secondItem="Inr-rX-boN" secondAttribute="top" constant="20" id="0yZ-io-c9Y"/>
-                            <constraint firstItem="rPS-Us-hsz" firstAttribute="leading" secondItem="Inr-rX-boN" secondAttribute="leading" constant="16" id="BQ2-bw-7XW"/>
+                            <constraint firstItem="rPS-Us-hsz" firstAttribute="leading" secondItem="Inr-rX-boN" secondAttribute="leading" id="7OQ-tG-nQW"/>
+                            <constraint firstItem="rPS-Us-hsz" firstAttribute="trailing" secondItem="Inr-rX-boN" secondAttribute="trailing" id="Avi-yG-R7N"/>
                             <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="HWt-eh-Gak" secondAttribute="trailing" constant="20" id="Dna-f8-7nG"/>
                             <constraint firstItem="JMK-dK-NIk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Inr-rX-boN" secondAttribute="leading" id="L6u-7K-ktm"/>
-                            <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="rPS-Us-hsz" secondAttribute="trailing" constant="16" id="OxF-sN-wdM"/>
                             <constraint firstItem="HWt-eh-Gak" firstAttribute="top" secondItem="JMK-dK-NIk" secondAttribute="bottom" constant="20" id="RBT-vg-NF3"/>
                             <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="JMK-dK-NIk" secondAttribute="trailing" constant="260" id="StQ-JG-oRK"/>
                             <constraint firstItem="HWt-eh-Gak" firstAttribute="top" secondItem="JMK-dK-NIk" secondAttribute="bottom" constant="20" id="Uo1-vK-ndb"/>
+                            <constraint firstAttribute="bottom" secondItem="rPS-Us-hsz" secondAttribute="bottom" id="Vs1-sB-6ue"/>
                             <constraint firstItem="HWt-eh-Gak" firstAttribute="leading" secondItem="Inr-rX-boN" secondAttribute="leading" constant="20" id="WH8-H9-zjQ"/>
                             <constraint firstItem="rPS-Us-hsz" firstAttribute="top" secondItem="HWt-eh-Gak" secondAttribute="bottom" constant="15" id="yBK-ru-Lby"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="bTj-b7-zj0"/>
                     <connections>
-                        <outlet property="HomeTableView" destination="rPS-Us-hsz" id="Z9j-v6-cXD"/>
+                        <outlet property="HomeTableView" destination="rPS-Us-hsz" id="Zn8-Wp-3ZP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryb-N4-vaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

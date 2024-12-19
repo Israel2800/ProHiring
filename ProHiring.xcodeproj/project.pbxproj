@@ -18,9 +18,9 @@
 		C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F52D1295BE007FD9FD /* DataManager.swift */; };
 		C66691FD2D13C7DD007FD9FD /* TreeServices.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C66691FB2D13C7DD007FD9FD /* TreeServices.xcdatamodeld */; };
 		C66692062D13CE4B007FD9FD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66692052D13CE4B007FD9FD /* CoreData.framework */; };
-		C666920D2D13D090007FD9FD /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666920B2D13D090007FD9FD /* TreeServices+CoreDataClass.swift */; };
-		C666920E2D13D090007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666920C2D13D090007FD9FD /* TreeServices+CoreDataProperties.swift */; };
 		C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666920F2D13D255007FD9FD /* InternetMonitor.swift */; };
+		C66692172D13F20D007FD9FD /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */; };
+		C66692182D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +37,9 @@
 		C66691F52D1295BE007FD9FD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C66691FC2D13C7DD007FD9FD /* TreeServices.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TreeServices.xcdatamodel; sourceTree = "<group>"; };
 		C66692052D13CE4B007FD9FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		C666920B2D13D090007FD9FD /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C666920C2D13D090007FD9FD /* TreeServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C666920F2D13D255007FD9FD /* InternetMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMonitor.swift; sourceTree = "<group>"; };
+		C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +125,8 @@
 		C66691F72D13C78A007FD9FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C666920B2D13D090007FD9FD /* TreeServices+CoreDataClass.swift */,
-				C666920C2D13D090007FD9FD /* TreeServices+CoreDataProperties.swift */,
+				C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */,
+				C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */,
 				C66691FB2D13C7DD007FD9FD /* TreeServices.xcdatamodeld */,
 			);
 			path = Model;
@@ -217,10 +217,10 @@
 				C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */,
 				C62F59CA2D0FDAA00075849F /* ViewController.swift in Sources */,
 				C62F59C62D0FDAA00075849F /* AppDelegate.swift in Sources */,
-				C666920D2D13D090007FD9FD /* TreeServices+CoreDataClass.swift in Sources */,
-				C666920E2D13D090007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */,
 				C66691FD2D13C7DD007FD9FD /* TreeServices.xcdatamodeld in Sources */,
 				C62F59C82D0FDAA00075849F /* SceneDelegate.swift in Sources */,
+				C66692172D13F20D007FD9FD /* TreeServices+CoreDataClass.swift in Sources */,
+				C66692182D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
