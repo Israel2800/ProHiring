@@ -21,6 +21,7 @@
 		C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666920F2D13D255007FD9FD /* InternetMonitor.swift */; };
 		C66692172D13F20D007FD9FD /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */; };
 		C66692182D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */; };
+		C666921A2D161BA1007FD9FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692192D161BA1007FD9FD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C666920F2D13D255007FD9FD /* InternetMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMonitor.swift; sourceTree = "<group>"; };
 		C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C66692192D161BA1007FD9FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				C62F59C72D0FDAA00075849F /* SceneDelegate.swift */,
 				C62F59CE2D0FDAA10075849F /* Assets.xcassets */,
 				C62F59D32D0FDAA10075849F /* Info.plist */,
+				C66692192D161BA1007FD9FD /* Constants.swift */,
 			);
 			path = ProHiring;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */,
+				C666921A2D161BA1007FD9FD /* Constants.swift in Sources */,
 				C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */,
 				C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */,
 				C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */,
