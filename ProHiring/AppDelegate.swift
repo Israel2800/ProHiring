@@ -16,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let _ = InternetMonitor.shared
         DataManager.shared.llenaBD()
+        FirebaseApp.configure()
+
         return true
+
     }
 
     // MARK: UISceneSession Lifecycle
