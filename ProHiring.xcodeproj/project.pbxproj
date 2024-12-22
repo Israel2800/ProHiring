@@ -22,6 +22,9 @@
 		C66692172D13F20D007FD9FD /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */; };
 		C66692182D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */; };
 		C666921A2D161BA1007FD9FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692192D161BA1007FD9FD /* Constants.swift */; };
+		C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666921D2D168409007FD9FD /* CompanyTableViewController.swift */; };
+		C66692202D1688FF007FD9FD /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666921F2D1688FF007FD9FD /* MyProjectsViewController.swift */; };
+		C66692222D168951007FD9FD /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692212D168951007FD9FD /* CompanyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C66692192D161BA1007FD9FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C666921D2D168409007FD9FD /* CompanyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
+		C666921F2D1688FF007FD9FD /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
+		C66692212D168951007FD9FD /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,9 @@
 				C66691F32D129340007FD9FD /* HomeViewController.swift */,
 				C66691F52D1295BE007FD9FD /* DataManager.swift */,
 				C666920F2D13D255007FD9FD /* InternetMonitor.swift */,
+				C666921D2D168409007FD9FD /* CompanyTableViewController.swift */,
+				C666921F2D1688FF007FD9FD /* MyProjectsViewController.swift */,
+				C66692212D168951007FD9FD /* CompanyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 			files = (
 				C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */,
 				C666921A2D161BA1007FD9FD /* Constants.swift in Sources */,
+				C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */,
 				C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */,
 				C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */,
 				C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */,
@@ -223,7 +233,9 @@
 				C62F59C62D0FDAA00075849F /* AppDelegate.swift in Sources */,
 				C66691FD2D13C7DD007FD9FD /* TreeServices.xcdatamodeld in Sources */,
 				C62F59C82D0FDAA00075849F /* SceneDelegate.swift in Sources */,
+				C66692202D1688FF007FD9FD /* MyProjectsViewController.swift in Sources */,
 				C66692172D13F20D007FD9FD /* TreeServices+CoreDataClass.swift in Sources */,
+				C66692222D168951007FD9FD /* CompanyViewController.swift in Sources */,
 				C66692182D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
