@@ -89,9 +89,6 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     }
     
     
-    
-    
-    
     @IBAction func loginTapped(_ sender: UIButton) {
         guard let email = accountField.text, isValidEmail(email),
               let password = passwordField.text, isValidPassword(password) else {
@@ -185,6 +182,11 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
+    @objc func createAccountTapped(_ sender: UIButton) {
+        //
+    }
+
 }
 
 
@@ -201,6 +203,8 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         return passwordPredicate.evaluate(with: password)
     }
+
+
     
     
 

@@ -1,5 +1,5 @@
 //
-//  FirebaseAuthManager.swift
+//  FirebaseAuth.swift
 //  ProHiring
 //
 //  Created by Paola Delgadillo on 12/22/24.

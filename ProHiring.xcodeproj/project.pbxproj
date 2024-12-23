@@ -38,7 +38,7 @@
 		C666923C2D18F41F007FD9FD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C666923B2D18F41F007FD9FD /* GoogleSignInSwift */; };
 		C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */; };
 		C66692422D190A26007FD9FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66692412D190A26007FD9FD /* GoogleService-Info.plist */; };
-		C66692442D191620007FD9FD /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692432D191620007FD9FD /* FirebaseAuthManager.swift */; };
+		C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692452D1925FC007FD9FD /* FirebaseAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +65,7 @@
 		C66692362D18EF1A007FD9FD /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		C66692412D190A26007FD9FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C66692432D191620007FD9FD /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		C66692452D1925FC007FD9FD /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */,
-				C66692432D191620007FD9FD /* FirebaseAuthManager.swift */,
+				C66692452D1925FC007FD9FD /* FirebaseAuth.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,12 +275,12 @@
 				C66692372D18EF1A007FD9FD /* CreateAccountViewController.swift in Sources */,
 				C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */,
 				C666921A2D161BA1007FD9FD /* Constants.swift in Sources */,
-				C66692442D191620007FD9FD /* FirebaseAuthManager.swift in Sources */,
 				C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */,
 				C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */,
 				C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */,
 				C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */,
 				C62F59CA2D0FDAA00075849F /* ViewController.swift in Sources */,
+				C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */,
 				C62F59C62D0FDAA00075849F /* AppDelegate.swift in Sources */,
 				C66691FD2D13C7DD007FD9FD /* TreeServices.xcdatamodeld in Sources */,
 				C62F59C82D0FDAA00075849F /* SceneDelegate.swift in Sources */,
