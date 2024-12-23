@@ -12,7 +12,7 @@ import AuthenticationServices
 import FirebaseCore
 
 class LoginViewController: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
-    
+  
     @IBOutlet weak var accountField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -53,7 +53,6 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         }
     }
     
-    // Función para alternar la visibilidad del texto de la contraseña
     @objc func togglePasswordVisibility(_ sender: UIButton) {
         sender.isSelected.toggle() // Cambia el estado seleccionado del botón
         passwordField.isSecureTextEntry.toggle() // Alterna la visibilidad del texto
@@ -188,6 +187,10 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         authController.performRequests()
     }
     
+    @IBAction func createAccountTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "CreateAccountSegue", sender: self)
+    }
+    
     private func storeUserDetails(email: String) {
         let ud = UserDefaults.standard
         ud.set(true, forKey: "customLogin")
@@ -205,7 +208,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     // MARK: - Validación de correo y contraseña
     
     func isValidEmail(_ email: String) -> Bool {
-        let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z09.-]+\\.[A-Za-z]{2,}$"
+        let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailPredicate.evaluate(with: email)
     }

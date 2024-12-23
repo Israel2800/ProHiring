@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="SMt-6H-QXR">
-                                <rect key="frame" x="94" y="89" width="205" height="180"/>
+                                <rect key="frame" x="94" y="30" width="205" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="YYy-PO-w2r"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProHiring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuG-ZJ-e7H">
-                                <rect key="frame" x="141.66666666666666" y="269" width="110" height="30"/>
+                                <rect key="frame" x="141.66666666666666" y="210" width="110" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1b-HP-333">
-                                <rect key="frame" x="0.0" y="319" width="393" height="487.66666666666674"/>
+                                <rect key="frame" x="0.0" y="259.99999999999994" width="393" height="580.66666666666652"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFo-AH-aS9">
                                         <rect key="frame" x="22" y="20" width="78.666666666666671" height="35"/>
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xaa-WO-dk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1979" y="381"/>
+            <point key="canvasLocation" x="1555" y="445"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="Buc-6q-GD1">
@@ -253,6 +253,10 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
+                                <connections>
+                                    <action selector="signInBtnTapped:" destination="gff-XO-4Pa" eventType="touchUpInside" id="x9A-bq-f7U"/>
+                                    <segue destination="yg0-m8-fQN" kind="presentation" identifier="signInSegue" modalPresentationStyle="fullScreen" id="S1S-h2-JZK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wUn-FN-mMk"/>
@@ -292,6 +296,7 @@
                         <outlet property="createAccountiOSBtn" destination="9oN-2u-LOw" id="Oqy-vY-ugd"/>
                         <outlet property="emailField" destination="6Hm-Qn-0vl" id="40D-oP-cQ6"/>
                         <outlet property="passwordField" destination="u8M-RK-100" id="lHe-3q-SFX"/>
+                        <outlet property="signInBtn" destination="jqe-Xl-zf8" id="2y2-t6-rjR"/>
                         <segue destination="3VG-AZ-6Fj" kind="presentation" identifier="loginOK" modalPresentationStyle="fullScreen" id="WRR-3H-fiT"/>
                     </connections>
                 </viewController>
@@ -1375,7 +1380,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k7J-iM-sFN"/>
+        <segue reference="WRR-3H-fiT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="742" height="550"/>

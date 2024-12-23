@@ -19,6 +19,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
     @IBOutlet weak var createAccountBtn: UIButton!
     @IBOutlet weak var createAccountiOSBtn: UIButton!
     @IBOutlet weak var createAccountGoogleBtn: UIButton!
+    @IBOutlet weak var signInBtn: UIButton!
     
     let actInd = UIActivityIndicatorView(style: .large)
     private var googleSignInConfig: GIDConfiguration!
@@ -41,8 +42,19 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
         eyeButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
         passwordField.rightView = eyeButton
         passwordField.rightViewMode = .always
+        
+        // Configuración de Google Sign-In
+        if let clientID = FirebaseApp.app()?.options.clientID {
+            googleSignInConfig = GIDConfiguration(clientID: clientID)
+        } else {
+            showMessage("No se encontró el clientID de Google.")
+        }
     }
 
+    @IBAction func signInBtnTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "signInSegue", sender: self)
+    }
+    
     // Función para alternar la visibilidad del texto de la contraseña
     @objc func togglePasswordVisibility(_ sender: UIButton) {
         sender.isSelected.toggle() // Cambia el estado seleccionado del botón
@@ -106,9 +118,22 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
             // Limpiar los campos de texto
             self.emailField.text = ""
             self.passwordField.text = ""
+            
+            // Presentar LoginViewController
+            self.presentLoginViewController()
         }
     }
     
+    // Presentar LoginViewController
+    private func presentLoginViewController() {
+        DispatchQueue.main.async {
+            if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
+                loginVC.modalPresentationStyle = .fullScreen
+                self.present(loginVC, animated: true, completion: nil)
+            }
+        }
+    }
+
     // IBAction para iniciar sesión con Google
     @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
         if !isInternetAvailable() {
@@ -133,7 +158,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
                     self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
                     return
                 }
-                self.performSegue(withIdentifier: "loginOK", sender: nil)
+                self.presentLoginViewController()
             }
         }
     }
