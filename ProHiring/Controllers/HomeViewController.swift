@@ -198,7 +198,7 @@ class Cell3: UITableViewCell {
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var HomeTableView: UITableView!
 
     var treeServices: [TreeServices] = []
@@ -211,9 +211,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         HomeTableView.dataSource = self
 
         // Registra las celdas personalizadas utilizando clases
-        HomeTableView.register(Cell1.self, forCellReuseIdentifier: "Cell1")
-        HomeTableView.register(Cell2.self, forCellReuseIdentifier: "Cell2")
-        HomeTableView.register(Cell3.self, forCellReuseIdentifier: "Cell3")
+        //HomeTableView.register(Cell1.self, forCellReuseIdentifier: "Cell1")
+        //HomeTableView.register(Cell2.self, forCellReuseIdentifier: "Cell2")
+        //HomeTableView.register(Cell3.self, forCellReuseIdentifier: "Cell3")
 
         // Cargar datos desde CoreData
         let allServices = DataManager.shared.todosLosServicios()
@@ -273,6 +273,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.configure(with: service)
             return cell
         }
+        
+        
     }
 
     // MARK: - UITableViewDelegate
@@ -302,11 +304,9 @@ class Cell1: UITableViewCell {
 
 class Cell2: UITableViewCell {
     
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var HomePriceTreeService: UILabel!
     
     func configure(with service: TreeServices) {
-        descriptionLabel.text = service.descrip
         HomePriceTreeService.text = service.price
     }
 }
