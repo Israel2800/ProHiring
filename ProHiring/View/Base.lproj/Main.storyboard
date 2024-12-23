@@ -1236,11 +1236,81 @@
                         <segue destination="ftv-og-Qjw" kind="relationship" relationship="viewControllers" id="LVF-u4-0KC"/>
                         <segue destination="4U0-O7-MlY" kind="relationship" relationship="viewControllers" id="Sm0-Cp-v94"/>
                         <segue destination="mjD-oe-Ks2" kind="relationship" relationship="viewControllers" id="Oeq-mi-DpN"/>
+                        <segue destination="HPf-aR-kpp" kind="relationship" relationship="viewControllers" id="l95-JS-rgx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0a-PU-emV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2844" y="381"/>
+        </scene>
+        <!--My Projects-->
+        <scene sceneID="mMv-10-0tv">
+            <objects>
+                <viewController id="HPf-aR-kpp" customClass="MyProjectsViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eh8-rI-gQB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-GC-VjJ">
+                                <rect key="frame" x="0.0" y="410" width="393" height="442"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to your projects!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMF-V8-WjI">
+                                <rect key="frame" x="20" y="100" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3HA-DV-bS8">
+                                <rect key="frame" x="20" y="156" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiA-cV-RMG">
+                                <rect key="frame" x="20" y="200" width="353" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="7ok-r0-0h2"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRH-QT-Zgu">
+                                <rect key="frame" x="152" y="350" width="88" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Add"/>
+                                <connections>
+                                    <action selector="addServiceButtonTapped:" destination="HPf-aR-kpp" eventType="touchUpInside" id="XpE-p7-ouQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VKV-j3-BLJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tZM-GC-VjJ" firstAttribute="top" secondItem="wRH-QT-Zgu" secondAttribute="bottom" constant="25" id="2Pc-Z9-Qwl"/>
+                            <constraint firstItem="NiA-cV-RMG" firstAttribute="centerX" secondItem="wRH-QT-Zgu" secondAttribute="centerX" id="3LX-rV-Inb"/>
+                            <constraint firstAttribute="bottom" secondItem="tZM-GC-VjJ" secondAttribute="bottom" id="3gt-ZE-67a"/>
+                            <constraint firstItem="eMF-V8-WjI" firstAttribute="leading" secondItem="3HA-DV-bS8" secondAttribute="leading" id="4s2-u2-cJF"/>
+                            <constraint firstItem="tZM-GC-VjJ" firstAttribute="leading" secondItem="eh8-rI-gQB" secondAttribute="leading" id="93Q-JC-zav"/>
+                            <constraint firstAttribute="trailing" secondItem="tZM-GC-VjJ" secondAttribute="trailing" id="9Z7-6u-25X"/>
+                            <constraint firstItem="wRH-QT-Zgu" firstAttribute="top" secondItem="NiA-cV-RMG" secondAttribute="bottom" constant="18" id="ACs-AD-aaB"/>
+                            <constraint firstItem="NiA-cV-RMG" firstAttribute="top" secondItem="3HA-DV-bS8" secondAttribute="bottom" constant="10" id="COt-hN-YfS"/>
+                            <constraint firstItem="wRH-QT-Zgu" firstAttribute="centerX" secondItem="tZM-GC-VjJ" secondAttribute="centerX" id="V5Q-Ix-NCI"/>
+                            <constraint firstItem="3HA-DV-bS8" firstAttribute="trailing" secondItem="NiA-cV-RMG" secondAttribute="trailing" id="fv0-0J-ydr"/>
+                            <constraint firstItem="eMF-V8-WjI" firstAttribute="leading" secondItem="VKV-j3-BLJ" secondAttribute="leading" constant="20" id="gKF-3O-1gm"/>
+                            <constraint firstItem="3HA-DV-bS8" firstAttribute="top" secondItem="eMF-V8-WjI" secondAttribute="bottom" constant="35" id="gvw-jG-dij"/>
+                            <constraint firstItem="wRH-QT-Zgu" firstAttribute="centerX" secondItem="eh8-rI-gQB" secondAttribute="centerX" id="oi4-Uz-Lj6"/>
+                            <constraint firstItem="3HA-DV-bS8" firstAttribute="leading" secondItem="NiA-cV-RMG" secondAttribute="leading" id="p8E-7K-cpq"/>
+                            <constraint firstItem="eMF-V8-WjI" firstAttribute="top" secondItem="VKV-j3-BLJ" secondAttribute="top" constant="100" id="pFt-L5-r2d"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Projects" id="oYX-Qc-jpq"/>
+                    <connections>
+                        <outlet property="serviceColorPicker" destination="NiA-cV-RMG" id="AtG-1C-Koi"/>
+                        <outlet property="serviceNameTextField" destination="3HA-DV-bS8" id="HYk-NF-1eN"/>
+                        <outlet property="serviceTableView" destination="tZM-GC-VjJ" id="Smf-EC-FML"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwx-UL-hZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2803.8167938931297" y="-739.43661971830988"/>
         </scene>
         <!--Companies-->
         <scene sceneID="bf3-SU-Uxj">
