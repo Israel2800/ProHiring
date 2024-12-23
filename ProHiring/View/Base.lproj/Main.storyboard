@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="Kb6-cE-fi0">
             <objects>
-                <viewController id="yg0-m8-fQN" customClass="LoginViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="yg0-m8-fQN" customClass="LoginViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JEt-Vt-Pym">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -904,7 +904,7 @@
         <!--Home-->
         <scene sceneID="9yk-bd-Yys">
             <objects>
-                <viewController id="xnH-SE-aOH" customClass="HomeViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="xnH-SE-aOH" customClass="HomeViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SBm-GO-uc8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1195,6 +1195,13 @@
                                     <outlet property="delegate" destination="xnH-SE-aOH" id="A0U-fa-Dyw"/>
                                 </connections>
                             </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BFB-Nz-Gu8">
+                                <rect key="frame" x="333" y="20.333333333333336" width="40" height="39.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Ily-ip-u5S"/>
+                                    <constraint firstAttribute="height" constant="40" id="Ngt-NN-dsn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Inr-rX-boN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1203,6 +1210,8 @@
                             <constraint firstItem="rPS-Us-hsz" firstAttribute="leading" secondItem="Inr-rX-boN" secondAttribute="leading" id="7OQ-tG-nQW"/>
                             <constraint firstItem="rPS-Us-hsz" firstAttribute="trailing" secondItem="Inr-rX-boN" secondAttribute="trailing" id="Avi-yG-R7N"/>
                             <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="HWt-eh-Gak" secondAttribute="trailing" constant="20" id="Dna-f8-7nG"/>
+                            <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="BFB-Nz-Gu8" secondAttribute="trailing" constant="20" id="FNt-3Y-tod"/>
+                            <constraint firstItem="BFB-Nz-Gu8" firstAttribute="top" secondItem="Inr-rX-boN" secondAttribute="top" constant="20" id="Igg-dt-Ywx"/>
                             <constraint firstItem="JMK-dK-NIk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Inr-rX-boN" secondAttribute="leading" id="L6u-7K-ktm"/>
                             <constraint firstItem="HWt-eh-Gak" firstAttribute="top" secondItem="JMK-dK-NIk" secondAttribute="bottom" constant="20" id="RBT-vg-NF3"/>
                             <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="JMK-dK-NIk" secondAttribute="trailing" constant="260" id="StQ-JG-oRK"/>
@@ -1215,11 +1224,12 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="bTj-b7-zj0"/>
                     <connections>
                         <outlet property="HomeTableView" destination="rPS-Us-hsz" id="Zn8-Wp-3ZP"/>
+                        <outlet property="logoutBtn" destination="BFB-Nz-Gu8" id="BYc-Jt-aL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryb-N4-vaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3853" y="755"/>
+            <point key="canvasLocation" x="3852.6717557251909" y="754.92957746478874"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cgi-IF-KT3">
@@ -1365,7 +1375,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WRR-3H-fiT"/>
+        <segue reference="k7J-iM-sFN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="742" height="550"/>
@@ -1375,6 +1385,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="person.line.dotted.person.fill" catalog="system" width="128" height="59"/>
         <image name="phone.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <image name="tree.fill" catalog="system" width="128" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

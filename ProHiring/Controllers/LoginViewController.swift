@@ -9,9 +9,9 @@ import UIKit
 import FirebaseAuth
 import GoogleSignIn
 import AuthenticationServices
+import FirebaseCore
 
 class LoginViewController: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
-  
     
     @IBOutlet weak var accountField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -24,6 +24,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Configuración de botones (opcional)
         loginButton.layer.cornerRadius = 8
         createNewAccount.layer.cornerRadius = 8
@@ -43,6 +44,13 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         eyeButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
         passwordField.rightView = eyeButton
         passwordField.rightViewMode = .always
+        
+        // Configuración de Google Sign-In
+        if let clientID = FirebaseApp.app()?.options.clientID {
+            googleSignInConfig = GIDConfiguration(clientID: clientID)
+        } else {
+            showMessage("No se encontró el clientID de Google.")
+        }
     }
     
     // Función para alternar la visibilidad del texto de la contraseña
@@ -66,12 +74,16 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         } else {
             showMessage("No hay conexión a Internet.")
         }
+        
+        // Verificar si el usuario ya está autenticado
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "loginOK", sender: nil)
+        }
     }
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
     }
-    
     
     func showActivityIndicator() {
         actInd.center = self.view.center
@@ -88,7 +100,6 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         return NetworkReachability.shared.isConnected
     }
     
-    
     @IBAction func loginTapped(_ sender: UIButton) {
         guard let email = accountField.text, isValidEmail(email),
               let password = passwordField.text, isValidPassword(password) else {
@@ -96,14 +107,16 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
             return
         }
         
-        FirebaseAuthManager.authenticateUser(email: email, password: password, provider: .email, viewController: self) { success in
-            if success {
-                // Sesión iniciada con éxito
-                //self.performSegue(withIdentifier: "loginOK", sender: nil)
+        showActivityIndicator()
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            self.hideActivityIndicator()
+            if let error = error {
+                self.showAlert(message: "Error al iniciar sesión: \(error.localizedDescription)")
+                return
             }
+            self.storeUserDetails(email: email)
+            self.performSegue(withIdentifier: "loginOK", sender: nil)
         }
-        
-
     }
     
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
@@ -112,13 +125,11 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
             return
         }
         
-        // Recuperar contraseña con Firebase Authentication
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
                 self.showAlert(message: "Error al enviar el correo de recuperación: \(error.localizedDescription)")
                 return
             }
-            
             self.showAlert(message: "Correo de recuperación enviado. Revisa tu bandeja de entrada.")
         }
     }
@@ -153,6 +164,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
                     self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
                     return
                 }
+                self.storeUserDetails(email: user.profile?.email ?? "")
                 self.performSegue(withIdentifier: "loginOK", sender: nil)
             }
         }
@@ -176,24 +188,24 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         authController.performRequests()
     }
     
+    private func storeUserDetails(email: String) {
+        let ud = UserDefaults.standard
+        ud.set(true, forKey: "customLogin")
+        ud.set(email, forKey: "userEmail")
+        ud.synchronize()
+    }
+    
     // Mostrar mensajes
     private func showMessage(_ message: String) {
         let alert = UIAlertController(title: "Información", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
-    @objc func createAccountTapped(_ sender: UIButton) {
-        //
-    }
-
-}
-
 
     // MARK: - Validación de correo y contraseña
     
     func isValidEmail(_ email: String) -> Bool {
-        let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+        let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z09.-]+\\.[A-Za-z]{2,}$"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailPredicate.evaluate(with: email)
     }
@@ -203,8 +215,4 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         return passwordPredicate.evaluate(with: password)
     }
-
-
-    
-    
-
+}
