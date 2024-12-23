@@ -5,7 +5,6 @@
 //  Created by Paola Delgadillo on 12/22/24.
 //
 
-
 import Foundation
 import UIKit
 import AuthenticationServices
@@ -27,16 +26,32 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Configuración de botones (opcional)
-        createAccountBtn.layer.cornerRadius = 8
-        createAccountiOSBtn.layer.cornerRadius = 8
-        createAccountGoogleBtn.layer.cornerRadius = 8
+        emailField.placeholder = "Email"
+        passwordField.placeholder = "Password"
         
-        // Configuración de Google Sign-In
-        if let clientID = FirebaseApp.app()?.options.clientID {
-            googleSignInConfig = GIDConfiguration(clientID: clientID)
-        } else {
-            showMessage("No se encontró el clientID de Google.")
+        // Configurar el campo de contraseña para usar asteriscos
+        passwordField.isSecureTextEntry = true
+        
+        // Añadir el botón del ojito al campo de contraseña
+        let eyeButton = UIButton(type: .custom)
+        eyeButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        eyeButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .selected)
+        eyeButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        eyeButton.tintColor = .gray
+        eyeButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        passwordField.rightView = eyeButton
+        passwordField.rightViewMode = .always
+    }
+
+    // Función para alternar la visibilidad del texto de la contraseña
+    @objc func togglePasswordVisibility(_ sender: UIButton) {
+        sender.isSelected.toggle() // Cambia el estado seleccionado del botón
+        passwordField.isSecureTextEntry.toggle() // Alterna la visibilidad del texto
+        
+        // Evita que el cursor salte al final al alternar
+        if let existingText = passwordField.text, passwordField.isSecureTextEntry {
+            passwordField.deleteBackward() // Borra el último carácter
+            passwordField.insertText(existingText) // Restaura el texto
         }
     }
 
@@ -55,13 +70,13 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
         return self.view.window!
     }
     
-    func showActivityIndicator(){
+    func showActivityIndicator() {
         actInd.center = self.view.center
         self.view.addSubview(actInd)
         actInd.startAnimating()
     }
     
-    func hideActivityIndicator(){
+    func hideActivityIndicator() {
         actInd.stopAnimating()
         actInd.removeFromSuperview()
     }
@@ -87,6 +102,10 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
                 return
             }
             self.showMessage("Cuenta creada exitosamente.")
+            
+            // Limpiar los campos de texto
+            self.emailField.text = ""
+            self.passwordField.text = ""
         }
     }
     

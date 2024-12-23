@@ -39,13 +39,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ddd-Uu-hAr">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ddd-Uu-hAr">
                                         <rect key="frame" x="20" y="83" width="353" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTs-OU-J1g">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTs-OU-J1g">
                                         <rect key="frame" x="20" y="143" width="353" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -68,12 +68,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signInWithAppleTapped:" destination="yg0-m8-fQN" eventType="touchUpInside" id="btI-32-ImZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwh-2d-M6h">
                                         <rect key="frame" x="20" y="308.99999999999994" width="353" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Google"/>
+                                        <connections>
+                                            <action selector="signInWithGoogleTapped:" destination="yg0-m8-fQN" eventType="touchUpInside" id="cQa-8d-6Tn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ike-zq-Tc2">
                                         <rect key="frame" x="178" y="411.99999999999994" width="168" height="35"/>
@@ -126,7 +132,7 @@
                         <outlet property="forgotPassword" destination="lxE-Ff-yr5" id="iFB-C3-gaJ"/>
                         <outlet property="loginButton" destination="Evg-pY-SZe" id="TV6-Bp-RIt"/>
                         <outlet property="passwordField" destination="fTs-OU-J1g" id="zfG-rG-exJ"/>
-                        <segue destination="3VG-AZ-6Fj" kind="show" id="k7J-iM-sFN"/>
+                        <segue destination="3VG-AZ-6Fj" kind="show" identifier="loginOK" id="k7J-iM-sFN"/>
                     </connections>
                 </viewController>
             </objects>
@@ -149,7 +155,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-Qn-0vl">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-Qn-0vl">
                                 <rect key="frame" x="20" y="291" width="353" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="N4m-l1-tgf"/>
@@ -157,7 +163,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8M-RK-100">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8M-RK-100">
                                 <rect key="frame" x="20" y="351" width="353" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8iM-eV-qZ9"/>
@@ -171,7 +177,7 @@
                                     <constraint firstAttribute="height" constant="35" id="J4x-j6-8V1"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign in"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Account"/>
                                 <connections>
                                     <action selector="createAccountTapped:" destination="gff-XO-4Pa" eventType="touchUpInside" id="VOW-8W-DFb"/>
                                 </connections>
@@ -1186,7 +1192,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WRR-3H-fiT"/>
+        <segue reference="k7J-iM-sFN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="742" height="550"/>
