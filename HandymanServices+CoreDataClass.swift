@@ -1,5 +1,5 @@
 //
-//  TreeServices+CoreDataClass.swift
+//  HandymanServices+CoreDataClass.swift
 //  ProHiring
 //
 //  Created by Paola Delgadillo on 12/24/24.
@@ -9,8 +9,8 @@
 import Foundation
 import CoreData
 
-@objc(TreeServices)
-public class TreeServices: NSManagedObject {
+@objc(HandymanServices)
+public class HandymanServices: NSManagedObject {
     func inicializaCon(_ dict: Dictionary<String, Any>) {
         let id = (dict["id"] as? String) ?? ""
         let thumbnail = (dict["thumbnail"] as? String) ?? ""
@@ -26,4 +26,5 @@ public class TreeServices: NSManagedObject {
         self.price = price
         self.duration = duration
     }
+    
 }

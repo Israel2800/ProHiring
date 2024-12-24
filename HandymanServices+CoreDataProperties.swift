@@ -1,5 +1,5 @@
 //
-//  TreeServices+CoreDataProperties.swift
+//  HandymanServices+CoreDataProperties.swift
 //  ProHiring
 //
 //  Created by Paola Delgadillo on 12/24/24.
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension TreeServices {
+extension HandymanServices {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<TreeServices> {
-        return NSFetchRequest<TreeServices>(entityName: "TreeServices")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<HandymanServices> {
+        return NSFetchRequest<HandymanServices>(entityName: "HandymanServices")
     }
 
     @NSManaged public var descrip: String?
@@ -25,6 +25,6 @@ extension TreeServices {
 
 }
 
-extension TreeServices : Identifiable {
+extension HandymanServices : Identifiable {
 
 }

@@ -28,23 +28,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         HomeTableView.delegate = self
         HomeTableView.dataSource = self
 
-        // Cargar datos desde CoreData
-        let allServices = DataManager.shared.todosLosServicios()
-
+        // Cargar datos desde CoreData para TreeServices
+        treeServices = DataManager.shared.todosLosTreeServices()
+        
         // Filtrar los datos según el criterio necesario
-        treeServices = allServices.filter { service in
+        treeServices = treeServices.filter { service in
             if let priceString = service.price, let price = Double(priceString) {
                 return price > 10
             }
             return false
         }
 
+        // Generar tipos de celda para la tabla
         cellTypes = generateCellTypes(for: treeServices)
         
-        // Recargar la tabla
-        print(treeServices)  // Verifica si hay datos cargados
+        // Verificar datos cargados
+        print(treeServices)
         print("Servicios cargados: \(treeServices.count)")
 
+        // Recargar la tabla
         HomeTableView.reloadData()
     }
 

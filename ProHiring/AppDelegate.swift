@@ -18,7 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let _ = InternetMonitor.shared
-        DataManager.shared.llenaBD()
+        // Asegúrate de que los parámetros sean correctos al invocar llenaBD
+        
+        DataManager.shared.llenaBD(urlString: "https://private-c0eaf-treeservices1.apiary-mock.com/treeServices/treeServices_list", entityName: "TreeServices") { object, dict in
+                    // Usar guard let para evitar force cast y mejorar la seguridad
+                    guard let treeService = object as? TreeServices else {
+                        print("Error: No se pudo convertir el objeto a TreeServices.")
+                        return
+                    }
+                    treeService.inicializaCon(dict)
+                }
+ 
+
 
         // Inicializar Firebase solo una vez
         if FirebaseApp.app() == nil { FirebaseApp.configure() }
