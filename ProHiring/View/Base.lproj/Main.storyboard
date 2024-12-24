@@ -670,7 +670,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPk-wC-rr9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4799.2366412213742" y="-623.23943661971839"/>
+            <point key="canvasLocation" x="4815" y="-396"/>
         </scene>
         <!--Pros-->
         <scene sceneID="faW-kQ-01I">
@@ -687,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gq8-CJ-liJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="369" y="1794"/>
+            <point key="canvasLocation" x="5156" y="1324"/>
         </scene>
         <!--Item-->
         <scene sceneID="Ifl-xL-66c">
@@ -942,7 +942,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6V-ag-zmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5220.6106870229005" y="1892.9577464788733"/>
+            <point key="canvasLocation" x="4361" y="2160"/>
         </scene>
         <!--Services View Controller-->
         <scene sceneID="hV0-CB-j15">
@@ -1045,7 +1045,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0x7-Yq-kuf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4799" y="1089"/>
+            <point key="canvasLocation" x="3853" y="1435"/>
         </scene>
         <!--Home-->
         <scene sceneID="9yk-bd-Yys">
@@ -1056,7 +1056,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rPS-Us-hsz">
-                                <rect key="frame" x="0.0" y="150" width="393" height="702"/>
+                                <rect key="frame" x="0.0" y="105" width="393" height="747"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" rowHeight="135" id="wG4-7K-gGf" customClass="Cell1" customModule="ProHiring" customModuleProvider="target">
@@ -1075,19 +1075,48 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Chp-oD-LJd">
-                                                    <rect key="frame" x="30" y="46" width="64" height="64"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treeServicesBG" translatesAutoresizingMaskIntoConstraints="NO" id="Chp-oD-LJd">
+                                                    <rect key="frame" x="20" y="46" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="5MH-hv-Txn"/>
                                                         <constraint firstAttribute="height" constant="64" id="DIE-F1-fLN"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="seG-Si-PrZ">
+                                                    <rect key="frame" x="213" y="46" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="SYC-c8-6cw"/>
+                                                        <constraint firstAttribute="width" constant="64" id="T9x-dc-0uL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="qWY-t0-Cro">
+                                                    <rect key="frame" x="309" y="46" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="WJC-LZ-Jc6"/>
+                                                        <constraint firstAttribute="height" constant="64" id="tFC-tm-Cz9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handymanServicesBG" translatesAutoresizingMaskIntoConstraints="NO" id="E6z-vt-K9R">
+                                                    <rect key="frame" x="116" y="46" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="A63-lU-gjq"/>
+                                                        <constraint firstAttribute="height" constant="64" id="yDz-zK-nWs"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="seG-Si-PrZ" firstAttribute="leading" secondItem="E6z-vt-K9R" secondAttribute="trailing" constant="33" id="40g-At-Tra"/>
                                                 <constraint firstItem="ICN-5m-WtW" firstAttribute="top" secondItem="rZX-Xf-1If" secondAttribute="topMargin" id="7uX-Ox-dp5"/>
-                                                <constraint firstItem="Chp-oD-LJd" firstAttribute="leading" secondItem="rZX-Xf-1If" secondAttribute="leadingMargin" constant="10" id="EaM-sQ-SO1"/>
+                                                <constraint firstItem="Chp-oD-LJd" firstAttribute="leading" secondItem="rZX-Xf-1If" secondAttribute="leadingMargin" id="CkU-lB-tC1"/>
+                                                <constraint firstItem="qWY-t0-Cro" firstAttribute="trailing" secondItem="rZX-Xf-1If" secondAttribute="trailingMargin" id="E5j-QL-32V"/>
+                                                <constraint firstItem="qWY-t0-Cro" firstAttribute="top" secondItem="ICN-5m-WtW" secondAttribute="bottom" constant="10" id="Emd-sY-dxF"/>
+                                                <constraint firstItem="E6z-vt-K9R" firstAttribute="top" secondItem="ICN-5m-WtW" secondAttribute="bottom" constant="10" id="Fbd-50-gL4"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ICN-5m-WtW" secondAttribute="trailing" id="aTz-IY-9gh"/>
+                                                <constraint firstItem="qWY-t0-Cro" firstAttribute="leading" secondItem="seG-Si-PrZ" secondAttribute="trailing" constant="32" id="dgG-Y1-OnQ"/>
+                                                <constraint firstItem="seG-Si-PrZ" firstAttribute="top" secondItem="ICN-5m-WtW" secondAttribute="bottom" constant="10" id="drP-qi-iWc"/>
+                                                <constraint firstItem="seG-Si-PrZ" firstAttribute="leading" secondItem="E6z-vt-K9R" secondAttribute="trailing" constant="33" id="eul-WR-IQ6"/>
                                                 <constraint firstItem="Chp-oD-LJd" firstAttribute="top" secondItem="ICN-5m-WtW" secondAttribute="bottom" constant="10" id="pt2-mN-oUE"/>
+                                                <constraint firstItem="E6z-vt-K9R" firstAttribute="leading" secondItem="Chp-oD-LJd" secondAttribute="trailing" constant="32" id="s7a-Fd-nhL"/>
                                                 <constraint firstItem="ICN-5m-WtW" firstAttribute="leading" secondItem="rZX-Xf-1If" secondAttribute="leadingMargin" id="sr8-bc-gCn"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1322,49 +1351,35 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProHiring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMK-dK-NIk">
-                                <rect key="frame" x="20" y="20" width="113" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="pIw-jc-cwJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <searchBar contentMode="redraw" text="Try landscaping services, handyman" translatesAutoresizingMaskIntoConstraints="NO" id="HWt-eh-Gak">
-                                <rect key="frame" x="20" y="75" width="353" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="afE-Wa-AHt"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="xnH-SE-aOH" id="A0U-fa-Dyw"/>
-                                </connections>
-                            </searchBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BFB-Nz-Gu8">
                                 <rect key="frame" x="333" y="20.333333333333336" width="40" height="39.666666666666671"/>
+                                <color key="tintColor" red="0.0" green="0.59215686270000001" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Ily-ip-u5S"/>
                                     <constraint firstAttribute="height" constant="40" id="Ngt-NN-dsn"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProHiring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dz-ub-2Iv">
+                                <rect key="frame" x="20" y="20" width="179" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hsr-MY-HCw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <color key="textColor" red="0.094117647060000004" green="0.45882352939999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Inr-rX-boN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JMK-dK-NIk" firstAttribute="top" secondItem="Inr-rX-boN" secondAttribute="top" constant="20" id="0yZ-io-c9Y"/>
                             <constraint firstItem="rPS-Us-hsz" firstAttribute="leading" secondItem="Inr-rX-boN" secondAttribute="leading" id="7OQ-tG-nQW"/>
                             <constraint firstItem="rPS-Us-hsz" firstAttribute="trailing" secondItem="Inr-rX-boN" secondAttribute="trailing" id="Avi-yG-R7N"/>
-                            <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="HWt-eh-Gak" secondAttribute="trailing" constant="20" id="Dna-f8-7nG"/>
+                            <constraint firstAttribute="bottom" secondItem="rPS-Us-hsz" secondAttribute="bottom" id="FK1-Ia-Rlk"/>
                             <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="BFB-Nz-Gu8" secondAttribute="trailing" constant="20" id="FNt-3Y-tod"/>
+                            <constraint firstItem="rPS-Us-hsz" firstAttribute="top" secondItem="9dz-ub-2Iv" secondAttribute="bottom" constant="35" id="GcP-T6-Cwd"/>
                             <constraint firstItem="BFB-Nz-Gu8" firstAttribute="top" secondItem="Inr-rX-boN" secondAttribute="top" constant="20" id="Igg-dt-Ywx"/>
-                            <constraint firstItem="JMK-dK-NIk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Inr-rX-boN" secondAttribute="leading" id="L6u-7K-ktm"/>
-                            <constraint firstItem="HWt-eh-Gak" firstAttribute="top" secondItem="JMK-dK-NIk" secondAttribute="bottom" constant="20" id="RBT-vg-NF3"/>
-                            <constraint firstItem="Inr-rX-boN" firstAttribute="trailing" secondItem="JMK-dK-NIk" secondAttribute="trailing" constant="260" id="StQ-JG-oRK"/>
-                            <constraint firstItem="HWt-eh-Gak" firstAttribute="top" secondItem="JMK-dK-NIk" secondAttribute="bottom" constant="20" id="Uo1-vK-ndb"/>
-                            <constraint firstAttribute="bottom" secondItem="rPS-Us-hsz" secondAttribute="bottom" id="Vs1-sB-6ue"/>
-                            <constraint firstItem="HWt-eh-Gak" firstAttribute="leading" secondItem="Inr-rX-boN" secondAttribute="leading" constant="20" id="WH8-H9-zjQ"/>
-                            <constraint firstItem="rPS-Us-hsz" firstAttribute="top" secondItem="HWt-eh-Gak" secondAttribute="bottom" constant="15" id="yBK-ru-Lby"/>
+                            <constraint firstItem="9dz-ub-2Iv" firstAttribute="leading" secondItem="SBm-GO-uc8" secondAttribute="leading" constant="20" id="JZH-fg-UxI"/>
+                            <constraint firstItem="9dz-ub-2Iv" firstAttribute="top" secondItem="Inr-rX-boN" secondAttribute="top" constant="20" id="hR3-Iw-bFO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="bTj-b7-zj0"/>
@@ -1375,7 +1390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryb-N4-vaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6629.7709923664115" y="754.92957746478874"/>
+            <point key="canvasLocation" x="3852.6717557251909" y="724.64788732394368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cgi-IF-KT3">
@@ -1397,7 +1412,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0a-PU-emV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2844" y="381"/>
+            <point key="canvasLocation" x="2844" y="444"/>
         </scene>
         <!--My Projects-->
         <scene sceneID="mMv-10-0tv">
@@ -1466,7 +1481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwx-UL-hZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2803.8167938931297" y="-739.43661971830988"/>
+            <point key="canvasLocation" x="2892" y="-332"/>
         </scene>
         <!--Companies-->
         <scene sceneID="bf3-SU-Uxj">
@@ -1536,7 +1551,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjW-Oh-ews" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3878.6259541984732" y="1089.4366197183099"/>
+            <point key="canvasLocation" x="2844" y="1435"/>
         </scene>
         <!--HandymanServices-->
         <scene sceneID="QEm-1c-49k">
@@ -1662,14 +1677,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QnV-ao-AJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4451" y="1893"/>
+            <point key="canvasLocation" x="3329" y="2160"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WRR-3H-fiT"/>
+        <segue reference="k7J-iM-sFN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="742" height="550"/>
+        <image name="comingSoon" width="640" height="640"/>
         <image name="envelope.circle.fill" catalog="system" width="128" height="123"/>
         <image name="hammer.fill" catalog="system" width="128" height="117"/>
         <image name="handymanServicesBG" width="875" height="395"/>

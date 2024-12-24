@@ -51,6 +51,14 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         } else {
             showMessage("No se encontró el clientID de Google.")
         }
+        
+        // Agregar gesture recognizer para ocultar el teclado al tocar fuera
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func hideKeyboard() {
+       view.endEditing(true) // Oculta el teclado para todos los campos
     }
     
     @objc func togglePasswordVisibility(_ sender: UIButton) {
@@ -100,6 +108,10 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
+        
+        // Ocultar teclado al presionar el botón de inicio de sesión
+        hideKeyboard()
+        
         guard let email = accountField.text, isValidEmail(email),
               let password = passwordField.text, isValidPassword(password) else {
             showAlert(message: "Por favor, ingresa un correo y contraseña válidos.")
@@ -119,6 +131,8 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     }
     
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
+        hideKeyboard()
+
         guard let email = accountField.text, isValidEmail(email) else {
             showAlert(message: "Por favor, ingresa un correo válido para recuperar la contraseña.")
             return
@@ -207,15 +221,14 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
 
     // MARK: - Validación de correo y contraseña
     
+    // Extensión para validar el email y ocultar el teclado
     func isValidEmail(_ email: String) -> Bool {
         let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return emailPredicate.evaluate(with: email)
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
     }
 
     func isValidPassword(_ password: String) -> Bool {
         let passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)[A-Za-z\\d@$!%*?&#]{8,}$"
-        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-        return passwordPredicate.evaluate(with: password)
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: password)
     }
 }

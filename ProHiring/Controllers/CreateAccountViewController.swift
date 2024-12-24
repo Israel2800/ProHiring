@@ -49,9 +49,19 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
         } else {
             showMessage("No se encontró el clientID de Google.")
         }
+        
+        // Agregar gesture recognizer para ocultar el teclado al tocar fuera
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func hideKeyboard() {
+       view.endEditing(true) // Oculta el teclado para todos los campos
     }
 
     @IBAction func signInBtnTapped(_ sender: UIButton) {
+        hideKeyboard()
+
         performSegue(withIdentifier: "signInSegue", sender: self)
     }
     
@@ -99,6 +109,8 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
     
     // IBAction para crear una cuenta con correo y contraseña
     @IBAction func createAccountTapped(_ sender: UIButton) {
+        hideKeyboard()
+
         guard let email = emailField.text, isValidEmail(email),
               let password = passwordField.text, isValidPassword(password) else {
             showMessage("Por favor, ingresa un correo y contraseña válidos.")
