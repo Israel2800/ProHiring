@@ -817,36 +817,6 @@
             </objects>
             <point key="canvasLocation" x="1463" y="1674"/>
         </scene>
-        <!--Handyman Services View Controller-->
-        <scene sceneID="HSA-ui-JZp">
-            <objects>
-                <viewController storyboardIdentifier="HandymanServicesViewController" id="sEf-Kq-ysk" customClass="HandymanServicesViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YkT-kN-wBx">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProHiring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiR-me-018">
-                                <rect key="frame" x="20" y="69" width="179" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="qmW-ch-B3R"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                <color key="textColor" red="0.094117647060000004" green="0.45882352939999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="rb5-1l-ZvB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="oiR-me-018" firstAttribute="leading" secondItem="rb5-1l-ZvB" secondAttribute="leading" constant="20" id="Cgs-f7-j2j"/>
-                            <constraint firstItem="oiR-me-018" firstAttribute="top" secondItem="rb5-1l-ZvB" secondAttribute="top" constant="10" id="mry-jG-NK2"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kU2-Cu-0Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4393" y="1893"/>
-        </scene>
         <!--Landscaping-->
         <scene sceneID="o3x-2N-iva">
             <objects>
@@ -1567,6 +1537,132 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjW-Oh-ews" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3878.6259541984732" y="1089.4366197183099"/>
+        </scene>
+        <!--HandymanServices-->
+        <scene sceneID="QEm-1c-49k">
+            <objects>
+                <viewController storyboardIdentifier="HandymanServicesViewController" id="xCq-bd-Haw" userLabel="HandymanServices" customClass="HandymanServicesViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbc-oo-Ngm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-ZA-q9F">
+                                <rect key="frame" x="0.0" y="294" width="393" height="558"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" rowHeight="120" id="te0-wc-Crz" customClass="HandymanServiceTableViewCell" customModule="ProHiring" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="te0-wc-Crz" id="x9J-fe-hlR">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-IV-UGK">
+                                                    <rect key="frame" x="0.0" y="5" width="210" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="210" id="mt5-Ka-gvH"/>
+                                                        <constraint firstAttribute="height" constant="110" id="qzr-hQ-85L"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHb-7T-GIq">
+                                                    <rect key="frame" x="215" y="16" width="33" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="cYe-7I-4QZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvq-tm-lIc">
+                                                    <rect key="frame" x="215" y="41" width="158" height="74"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="HJt-IV-UGK" secondAttribute="bottom" constant="5" id="1MB-WL-vfb"/>
+                                                <constraint firstItem="XHb-7T-GIq" firstAttribute="top" secondItem="x9J-fe-hlR" secondAttribute="topMargin" constant="5" id="34i-lp-6Rr"/>
+                                                <constraint firstItem="HJt-IV-UGK" firstAttribute="top" secondItem="x9J-fe-hlR" secondAttribute="top" constant="5" id="89X-kC-6B0"/>
+                                                <constraint firstItem="XHb-7T-GIq" firstAttribute="leading" secondItem="HJt-IV-UGK" secondAttribute="trailing" constant="5" id="KX9-WW-zeQ"/>
+                                                <constraint firstItem="HJt-IV-UGK" firstAttribute="leading" secondItem="x9J-fe-hlR" secondAttribute="leading" id="WNm-27-cSQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="xvq-tm-lIc" secondAttribute="trailing" constant="20" id="eGI-oN-nO2"/>
+                                                <constraint firstItem="xvq-tm-lIc" firstAttribute="top" secondItem="XHb-7T-GIq" secondAttribute="bottom" constant="5" id="ljV-uh-NlM"/>
+                                                <constraint firstItem="xvq-tm-lIc" firstAttribute="leading" secondItem="HJt-IV-UGK" secondAttribute="trailing" constant="5" id="v0s-Lr-P38"/>
+                                                <constraint firstAttribute="bottom" secondItem="xvq-tm-lIc" secondAttribute="bottom" constant="5" id="wYv-d7-ZIZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="xvq-tm-lIc" id="TcW-7D-uaQ"/>
+                                            <outlet property="thumbnailImageView" destination="HJt-IV-UGK" id="uQT-LI-T1q"/>
+                                            <outlet property="titleLabel" destination="XHb-7T-GIq" id="IUf-8n-ZWc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1T-GD-AQy">
+                                <rect key="frame" x="0.0" y="134" width="393" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handyman Services" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-Gs-uAc">
+                                        <rect key="frame" x="20" y="10" width="189" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Zyd-NB-Sbb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.59215686270000001" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QdN-GY-PZB">
+                                        <rect key="frame" x="20" y="35" width="353" height="105"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="QdN-GY-PZB" firstAttribute="leading" secondItem="d1T-GD-AQy" secondAttribute="leading" constant="20" id="1P4-OD-AfL"/>
+                                    <constraint firstItem="QdN-GY-PZB" firstAttribute="top" secondItem="6Ph-Gs-uAc" secondAttribute="bottom" constant="5" id="Hre-MK-Bno"/>
+                                    <constraint firstItem="6Ph-Gs-uAc" firstAttribute="leading" secondItem="d1T-GD-AQy" secondAttribute="leading" constant="20" id="WqT-ua-tso"/>
+                                    <constraint firstItem="6Ph-Gs-uAc" firstAttribute="top" secondItem="d1T-GD-AQy" secondAttribute="top" constant="10" id="ZC8-OL-NZh"/>
+                                    <constraint firstAttribute="bottom" secondItem="QdN-GY-PZB" secondAttribute="bottom" id="d5F-7C-t0E"/>
+                                    <constraint firstAttribute="trailing" secondItem="QdN-GY-PZB" secondAttribute="trailing" constant="20" id="fAi-sJ-b7g"/>
+                                    <constraint firstAttribute="height" constant="140" id="tTs-ag-Joh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProHiring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-6Q-S8j">
+                                <rect key="frame" x="20" y="74" width="179" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mu2-Bl-Wrj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <color key="textColor" red="0.094117647060000004" green="0.45882352939999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D8g-bQ-agT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jaz-6Q-S8j" firstAttribute="leading" secondItem="D8g-bQ-agT" secondAttribute="leading" constant="20" id="71j-vB-rQI"/>
+                            <constraint firstItem="Gfb-ZA-q9F" firstAttribute="top" secondItem="d1T-GD-AQy" secondAttribute="bottom" constant="20" id="B7B-tr-cf8"/>
+                            <constraint firstAttribute="trailing" secondItem="Gfb-ZA-q9F" secondAttribute="trailing" id="K93-Uy-qSh"/>
+                            <constraint firstItem="Jaz-6Q-S8j" firstAttribute="top" secondItem="D8g-bQ-agT" secondAttribute="top" constant="15" id="Mr1-I4-6Dd"/>
+                            <constraint firstAttribute="bottom" secondItem="Gfb-ZA-q9F" secondAttribute="bottom" id="VFd-iP-eyN"/>
+                            <constraint firstItem="d1T-GD-AQy" firstAttribute="leading" secondItem="D8g-bQ-agT" secondAttribute="leading" id="cgm-9A-Lgi"/>
+                            <constraint firstItem="d1T-GD-AQy" firstAttribute="top" secondItem="Jaz-6Q-S8j" secondAttribute="bottom" constant="10" id="jl4-qa-87B"/>
+                            <constraint firstItem="Gfb-ZA-q9F" firstAttribute="leading" secondItem="bbc-oo-Ngm" secondAttribute="leading" id="khF-Tw-0vY"/>
+                            <constraint firstItem="d1T-GD-AQy" firstAttribute="trailing" secondItem="D8g-bQ-agT" secondAttribute="trailing" id="u9V-lm-Bkq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Landscaping" image="tree.fill" catalog="system" id="ZXf-Zh-4Er"/>
+                    <navigationItem key="navigationItem" id="Nrd-Bj-HLy"/>
+                    <connections>
+                        <outlet property="HandymanServicesTable" destination="Gfb-ZA-q9F" id="rsR-c6-bAU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QnV-ao-AJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4451" y="1893"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
