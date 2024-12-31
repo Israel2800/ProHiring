@@ -16,11 +16,8 @@
 		C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F12D10BCCA007FD9FD /* LoginViewController.swift */; };
 		C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F32D129340007FD9FD /* HomeViewController.swift */; };
 		C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F52D1295BE007FD9FD /* DataManager.swift */; };
-		C66691FD2D13C7DD007FD9FD /* TreeServices.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C66691FB2D13C7DD007FD9FD /* TreeServices.xcdatamodeld */; };
 		C66692062D13CE4B007FD9FD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66692052D13CE4B007FD9FD /* CoreData.framework */; };
 		C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666920F2D13D255007FD9FD /* InternetMonitor.swift */; };
-		C66692172D13F20D007FD9FD /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */; };
-		C66692182D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */; };
 		C666921A2D161BA1007FD9FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692192D161BA1007FD9FD /* Constants.swift */; };
 		C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666921D2D168409007FD9FD /* CompanyTableViewController.swift */; };
 		C66692202D1688FF007FD9FD /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666921F2D1688FF007FD9FD /* MyProjectsViewController.swift */; };
@@ -39,6 +36,19 @@
 		C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */; };
 		C66692422D190A26007FD9FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66692412D190A26007FD9FD /* GoogleService-Info.plist */; };
 		C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692452D1925FC007FD9FD /* FirebaseAuth.swift */; };
+		C6F77C4B2D1E2433000819EE /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C4A2D1E2433000819EE /* HomeData.swift */; };
+		C6F77C712D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */; };
+		C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */; };
+		C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */; };
+		C6F77C742D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C702D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift */; };
+		C6F77C762D1E654B000819EE /* HandymanServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C752D1E654A000819EE /* HandymanServicesViewController.swift */; };
+		C6F77C7A2D1E6579000819EE /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C792D1E6578000819EE /* ServicesViewController.swift */; };
+		C6F77C7C2D1E6581000819EE /* TreeServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C7B2D1E6581000819EE /* TreeServicesViewController.swift */; };
+		C6F77C8F2D234140000819EE /* ProHiring.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C8D2D23413F000819EE /* ProHiring.xcdatamodeld */; };
+		C6F77C922D23426E000819EE /* HomeData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C902D23426E000819EE /* HomeData+CoreDataClass.swift */; };
+		C6F77C932D23426E000819EE /* HomeData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C912D23426E000819EE /* HomeData+CoreDataProperties.swift */; };
+		C6F77C962D234A6C000819EE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C6F77C952D234A6C000819EE /* SDWebImage */; };
+		C6F77C982D234A6C000819EE /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6F77C972D234A6C000819EE /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,11 +63,8 @@
 		C66691F12D10BCCA007FD9FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C66691F32D129340007FD9FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C66691F52D1295BE007FD9FD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		C66691FC2D13C7DD007FD9FD /* TreeServices.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TreeServices.xcdatamodel; sourceTree = "<group>"; };
 		C66692052D13CE4B007FD9FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C666920F2D13D255007FD9FD /* InternetMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMonitor.swift; sourceTree = "<group>"; };
-		C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C66692192D161BA1007FD9FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C666921D2D168409007FD9FD /* CompanyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
 		C666921F2D1688FF007FD9FD /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +73,17 @@
 		C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		C66692412D190A26007FD9FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C66692452D1925FC007FD9FD /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		C6F77C4A2D1E2433000819EE /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C6F77C702D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C6F77C752D1E654A000819EE /* HandymanServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HandymanServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/HandymanServicesViewController.swift"; sourceTree = "<group>"; };
+		C6F77C792D1E6578000819EE /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/ServicesViewController.swift"; sourceTree = "<group>"; };
+		C6F77C7B2D1E6581000819EE /* TreeServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/TreeServicesViewController.swift"; sourceTree = "<group>"; };
+		C6F77C8E2D23413F000819EE /* ProHiring.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProHiring.xcdatamodel; sourceTree = "<group>"; };
+		C6F77C902D23426E000819EE /* HomeData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C6F77C912D23426E000819EE /* HomeData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +93,12 @@
 			files = (
 				C66692332D18E61E007FD9FD /* FirebaseMessaging in Frameworks */,
 				C66692272D18E61E007FD9FD /* FirebaseAnalytics in Frameworks */,
+				C6F77C982D234A6C000819EE /* SDWebImageMapKit in Frameworks */,
 				C66692352D18E61E007FD9FD /* FirebaseStorage in Frameworks */,
 				C66692312D18E61E007FD9FD /* FirebaseInAppMessaging-Beta in Frameworks */,
 				C666922D2D18E61E007FD9FD /* FirebaseAuth in Frameworks */,
 				C666923A2D18F41F007FD9FD /* GoogleSignIn in Frameworks */,
+				C6F77C962D234A6C000819EE /* SDWebImage in Frameworks */,
 				C66692292D18E61E007FD9FD /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				C66692062D13CE4B007FD9FD /* CoreData.framework in Frameworks */,
 				C666922B2D18E61E007FD9FD /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -93,6 +113,13 @@
 		C62F59B92D0FDAA00075849F = {
 			isa = PBXGroup;
 			children = (
+				C6F77C902D23426E000819EE /* HomeData+CoreDataClass.swift */,
+				C6F77C912D23426E000819EE /* HomeData+CoreDataProperties.swift */,
+				C6F77C8D2D23413F000819EE /* ProHiring.xcdatamodeld */,
+				C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */,
+				C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */,
+				C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */,
+				C6F77C702D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift */,
 				C62F59C42D0FDAA00075849F /* ProHiring */,
 				C62F59C32D0FDAA00075849F /* Products */,
 				C66692042D13CE4A007FD9FD /* Frameworks */,
@@ -110,7 +137,6 @@
 		C62F59C42D0FDAA00075849F /* ProHiring */ = {
 			isa = PBXGroup;
 			children = (
-				C66691F72D13C78A007FD9FD /* Model */,
 				C62F59DC2D0FDD8F0075849F /* Data */,
 				C62F59DB2D0FDD830075849F /* Controllers */,
 				C62F59DA2D0FDD7A0075849F /* Models */,
@@ -146,10 +172,12 @@
 		C62F59DB2D0FDD830075849F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6F77C752D1E654A000819EE /* HandymanServicesViewController.swift */,
+				C6F77C792D1E6578000819EE /* ServicesViewController.swift */,
 				C62F59C92D0FDAA00075849F /* ViewController.swift */,
 				C66691F12D10BCCA007FD9FD /* LoginViewController.swift */,
+				C6F77C7B2D1E6581000819EE /* TreeServicesViewController.swift */,
 				C66691F32D129340007FD9FD /* HomeViewController.swift */,
-				C66691F52D1295BE007FD9FD /* DataManager.swift */,
 				C666920F2D13D255007FD9FD /* InternetMonitor.swift */,
 				C666921D2D168409007FD9FD /* CompanyTableViewController.swift */,
 				C666921F2D1688FF007FD9FD /* MyProjectsViewController.swift */,
@@ -162,18 +190,10 @@
 		C62F59DC2D0FDD8F0075849F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C66691F52D1295BE007FD9FD /* DataManager.swift */,
+				C6F77C4A2D1E2433000819EE /* HomeData.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		C66691F72D13C78A007FD9FD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C66692152D13F20D007FD9FD /* TreeServices+CoreDataClass.swift */,
-				C66692162D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift */,
-				C66691FB2D13C7DD007FD9FD /* TreeServices.xcdatamodeld */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C66692042D13CE4A007FD9FD /* Frameworks */ = {
@@ -211,6 +231,8 @@
 				C66692342D18E61E007FD9FD /* FirebaseStorage */,
 				C66692392D18F41F007FD9FD /* GoogleSignIn */,
 				C666923B2D18F41F007FD9FD /* GoogleSignInSwift */,
+				C6F77C952D234A6C000819EE /* SDWebImage */,
+				C6F77C972D234A6C000819EE /* SDWebImageMapKit */,
 			);
 			productName = ProHiring;
 			productReference = C62F59C22D0FDAA00075849F /* ProHiring.app */;
@@ -243,6 +265,7 @@
 			packageReferences = (
 				C66692252D18E61D007FD9FD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C66692382D18F41F007FD9FD /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */,
+				C6F77C942D234A6C000819EE /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = C62F59C32D0FDAA00075849F /* Products */;
 			projectDirPath = "";
@@ -275,19 +298,27 @@
 				C66692372D18EF1A007FD9FD /* CreateAccountViewController.swift in Sources */,
 				C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */,
 				C666921A2D161BA1007FD9FD /* Constants.swift in Sources */,
+				C6F77C7C2D1E6581000819EE /* TreeServicesViewController.swift in Sources */,
+				C6F77C712D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift in Sources */,
+				C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */,
+				C6F77C762D1E654B000819EE /* HandymanServicesViewController.swift in Sources */,
+				C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */,
+				C6F77C742D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift in Sources */,
 				C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */,
+				C6F77C8F2D234140000819EE /* ProHiring.xcdatamodeld in Sources */,
 				C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */,
+				C6F77C7A2D1E6579000819EE /* ServicesViewController.swift in Sources */,
 				C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */,
 				C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */,
 				C62F59CA2D0FDAA00075849F /* ViewController.swift in Sources */,
 				C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */,
 				C62F59C62D0FDAA00075849F /* AppDelegate.swift in Sources */,
-				C66691FD2D13C7DD007FD9FD /* TreeServices.xcdatamodeld in Sources */,
 				C62F59C82D0FDAA00075849F /* SceneDelegate.swift in Sources */,
 				C66692202D1688FF007FD9FD /* MyProjectsViewController.swift in Sources */,
-				C66692172D13F20D007FD9FD /* TreeServices+CoreDataClass.swift in Sources */,
+				C6F77C4B2D1E2433000819EE /* HomeData.swift in Sources */,
 				C66692222D168951007FD9FD /* CompanyViewController.swift in Sources */,
-				C66692182D13F20D007FD9FD /* TreeServices+CoreDataProperties.swift in Sources */,
+				C6F77C922D23426E000819EE /* HomeData+CoreDataClass.swift in Sources */,
+				C6F77C932D23426E000819EE /* HomeData+CoreDataProperties.swift in Sources */,
 				C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +562,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		C6F77C942D234A6C000819EE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.20.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -584,17 +623,27 @@
 			package = C66692382D18F41F007FD9FD /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */;
 			productName = GoogleSignInSwift;
 		};
+		C6F77C952D234A6C000819EE /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6F77C942D234A6C000819EE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		C6F77C972D234A6C000819EE /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6F77C942D234A6C000819EE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		C66691FB2D13C7DD007FD9FD /* TreeServices.xcdatamodeld */ = {
+		C6F77C8D2D23413F000819EE /* ProHiring.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C66691FC2D13C7DD007FD9FD /* TreeServices.xcdatamodel */,
+				C6F77C8E2D23413F000819EE /* ProHiring.xcdatamodel */,
 			);
-			currentVersion = C66691FC2D13C7DD007FD9FD /* TreeServices.xcdatamodel */;
-			name = TreeServices.xcdatamodeld;
-			path = /Users/paoladelgadillo/Desktop/Israel/iOS_Projects/ProHiring/ProHiring/Model/TreeServices.xcdatamodeld;
+			currentVersion = C6F77C8E2D23413F000819EE /* ProHiring.xcdatamodel */;
+			name = ProHiring.xcdatamodeld;
+			path = "/Users/paoladelgadillo/Downloads/ProHiring-main/ProHiring/Model/ProHiring.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

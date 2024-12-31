@@ -86,6 +86,79 @@ class DataManager: NSObject {
         }
     }
     
+    // MARK: - Categories Methods
+
+    func todasLasCategorias() -> [HomeData] {
+        return fetchAllServices(entityName: "HomeData")
+    }
+
+    func buscaCategoriaConNombre(_ nombre: String) -> HomeData? {
+        return fetchServiceByName(nombre, entityName: "HomeData", attributeName: "title")
+    }
+
+    func llenaBDCategorias() {
+        /*llenaBD(urlString: "https://private-740e4f-homedata1.apiary-mock.com/homedata/categories", entityName: "Categories") { object, dict in
+            guard let categories = object as? Categories else { return }
+            categories.id = dict["id"] as? String
+            categories.title = dict["title"] as? String
+            categories.imageName = dict["imageName"] as? String
+            categories.destinationView = dict["destinationView"] as? String
+            print("Categoría guardada: \(categories)")
+        }
+         */
+        
+            llenaBD(urlString: "https://private-740e4f-homedata1.apiary-mock.com/homedata/categories", entityName: "HomeData") { object, dict in
+                (object as! HomeData).inicializaCon(dict)
+            }
+        
+        
+    }
+
+    /*
+    // MARK: - Popular Projects Methods
+
+    func todosLosProyectosPopulares() -> [PopularProject] {
+        return fetchAllServices(entityName: "PopularProject")
+    }
+
+    func buscaProyectoPopularConNombre(_ nombre: String) -> PopularProject? {
+        return fetchServiceByName(nombre, entityName: "PopularProject", attributeName: "title")
+    }
+
+    func llenaBDProyectosPopulares() {
+        llenaBD(urlString: "https://handyman.apiblueprint.org/homedata/popular_projects", entityName: "PopularProject") { object, dict in
+            guard let project = object as? PopularProject else { return }
+            project.id = dict["id"] as? String
+            project.title = dict["title"] as? String
+            project.imageName = dict["imageName"] as? String
+            project.price = dict["price"] as? String
+            project.destinationView = dict["destinationView"] as? String
+        }
+    }
+
+    // MARK: - Inspirations Methods
+
+    func todasLasInspiraciones() -> [Inspiration] {
+        return fetchAllServices(entityName: "Inspiration")
+    }
+
+    func buscaInspiracionConDescripcion(_ descripcion: String) -> Inspiration? {
+        return fetchServiceByName(descripcion, entityName: "Inspiration", attributeName: "description")
+    }
+
+    func llenaBDInspiraciones() {
+        llenaBD(urlString: "https://handyman.apiblueprint.org/homedata/inspirations", entityName: "Inspiration") { object, dict in
+            guard let inspiration = object as? Inspiration else { return }
+            inspiration.id = dict["id"] as? String
+            inspiration.descriptionText = dict["description"] as? String
+            inspiration.imageName = dict["imageName"] as? String
+            inspiration.buttonTitle = dict["buttonTitle"] as? String
+            inspiration.destinationView = dict["destinationView"] as? String
+        }
+    }
+*/
+    
+    
     // MARK: - Helper Methods
     
     func llenaBD(urlString: String, entityName: String, initializer: @escaping (NSManagedObject, [String: Any]) -> Void) {
