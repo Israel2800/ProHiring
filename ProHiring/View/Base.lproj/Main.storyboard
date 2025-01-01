@@ -2123,7 +2123,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="S0q-Oj-x1b">
-                                <rect key="frame" x="333" y="79.333333333333314" width="40" height="39.666666666666686"/>
+                                <rect key="frame" x="333" y="79.333333333333314" width="40" height="39.666666666666671"/>
                                 <color key="tintColor" red="0.0" green="0.59215686270000001" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Ira-NE-JBw"/>
@@ -2163,7 +2163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8F-hT-BoB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4682" y="924"/>
+            <point key="canvasLocation" x="4681.679389312977" y="923.94366197183103"/>
         </scene>
         <!--Item-->
         <scene sceneID="dgf-IG-VZ5">
@@ -2174,7 +2174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1L-dl-IpM">
-                                <rect key="frame" x="0.0" y="113" width="393" height="739"/>
+                                <rect key="frame" x="0.0" y="105" width="393" height="747"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeDataTableViewCell" rowHeight="400" id="a8Y-hQ-vie" customClass="HomeDataTableViewCell" customModule="ProHiring" customModuleProvider="target">
@@ -2248,6 +2248,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lTI-Jf-s2l">
+                                <rect key="frame" x="333" y="20.333333333333329" width="40" height="39.666666666666671"/>
+                                <color key="tintColor" red="0.0" green="0.59215686270000001" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="JTx-dI-ko1"/>
+                                    <constraint firstAttribute="height" constant="40" id="RV9-kl-deZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProHiring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-Bo-kBY">
+                                <rect key="frame" x="20" y="20" width="179" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DqZ-u8-xNi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <color key="textColor" red="0.094117647060000004" green="0.45882352939999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pBQ-GZ-DdR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2255,12 +2272,17 @@
                             <constraint firstAttribute="bottom" secondItem="f1L-dl-IpM" secondAttribute="bottom" id="4PQ-9c-7v8"/>
                             <constraint firstItem="f1L-dl-IpM" firstAttribute="trailing" secondItem="pBQ-GZ-DdR" secondAttribute="trailing" id="7Tm-aa-CVr"/>
                             <constraint firstItem="f1L-dl-IpM" firstAttribute="leading" secondItem="pBQ-GZ-DdR" secondAttribute="leading" id="Cdw-X9-PlF"/>
-                            <constraint firstItem="f1L-dl-IpM" firstAttribute="top" secondItem="pBQ-GZ-DdR" secondAttribute="top" constant="113" id="kYi-wM-Eqr"/>
+                            <constraint firstItem="v7Z-Bo-kBY" firstAttribute="top" secondItem="pBQ-GZ-DdR" secondAttribute="top" constant="20" id="MDE-7R-vyz"/>
+                            <constraint firstItem="pBQ-GZ-DdR" firstAttribute="trailing" secondItem="lTI-Jf-s2l" secondAttribute="trailing" constant="20" id="Ow0-po-6ZB"/>
+                            <constraint firstItem="v7Z-Bo-kBY" firstAttribute="leading" secondItem="pBQ-GZ-DdR" secondAttribute="leading" constant="20" id="QOq-Os-g1O"/>
+                            <constraint firstItem="lTI-Jf-s2l" firstAttribute="top" secondItem="pBQ-GZ-DdR" secondAttribute="top" constant="20" id="k2h-d5-yoh"/>
+                            <constraint firstItem="f1L-dl-IpM" firstAttribute="top" secondItem="v7Z-Bo-kBY" secondAttribute="bottom" constant="35" id="yha-Ab-eqP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="HQc-Tt-StO"/>
                     <connections>
                         <outlet property="HomeViewTable" destination="f1L-dl-IpM" id="6jW-mX-MHY"/>
+                        <outlet property="logoutBtn" destination="lTI-Jf-s2l" id="2Fl-rj-7gB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7S-cD-zAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
