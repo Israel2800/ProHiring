@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let urlString = "https://private-c0eaf-treeservices1.apiary-mock.com/treeServices/treeServices_list"
         
         // Usar el método `llenaBD` para llenar la base de datos con los servicios de TreeServices
-        DataManager.shared.llenaBD(urlString: urlString, entityName: "TreeServices") { object, dict in
+        DataManager.shared.llenaBD(from: urlString, entityName: "TreeServices") { object, dict in
             // Usar guard let para evitar el force cast y mejorar la seguridad
             guard let treeService = object as? TreeServices else {
                 print("Error: No se pudo convertir el objeto a TreeServices.")
@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let urlString = "https://private-138fcc-handymanservices.apiary-mock.com/handymanServices/service_list"
         
         // Usar el método `llenaBD` para llenar la base de datos con los servicios de HandymanServices
-        DataManager.shared.llenaBD(urlString: urlString, entityName: "HandymanServices") { object, dict in
+        DataManager.shared.llenaBD(from: urlString, entityName: "HandymanServices") { object, dict in
             // Usar guard let para evitar el force cast y mejorar la seguridad
             guard let handymanService = object as? HandymanServices else {
                 print("Error: No se pudo convertir el objeto a HandymanServices.")

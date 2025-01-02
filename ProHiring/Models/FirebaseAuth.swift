@@ -20,7 +20,7 @@ class FirebaseAuthManager {
             }
             // Autenticación por correo
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                if let error = error {
+                if error != nil {
                     //viewController.showMessage("Error al iniciar sesión: \(error.localizedDescription)")
                     completion(false)
                     return
@@ -32,7 +32,7 @@ class FirebaseAuthManager {
         } else if provider == .google {
             // Autenticación por Google
             GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { result, error in
-                if let error = error {
+                if error != nil {
                     //viewController.showMessage("Error al iniciar sesión con Google: \(error.localizedDescription)")
                     completion(false)
                     return
@@ -42,7 +42,7 @@ class FirebaseAuthManager {
                 let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
                 
                 Auth.auth().signIn(with: credential) { authResult, error in
-                    if let error = error {
+                    if error != nil {
                         //viewController.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
                         completion(false)
                         return

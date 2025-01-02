@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var logoutBtn: UIImageView!  // IBOutlet para la imagen de cierre de sesión
     @IBOutlet weak var HomeViewTable: UITableView!
     
-    var categories: [TreeServices] = []
+    var categories: [PopularProjects] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cargarServicios()
         
         // Escuchar notificaciones para recargar la tabla
-        NotificationCenter.default.addObserver(self, selector: #selector(recargarTabla), name: NSNotification.Name("BD_LISTA_HomeData"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(recargarTabla), name: NSNotification.Name("BD_LISTA_PopularProjects"), object: nil)
         
         // Habilitar interacción con el UIImageView
         logoutBtn.isUserInteractionEnabled = true
@@ -64,7 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func cargarServicios() {
-        categories = DataManager.shared.todosLosTreeServices()
+        categories = DataManager.shared.todosLosPopularProjects()
         HomeViewTable.reloadData()
     }
     
@@ -100,7 +100,7 @@ class HomeDataTableViewCell: UITableViewCell, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView! // El UICollectionView dentro de la celda
     
-    var categories: [TreeServices] = [] // Datos para el UICollectionView
+    var categories: [PopularProjects] = [] // Datos para el UICollectionView
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -113,7 +113,7 @@ class HomeDataTableViewCell: UITableViewCell, UICollectionViewDelegate {
         //collectionView.register(UINib(nibName: "HomeDataCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeDataTableViewCell")
     }
     
-    func configurarCategorias(categories: [TreeServices]) {
+    func configurarCategorias(categories: [PopularProjects]) {
         self.categories = categories
         collectionView.reloadData()
     }

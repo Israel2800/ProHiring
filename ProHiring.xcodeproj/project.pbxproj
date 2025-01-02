@@ -13,6 +13,12 @@
 		C62F59CD2D0FDAA00075849F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C62F59CC2D0FDAA00075849F /* Base */; };
 		C62F59CF2D0FDAA10075849F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62F59CE2D0FDAA10075849F /* Assets.xcassets */; };
 		C62F59D22D0FDAA10075849F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C62F59D12D0FDAA10075849F /* Base */; };
+		C646D2622D26536F00E366E9 /* ProHiring.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C646D2602D26536F00E366E9 /* ProHiring.xcdatamodeld */; };
+		C646D2692D2656E300E366E9 /* HomeCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D2672D2656E300E366E9 /* HomeCategory+CoreDataClass.swift */; };
+		C646D26A2D2656E300E366E9 /* HomeCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D2682D2656E300E366E9 /* HomeCategory+CoreDataProperties.swift */; };
+		C646D26D2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D26B2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift */; };
+		C646D26E2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D26C2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift */; };
+		C646D2702D266A4E00E366E9 /* LoginCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */; };
 		C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F12D10BCCA007FD9FD /* LoginViewController.swift */; };
 		C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F32D129340007FD9FD /* HomeViewController.swift */; };
 		C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F52D1295BE007FD9FD /* DataManager.swift */; };
@@ -36,7 +42,6 @@
 		C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */; };
 		C66692422D190A26007FD9FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66692412D190A26007FD9FD /* GoogleService-Info.plist */; };
 		C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692452D1925FC007FD9FD /* FirebaseAuth.swift */; };
-		C6F77C4B2D1E2433000819EE /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C4A2D1E2433000819EE /* HomeData.swift */; };
 		C6F77C712D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */; };
 		C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */; };
 		C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */; };
@@ -44,9 +49,6 @@
 		C6F77C762D1E654B000819EE /* HandymanServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C752D1E654A000819EE /* HandymanServicesViewController.swift */; };
 		C6F77C7A2D1E6579000819EE /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C792D1E6578000819EE /* ServicesViewController.swift */; };
 		C6F77C7C2D1E6581000819EE /* TreeServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C7B2D1E6581000819EE /* TreeServicesViewController.swift */; };
-		C6F77C8F2D234140000819EE /* ProHiring.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C8D2D23413F000819EE /* ProHiring.xcdatamodeld */; };
-		C6F77C922D23426E000819EE /* HomeData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C902D23426E000819EE /* HomeData+CoreDataClass.swift */; };
-		C6F77C932D23426E000819EE /* HomeData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C912D23426E000819EE /* HomeData+CoreDataProperties.swift */; };
 		C6F77C962D234A6C000819EE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C6F77C952D234A6C000819EE /* SDWebImage */; };
 		C6F77C982D234A6C000819EE /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6F77C972D234A6C000819EE /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,12 @@
 		C62F59CE2D0FDAA10075849F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62F59D12D0FDAA10075849F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62F59D32D0FDAA10075849F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C646D2612D26536F00E366E9 /* ProHiring.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProHiring.xcdatamodel; sourceTree = "<group>"; };
+		C646D2672D2656E300E366E9 /* HomeCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C646D2682D2656E300E366E9 /* HomeCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C646D26B2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularProjects+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C646D26C2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularProjects+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCompanyViewController.swift; sourceTree = "<group>"; };
 		C66691F12D10BCCA007FD9FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C66691F32D129340007FD9FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C66691F52D1295BE007FD9FD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -73,7 +81,6 @@
 		C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		C66692412D190A26007FD9FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C66692452D1925FC007FD9FD /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
-		C6F77C4A2D1E2433000819EE /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -81,9 +88,6 @@
 		C6F77C752D1E654A000819EE /* HandymanServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HandymanServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/HandymanServicesViewController.swift"; sourceTree = "<group>"; };
 		C6F77C792D1E6578000819EE /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/ServicesViewController.swift"; sourceTree = "<group>"; };
 		C6F77C7B2D1E6581000819EE /* TreeServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/TreeServicesViewController.swift"; sourceTree = "<group>"; };
-		C6F77C8E2D23413F000819EE /* ProHiring.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProHiring.xcdatamodel; sourceTree = "<group>"; };
-		C6F77C902D23426E000819EE /* HomeData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C6F77C912D23426E000819EE /* HomeData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +117,6 @@
 		C62F59B92D0FDAA00075849F = {
 			isa = PBXGroup;
 			children = (
-				C6F77C902D23426E000819EE /* HomeData+CoreDataClass.swift */,
-				C6F77C912D23426E000819EE /* HomeData+CoreDataProperties.swift */,
-				C6F77C8D2D23413F000819EE /* ProHiring.xcdatamodeld */,
-				C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */,
-				C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */,
-				C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */,
-				C6F77C702D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift */,
 				C62F59C42D0FDAA00075849F /* ProHiring */,
 				C62F59C32D0FDAA00075849F /* Products */,
 				C66692042D13CE4A007FD9FD /* Frameworks */,
@@ -137,6 +134,7 @@
 		C62F59C42D0FDAA00075849F /* ProHiring */ = {
 			isa = PBXGroup;
 			children = (
+				C646D25F2D26507800E366E9 /* Model */,
 				C62F59DC2D0FDD8F0075849F /* Data */,
 				C62F59DB2D0FDD830075849F /* Controllers */,
 				C62F59DA2D0FDD7A0075849F /* Models */,
@@ -183,6 +181,7 @@
 				C666921F2D1688FF007FD9FD /* MyProjectsViewController.swift */,
 				C66692212D168951007FD9FD /* CompanyViewController.swift */,
 				C66692362D18EF1A007FD9FD /* CreateAccountViewController.swift */,
+				C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,9 +190,24 @@
 			isa = PBXGroup;
 			children = (
 				C66691F52D1295BE007FD9FD /* DataManager.swift */,
-				C6F77C4A2D1E2433000819EE /* HomeData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		C646D25F2D26507800E366E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C646D26B2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift */,
+				C646D26C2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift */,
+				C646D2672D2656E300E366E9 /* HomeCategory+CoreDataClass.swift */,
+				C646D2682D2656E300E366E9 /* HomeCategory+CoreDataProperties.swift */,
+				C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */,
+				C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */,
+				C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */,
+				C6F77C702D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift */,
+				C646D2602D26536F00E366E9 /* ProHiring.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C66692042D13CE4A007FD9FD /* Frameworks */ = {
@@ -299,13 +313,18 @@
 				C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */,
 				C666921A2D161BA1007FD9FD /* Constants.swift in Sources */,
 				C6F77C7C2D1E6581000819EE /* TreeServicesViewController.swift in Sources */,
+				C646D26D2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift in Sources */,
+				C646D26E2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift in Sources */,
+				C646D2702D266A4E00E366E9 /* LoginCompanyViewController.swift in Sources */,
 				C6F77C712D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift in Sources */,
 				C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */,
 				C6F77C762D1E654B000819EE /* HandymanServicesViewController.swift in Sources */,
 				C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */,
+				C646D2622D26536F00E366E9 /* ProHiring.xcdatamodeld in Sources */,
 				C6F77C742D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift in Sources */,
 				C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */,
-				C6F77C8F2D234140000819EE /* ProHiring.xcdatamodeld in Sources */,
+				C646D2692D2656E300E366E9 /* HomeCategory+CoreDataClass.swift in Sources */,
+				C646D26A2D2656E300E366E9 /* HomeCategory+CoreDataProperties.swift in Sources */,
 				C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */,
 				C6F77C7A2D1E6579000819EE /* ServicesViewController.swift in Sources */,
 				C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */,
@@ -315,10 +334,7 @@
 				C62F59C62D0FDAA00075849F /* AppDelegate.swift in Sources */,
 				C62F59C82D0FDAA00075849F /* SceneDelegate.swift in Sources */,
 				C66692202D1688FF007FD9FD /* MyProjectsViewController.swift in Sources */,
-				C6F77C4B2D1E2433000819EE /* HomeData.swift in Sources */,
 				C66692222D168951007FD9FD /* CompanyViewController.swift in Sources */,
-				C6F77C922D23426E000819EE /* HomeData+CoreDataClass.swift in Sources */,
-				C6F77C932D23426E000819EE /* HomeData+CoreDataProperties.swift in Sources */,
 				C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,14 +652,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		C6F77C8D2D23413F000819EE /* ProHiring.xcdatamodeld */ = {
+		C646D2602D26536F00E366E9 /* ProHiring.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C6F77C8E2D23413F000819EE /* ProHiring.xcdatamodel */,
+				C646D2612D26536F00E366E9 /* ProHiring.xcdatamodel */,
 			);
-			currentVersion = C6F77C8E2D23413F000819EE /* ProHiring.xcdatamodel */;
+			currentVersion = C646D2612D26536F00E366E9 /* ProHiring.xcdatamodel */;
 			name = ProHiring.xcdatamodeld;
-			path = "/Users/paoladelgadillo/Downloads/ProHiring-main/ProHiring/Model/ProHiring.xcdatamodeld";
+			path = /Users/paoladelgadillo/Desktop/Israel/iOS_Projects/ProHiring/ProHiring/Model/ProHiring.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
