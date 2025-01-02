@@ -19,6 +19,7 @@
 		C646D26D2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D26B2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift */; };
 		C646D26E2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D26C2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift */; };
 		C646D2702D266A4E00E366E9 /* LoginCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */; };
+		C646D2722D26756800E366E9 /* CreateCompanyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D2712D26756800E366E9 /* CreateCompanyAccountVC.swift */; };
 		C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F12D10BCCA007FD9FD /* LoginViewController.swift */; };
 		C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F32D129340007FD9FD /* HomeViewController.swift */; };
 		C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F52D1295BE007FD9FD /* DataManager.swift */; };
@@ -68,6 +69,7 @@
 		C646D26B2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularProjects+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C646D26C2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularProjects+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCompanyViewController.swift; sourceTree = "<group>"; };
+		C646D2712D26756800E366E9 /* CreateCompanyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyAccountVC.swift; sourceTree = "<group>"; };
 		C66691F12D10BCCA007FD9FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C66691F32D129340007FD9FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C66691F52D1295BE007FD9FD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				C66692212D168951007FD9FD /* CompanyViewController.swift */,
 				C66692362D18EF1A007FD9FD /* CreateAccountViewController.swift */,
 				C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */,
+				C646D2712D26756800E366E9 /* CreateCompanyAccountVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */,
 				C62F59C62D0FDAA00075849F /* AppDelegate.swift in Sources */,
 				C62F59C82D0FDAA00075849F /* SceneDelegate.swift in Sources */,
+				C646D2722D26756800E366E9 /* CreateCompanyAccountVC.swift in Sources */,
 				C66692202D1688FF007FD9FD /* MyProjectsViewController.swift in Sources */,
 				C66692222D168951007FD9FD /* CompanyViewController.swift in Sources */,
 				C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */,

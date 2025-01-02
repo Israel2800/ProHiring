@@ -10,15 +10,16 @@ import FirebaseAuth
 import GoogleSignIn
 import AuthenticationServices
 import FirebaseCore
+import FirebaseFirestore
 
-class LoginCompanyController: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
+class LoginCompanyViewController: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
   
     @IBOutlet weak var accountField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var createNewAccount: UIButton!
     @IBOutlet weak var forgotPassword: UIButton!
-
+    @IBOutlet weak var createNewAccount: UIButton!
+    
     let actInd = UIActivityIndicatorView(style: .large)
     private var googleSignInConfig: GIDConfiguration!
     
@@ -83,8 +84,8 @@ class LoginCompanyController: UIViewController, ASAuthorizationControllerPresent
         }
         
         // Verificar si el usuario ya está autenticado
-        if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "loginOK", sender: nil)
+        if let user = Auth.auth().currentUser {
+            self.checkUserTypeAndNavigate(user: user)
         }
     }
     
@@ -125,11 +126,27 @@ class LoginCompanyController: UIViewController, ASAuthorizationControllerPresent
                 self.showAlert(message: "Error al iniciar sesión: \(error.localizedDescription)")
                 return
             }
-            self.storeUserDetails(email: email)
-            self.performSegue(withIdentifier: "loginOK", sender: nil)
+            if let user = authResult?.user {
+                self.checkUserTypeAndNavigate(user: user)
+            }
         }
     }
     
+    func checkUserTypeAndNavigate(user: User) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("companies").document(user.uid)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                // Si es una compañía, se navega a su perfil
+                self.performSegue(withIdentifier: "CompanyProfileSegue", sender: nil)
+            } else {
+                // Si no es una compañía, se navega a la vista normal
+                self.performSegue(withIdentifier: "NormalUserProfileSegue", sender: nil)
+            }
+        }
+    }
+
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
         hideKeyboard()
 
@@ -153,56 +170,8 @@ class LoginCompanyController: UIViewController, ASAuthorizationControllerPresent
         present(alert, animated: true, completion: nil)
     }
     
-    // IBAction para iniciar sesión con Google
-    @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
-        if !isInternetAvailable() {
-            showMessage("No hay conexión a Internet.")
-            return
-        }
-        showActivityIndicator()
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
-            self.hideActivityIndicator()
-            if let error = error {
-                self.showMessage("Error al iniciar sesión con Google: \(error.localizedDescription)")
-                return
-            }
-            
-            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
-            let accessToken = user.accessToken.tokenString
-            
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
-            
-            Auth.auth().signIn(with: credential) { authResult, error in
-                if let error = error {
-                    self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
-                    return
-                }
-                self.storeUserDetails(email: user.profile?.email ?? "")
-                self.performSegue(withIdentifier: "loginOK", sender: nil)
-            }
-        }
-    }
-    
-    // IBAction para iniciar sesión con Apple ID
-    @IBAction func signInWithAppleTapped(_ sender: UIButton) {
-        if !isInternetAvailable() {
-            showMessage("No hay conexión a Internet.")
-            return
-        }
-        
-        showActivityIndicator()
-        let provider = ASAuthorizationAppleIDProvider()
-        let request = provider.createRequest()
-        request.requestedScopes = [.fullName, .email]
-        
-        let authController = ASAuthorizationController(authorizationRequests: [request])
-        authController.presentationContextProvider = self
-        authController.delegate = self
-        authController.performRequests()
-    }
-    
     @IBAction func createAccountTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "CreateAccountSegue", sender: self)
+        performSegue(withIdentifier: "CreateCompanyAccountSegue", sender: self)
     }
     
     private func storeUserDetails(email: String) {
