@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Cargar servicios de TreeServices y HandymanServices
         cargarTreeServices()
         cargarHandymanServices()
- 
+        cargarPopularProjects()
 
 
         // Inicializar Firebase solo una vez
@@ -68,6 +68,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             // Inicializar el objeto HandymanServices con los datos recibidos
             handymanService.inicializaCon(dict)
+        }
+    }
+    
+    func cargarPopularProjects() {
+        // URL del API de HandymanServices
+        let urlString = "https://private-3a90bc-popularprojects.apiary-mock.com/popularProjects/popularProjects_list"
+        
+        // Usar el método `llenaBD` para llenar la base de datos con los servicios de HandymanServices
+        DataManager.shared.llenaBD(from: urlString, entityName: "PopularProjects") { object, dict in
+            // Usar guard let para evitar el force cast y mejorar la seguridad
+            guard let popularProject = object as? PopularProjects else {
+                print("Error: No se pudo convertir el objeto a HandymanServices.")
+                return
+            }
+            // Inicializar el objeto HandymanServices con los datos recibidos
+            popularProject.inicializaCon(dict)
         }
     }
 

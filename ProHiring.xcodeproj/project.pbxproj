@@ -20,6 +20,7 @@
 		C646D26E2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D26C2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift */; };
 		C646D2702D266A4E00E366E9 /* LoginCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */; };
 		C646D2722D26756800E366E9 /* CreateCompanyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D2712D26756800E366E9 /* CreateCompanyAccountVC.swift */; };
+		C646D2742D2780A600E366E9 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646D2732D2780A600E366E9 /* MyProfileViewController.swift */; };
 		C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F12D10BCCA007FD9FD /* LoginViewController.swift */; };
 		C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F32D129340007FD9FD /* HomeViewController.swift */; };
 		C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66691F52D1295BE007FD9FD /* DataManager.swift */; };
@@ -70,6 +71,7 @@
 		C646D26C2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularProjects+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCompanyViewController.swift; sourceTree = "<group>"; };
 		C646D2712D26756800E366E9 /* CreateCompanyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyAccountVC.swift; sourceTree = "<group>"; };
+		C646D2732D2780A600E366E9 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		C66691F12D10BCCA007FD9FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C66691F32D129340007FD9FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C66691F52D1295BE007FD9FD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				C66692362D18EF1A007FD9FD /* CreateAccountViewController.swift */,
 				C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */,
 				C646D2712D26756800E366E9 /* CreateCompanyAccountVC.swift */,
+				C646D2732D2780A600E366E9 /* MyProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				C6F77C742D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift in Sources */,
 				C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */,
 				C646D2692D2656E300E366E9 /* HomeCategory+CoreDataClass.swift in Sources */,
+				C646D2742D2780A600E366E9 /* MyProfileViewController.swift in Sources */,
 				C646D26A2D2656E300E366E9 /* HomeCategory+CoreDataProperties.swift in Sources */,
 				C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */,
 				C6F77C7A2D1E6579000819EE /* ServicesViewController.swift in Sources */,

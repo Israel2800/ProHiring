@@ -251,7 +251,22 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Detectar la conexión a internet
+        if isInternetAvailable() {
+            print("Sí hay conexión a internet")
+        } else {
+            showMessage("No hay conexión a Internet.")
+        }
+    }
 
+    func isInternetAvailable() -> Bool {
+        return NetworkReachability.shared.isConnected
+    }
+    
     @objc func hideKeyboard() {
         view.endEditing(true) // Oculta el teclado para todos los campos
     }
@@ -273,6 +288,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
     }
 
     // IBAction para crear una cuenta con correo y contraseña
+    
     @IBAction func createAccountTapped(_ sender: UIButton) {
         hideKeyboard()
 
@@ -281,22 +297,55 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
               let services = servicesField.text, !services.isEmpty,
               let socialMedia = socialMediaField.text, !socialMedia.isEmpty,
               let contact = contactField.text, !contact.isEmpty else {
-            showMessage("Please fill out all the boxes.")
+            showMessage("Por favor, completa todos los campos.")
             return
         }
 
-        // Crear cuenta en Firebase Authentication
         showActivityIndicator()
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             self.hideActivityIndicator()
             if let error = error {
-                self.showMessage("Error trying to create account: \(error.localizedDescription)")
+                self.showMessage("Error al crear la cuenta: \(error.localizedDescription)")
                 return
             }
-            self.showMessage("Account successfully created.")
+
+            guard let user = authResult?.user else { return }
+
+            // Guardar en Firestore bajo la colección `Companías`
+            let db = Firestore.firestore()
+            db.collection("companies").document(user.uid).setData([
+                "email": email,
+                "services": services,
+                "socialMedia": socialMedia,
+                "contact": contact,
+                "createdAt": Timestamp(date: Date())
+            ]) { error in
+                if let error = error {
+                    self.showMessage("Error al guardar datos de la compañía: \(error.localizedDescription)")
+                } else {
+                    self.showMessage("Cuenta de compañía creada exitosamente.")
+                }
+            }
+
+            // Limpiar los campos de texto
+            self.emailField.text = ""
+            self.passwordField.text = ""
+            self.servicesField.text = ""
+            self.socialMediaField.text = ""
+            self.contactField.text = ""
             
-            // Guardar los datos adicionales en Firestore (o en cualquier otro servicio que utilices)
-            self.saveCompanyData(logo: self.logoImageView.image, services: services, socialMedia: socialMedia, contact: contact)
+            self.presentLoginCompanyViewController()
+        }
+    }
+
+    
+    // Presentar LoginCompanyViewController
+    private func presentLoginCompanyViewController() {
+        DispatchQueue.main.async {
+            if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginCompanyViewController") {
+                loginVC.modalPresentationStyle = .fullScreen
+                self.present(loginVC, animated: true, completion: nil)
+            }
         }
     }
 
@@ -348,6 +397,8 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
             }
         }
     }
+    
+    
 
     // Función para mostrar mensajes de alerta
     func showMessage(_ message: String) {
@@ -356,6 +407,35 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
         present(alert, animated: true, completion: nil)
     }
 
+    // IBAction para iniciar sesión con Google
+    @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
+        if !isInternetAvailable() {
+            showMessage("No hay conexión a Internet.")
+            return
+        }
+        showActivityIndicator()
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+            self.hideActivityIndicator()
+            if let error = error {
+                self.showMessage("Error al iniciar sesión con Google: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
+            let accessToken = user.accessToken.tokenString
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+            
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
+                    return
+                }
+                self.presentLoginCompanyViewController()
+            }
+        }
+    }
+    
     // Función para mostrar el indicador de carga
     func showActivityIndicator() {
         actInd.startAnimating()

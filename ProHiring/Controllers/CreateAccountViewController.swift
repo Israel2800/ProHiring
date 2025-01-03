@@ -11,6 +11,7 @@ import AuthenticationServices
 import GoogleSignIn
 import FirebaseAuth
 import FirebaseCore
+import FirebaseFirestore
 
 class CreateAccountViewController: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
 
@@ -117,7 +118,6 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
             return
         }
 
-        // Crear cuenta en Firebase Authentication
         showActivityIndicator()
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             self.hideActivityIndicator()
@@ -125,12 +125,26 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
                 self.showMessage("Error al crear la cuenta: \(error.localizedDescription)")
                 return
             }
-            self.showMessage("Cuenta creada exitosamente.")
             
+            guard let user = authResult?.user else { return }
+            
+            // Guardar en Firestore bajo la colección `Usuarios`
+            let db = Firestore.firestore()
+            db.collection("users").document(user.uid).setData([
+                "email": email,
+                "createdAt": Timestamp(date: Date())
+            ]) { error in
+                if let error = error {
+                    self.showMessage("Error al guardar datos del usuario: \(error.localizedDescription)")
+                } else {
+                    self.showMessage("Cuenta creada exitosamente.")
+                }
+            }
+
             // Limpiar los campos de texto
             self.emailField.text = ""
             self.passwordField.text = ""
-            
+
             // Presentar LoginViewController
             self.presentLoginViewController()
         }

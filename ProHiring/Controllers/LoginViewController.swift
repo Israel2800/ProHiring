@@ -10,6 +10,7 @@ import FirebaseAuth
 import GoogleSignIn
 import AuthenticationServices
 import FirebaseCore
+import FirebaseFirestore
 
 class LoginViewController: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
   
@@ -107,6 +108,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         return NetworkReachability.shared.isConnected
     }
     
+    /*
     @IBAction func loginTapped(_ sender: UIButton) {
         
         // Ocultar teclado al presionar el botón de inicio de sesión
@@ -129,29 +131,30 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
             self.performSegue(withIdentifier: "loginOK", sender: nil)
         }
     }
+    */
     
-    @IBAction func forgotPasswordTapped(_ sender: UIButton) {
-        hideKeyboard()
-
-        guard let email = accountField.text, isValidEmail(email) else {
-            showAlert(message: "Por favor, ingresa un correo válido para recuperar la contraseña.")
-            return
-        }
-        
-        Auth.auth().sendPasswordReset(withEmail: email) { error in
-            if let error = error {
-                self.showAlert(message: "Error al enviar el correo de recuperación: \(error.localizedDescription)")
-                return
-            }
-            self.showAlert(message: "Correo de recuperación enviado. Revisa tu bandeja de entrada.")
-        }
-    }
-
-    func showAlert(message: String) {
-        let alert = UIAlertController(title: "Información", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
+    
+    @IBAction func loginTapped(_ sender: UIButton) {
+           hideKeyboard()
+           
+           guard let email = accountField.text, isValidEmail(email),
+                 let password = passwordField.text, isValidPassword(password) else {
+               showAlert(message: "Por favor, ingresa un correo y contraseña válidos.")
+               return
+           }
+           
+           showActivityIndicator()
+           Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+               self.hideActivityIndicator()
+               if let error = error {
+                   self.showAlert(message: "Error al iniciar sesión: \(error.localizedDescription)")
+                   return
+               }
+               if let user = authResult?.user {
+                   self.checkUserTypeAndNavigate(user: user)
+               }
+           }
+       }
     
     // IBAction para iniciar sesión con Google
     @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
@@ -177,11 +180,13 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
                     self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
                     return
                 }
-                self.storeUserDetails(email: user.profile?.email ?? "")
-                self.performSegue(withIdentifier: "loginOK", sender: nil)
+                if let user = authResult?.user {
+                    self.checkUserTypeAndNavigate(user: user)
+                }
             }
         }
     }
+
     
     // IBAction para iniciar sesión con Apple ID
     @IBAction func signInWithAppleTapped(_ sender: UIButton) {
@@ -200,6 +205,55 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         authController.delegate = self
         authController.performRequests()
     }
+    
+    // Verificar la collection en Firestore
+    func checkUserTypeAndNavigate(user: User) {
+            let db = Firestore.firestore()
+            let docRef = db.collection("users").document(user.uid)
+            
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    // Si es un usuario normal, navegar a su perfil
+                    self.performSegue(withIdentifier: "loginOK", sender: nil)
+                } else {
+                    // Si no es un usuario, verificar si es una compañía
+                    let companyDocRef = db.collection("companies").document(user.uid)
+                    companyDocRef.getDocument { (companyDocument, error) in
+                        if let companyDocument = companyDocument, companyDocument.exists {
+                            self.performSegue(withIdentifier: "loginCompanyOK", sender: nil)
+                        } else {
+                            self.showAlert(message: "No se pudo identificar al usuario.")
+                        }
+                    }
+                }
+            }
+        }
+
+    
+    @IBAction func forgotPasswordTapped(_ sender: UIButton) {
+        hideKeyboard()
+
+        guard let email = accountField.text, isValidEmail(email) else {
+            showAlert(message: "Por favor, ingresa un correo válido para recuperar la contraseña.")
+            return
+        }
+        
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                self.showAlert(message: "Error al enviar el correo de recuperación: \(error.localizedDescription)")
+                return
+            }
+            self.showAlert(message: "Correo de recuperación enviado. Revisa tu bandeja de entrada.")
+        }
+    }
+
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Información", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+
     
     @IBAction func createAccountTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "CreateAccountSegue", sender: self)

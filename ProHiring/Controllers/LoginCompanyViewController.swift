@@ -13,7 +13,7 @@ import FirebaseCore
 import FirebaseFirestore
 
 class LoginCompanyViewController: UIViewController, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
-  
+    
     @IBOutlet weak var accountField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -84,9 +84,18 @@ class LoginCompanyViewController: UIViewController, ASAuthorizationControllerPre
         }
         
         // Verificar si el usuario ya está autenticado
-        if let user = Auth.auth().currentUser {
+        /*if let user = Auth.auth().currentUser {
             self.checkUserTypeAndNavigate(user: user)
         }
+        */
+        if let userUID = UserDefaults.standard.string(forKey: "loggedInUserUID"),
+               let userType = UserDefaults.standard.string(forKey: "loggedInUserType") {
+                if userType == "company" {
+                    self.performSegue(withIdentifier: "loginCompanyOK", sender: nil)
+                } else if userType == "user" {
+                    self.performSegue(withIdentifier: "loginOK", sender: nil)
+                }
+            }
     }
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
@@ -109,8 +118,6 @@ class LoginCompanyViewController: UIViewController, ASAuthorizationControllerPre
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
-        
-        // Ocultar teclado al presionar el botón de inicio de sesión
         hideKeyboard()
         
         guard let email = accountField.text, isValidEmail(email),
@@ -131,21 +138,74 @@ class LoginCompanyViewController: UIViewController, ASAuthorizationControllerPre
             }
         }
     }
+
     
     func checkUserTypeAndNavigate(user: User) {
         let db = Firestore.firestore()
-        let docRef = db.collection("companies").document(user.uid)
         
-        docRef.getDocument { (document, error) in
+        // Verificar si es una compañía
+        db.collection("companies").document(user.uid).getDocument { (document, error) in
             if let document = document, document.exists {
-                // Si es una compañía, se navega a su perfil
-                self.performSegue(withIdentifier: "CompanyProfileSegue", sender: nil)
+                // Si es una compañía
+                self.storeSession(userUID: user.uid, userType: "company")
+                self.performSegue(withIdentifier: "loginCompanyOK", sender: nil)
             } else {
-                // Si no es una compañía, se navega a la vista normal
-                self.performSegue(withIdentifier: "NormalUserProfileSegue", sender: nil)
+                // Verificar si es un usuario normal
+                db.collection("users").document(user.uid).getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        // Si es un usuario normal
+                        self.storeSession(userUID: user.uid, userType: "user")
+                        self.performSegue(withIdentifier: "loginOK", sender: nil)
+                    } else {
+                        // Si no se encuentra, mostrar error
+                        self.showAlert(message: "Usuario no encontrado. Verifica tu cuenta.")
+                    }
+                }
             }
         }
     }
+
+    private func storeSession(userUID: String, userType: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(userUID, forKey: "loggedInUserUID")
+        defaults.set(userType, forKey: "loggedInUserType")
+        defaults.synchronize()
+    }
+
+
+    // IBAction para iniciar sesión con Google
+    @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
+        if !isInternetAvailable() {
+            showMessage("No hay conexión a Internet.")
+            return
+        }
+        showActivityIndicator()
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+            self.hideActivityIndicator()
+            if let error = error {
+                self.showMessage("Error al iniciar sesión con Google: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
+            let accessToken = user.accessToken.tokenString
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+            
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
+                    return
+                }
+                if let user = authResult?.user {
+                    self.checkUserTypeAndNavigate(user: user)
+                }
+            }
+        }
+    }
+
+    
+
 
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
         hideKeyboard()
@@ -176,8 +236,8 @@ class LoginCompanyViewController: UIViewController, ASAuthorizationControllerPre
     
     private func storeUserDetails(email: String) {
         let ud = UserDefaults.standard
-        ud.set(true, forKey: "customLogin")
-        ud.set(email, forKey: "userEmail")
+        ud.set(true, forKey: "customCompanyLogin")
+        ud.set(email, forKey: "userCompanyEmail")
         ud.synchronize()
     }
     
