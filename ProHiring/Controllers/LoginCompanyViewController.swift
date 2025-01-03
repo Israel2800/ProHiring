@@ -93,7 +93,7 @@ class LoginCompanyViewController: UIViewController, ASAuthorizationControllerPre
                 if userType == "company" {
                     self.performSegue(withIdentifier: "loginCompanyOK", sender: nil)
                 } else if userType == "user" {
-                    self.performSegue(withIdentifier: "loginOK", sender: nil)
+                    self.performSegue(withIdentifier: "loginCompanyOK", sender: nil)
                 }
             }
     }

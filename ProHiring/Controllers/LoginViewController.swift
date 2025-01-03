@@ -84,6 +84,25 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         }
         
         // Verificar si el usuario ya está autenticado
+        /*
+        if let currentUser = Auth.auth().currentUser {
+                let db = Firestore.firestore()
+                
+                // Verificar si el usuario es una compañía
+                let companyDocRef = db.collection("companies").document(currentUser.uid)
+                companyDocRef.getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        // Es una compañía, realizar segue correspondiente
+                        self.performSegue(withIdentifier: "loginOK", sender: nil)
+                    } else {
+                        // Es un usuario normal
+                        self.performSegue(withIdentifier: "loginOK", sender: nil)
+                    }
+                }
+            
+            
+            }*/
+        
         if Auth.auth().currentUser != nil {
             self.performSegue(withIdentifier: "loginOK", sender: nil)
         }
@@ -258,6 +277,19 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     @IBAction func createAccountTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "CreateAccountSegue", sender: self)
     }
+    
+    /*
+    @IBAction func registerCompanyTapped(_ sender: UIButton) {
+        if let presentingVC = self.presentingViewController {
+            presentingVC.dismiss(animated: true) {
+                self.performSegue(withIdentifier: "registerCompanySegue", sender: nil)
+            }
+        } else {
+            self.performSegue(withIdentifier: "registerCompanySegue", sender: nil)
+        }
+    }
+     */
+
     
     private func storeUserDetails(email: String) {
         let ud = UserDefaults.standard
