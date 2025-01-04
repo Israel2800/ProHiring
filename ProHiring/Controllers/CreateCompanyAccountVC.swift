@@ -288,7 +288,8 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
     }
 
     // IBAction para crear una cuenta con correo y contraseña
-    
+    /*
+     // Este es el primer intento
     @IBAction func createAccountTapped(_ sender: UIButton) {
         hideKeyboard()
 
@@ -311,7 +312,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
 
             guard let user = authResult?.user else { return }
 
-            // Guardar en Firestore bajo la colección `Companías`
+            // Guardar en Firestore bajo la colección `companies`
             let db = Firestore.firestore()
             db.collection("companies").document(user.uid).setData([
                 "email": email,
@@ -398,6 +399,79 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
+    */
+    
+    // Segundo intento
+    @IBAction func createAccountTapped(_ sender: UIButton) {
+        guard let email = emailField.text, isValidEmail(email),
+              let password = passwordField.text, isValidPassword(password),
+              let services = servicesField.text, !services.isEmpty,
+              let socialMedia = socialMediaField.text, !socialMedia.isEmpty,
+              let contact = contactField.text, !contact.isEmpty,
+              let logoImage = logoImageView.image else {
+            showMessage("Por favor, completa todos los campos y selecciona un logo.")
+            return
+        }
+
+        // Crear cuenta en Firebase Authentication
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let self = self else { return }
+            if let error = error {
+                self.showMessage("Error al crear la cuenta: \(error.localizedDescription)")
+                return
+            }
+            guard let userID = authResult?.user.uid else { return }
+            self.uploadLogoToStorage(userID: userID, logoImage: logoImage) { logoURL in
+                self.saveCompanyDataToFirestore(userID: userID, logoURL: logoURL, services: services, socialMedia: socialMedia, contact: contact)
+            }
+        }
+    }
+
+    private func uploadLogoToStorage(userID: String, logoImage: UIImage, completion: @escaping (String) -> Void) {
+        guard let imageData = logoImage.jpegData(compressionQuality: 0.8) else { return }
+        let storageRef = Storage.storage().reference().child("logos/\(userID).jpg")
+        storageRef.putData(imageData, metadata: nil) { _, error in
+            if let error = error {
+                self.showMessage("Error al subir el logo: \(error.localizedDescription)")
+                return
+            }
+            storageRef.downloadURL { url, error in
+                if let error = error {
+                    self.showMessage("Error al obtener URL del logo: \(error.localizedDescription)")
+                    return
+                }
+                completion(url?.absoluteString ?? "")
+            }
+        }
+    }
+
+    private func saveCompanyDataToFirestore(userID: String, logoURL: String, services: String, socialMedia: String, contact: String) {
+        let db = Firestore.firestore()
+        let companyData: [String: Any] = [
+            "logoURL": logoURL,
+            "name": emailField.text ?? "",
+            "services": services,
+            "socialMedia": socialMedia,
+            "contact": contact
+        ]
+        db.collection("companies").document(userID).setData(companyData) { error in
+            if let error = error {
+                self.showMessage("Error al guardar datos en Firestore: \(error.localizedDescription)")
+            } else {
+                self.showMessage("Cuenta creada exitosamente.")
+                self.navigateToProfile()
+            }
+        }
+    }
+
+    private func navigateToProfile() {
+        DispatchQueue.main.async {
+            if let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "MyProfileViewController") as? MyProfileViewController {
+                profileVC.modalPresentationStyle = .fullScreen
+                self.present(profileVC, animated: true, completion: nil)
+            }
+        }
+    }
     
 
     // Función para mostrar mensajes de alerta
@@ -431,7 +505,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
                     self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
                     return
                 }
-                self.presentLoginCompanyViewController()
+                self.navigateToProfile()
             }
         }
     }
