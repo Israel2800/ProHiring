@@ -84,4 +84,13 @@ extension UITextField {
 }
 
 
+struct Company {
+    let companyName: String
+    let services: String
+    let logoURL: String
+    let socialMedia: String
+    let contact: String
+    let name: String
+}
+
 

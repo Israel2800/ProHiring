@@ -1,4 +1,3 @@
-//
 //  MyProjectsViewController.swift
 //  ProHiring
 //
@@ -30,6 +29,15 @@ class MyProjectsViewController: UIViewController {
         setupPickerView()
         setupTableView()
         loadServices()
+        
+        // Añadir gesto de tap para ocultar teclado al tocar fuera del TextField
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    @objc func dismissKeyboard() {
+        serviceNameTextField.resignFirstResponder()
     }
 
     private func setupPickerView() {
@@ -66,6 +74,48 @@ class MyProjectsViewController: UIViewController {
         }
     }
 
+    // Agregar botón de eliminar servicio
+    @IBAction func deleteServiceButtonTapped(_ sender: UIButton) {
+        // Mostrar alerta de confirmación antes de eliminar
+        let alertController = UIAlertController(
+            title: "Are you sure?",
+            message: "Do you really want to delete this service?",
+            preferredStyle: .alert
+        )
+        
+        // Acción de eliminar
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            // Asegurarse de que hay un servicio seleccionado
+            guard let selectedService = self.selectedServiceToEdit else {
+                return
+            }
+            
+            // Eliminar servicio de Firebase
+            self.deleteService(selectedService)
+            
+            // Eliminar servicio de la lista local
+            if let index = self.serviceList.firstIndex(where: { $0.id == selectedService.id }) {
+                self.serviceList.remove(at: index)
+                self.serviceTableView.reloadData()
+            }
+            
+            // Limpiar los campos de texto después de eliminar
+            self.clearFields()
+        }
+        
+        // Acción de cancelar
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        // Añadir las acciones a la alerta
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        // Mostrar la alerta
+        present(alertController, animated: true, completion: nil)
+    }
+
+    
+    
     // Agregar un nuevo servicio
     @IBAction func addServiceButtonTapped(_ sender: UIButton) {
         guard let serviceName = serviceNameTextField.text, !serviceName.isEmpty else {
@@ -117,7 +167,9 @@ class MyProjectsViewController: UIViewController {
         
         db.collection("users").document(currentUserID).collection("services").document(service.id).delete { error in
             if let error = error {
-                print("Error al eliminar servicio: \(error.localizedDescription)")
+                print("Error deleting service: \(error.localizedDescription)")
+            } else {
+                print("Service deleted successfully")
             }
         }
     }

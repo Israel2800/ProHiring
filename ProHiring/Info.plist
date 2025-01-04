@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Your app needs access to the photo library so you can select a logo for the company.</string>
 	<key>GIDClientID</key>
 	<string>94451049041-jp6iljme29qq2s87ec6nusn3a2ra0tr0.apps.googleusercontent.com</string>
 	<key>CFBundleURLTypes</key>

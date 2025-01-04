@@ -44,6 +44,7 @@
 		C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */; };
 		C66692422D190A26007FD9FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66692412D190A26007FD9FD /* GoogleService-Info.plist */; };
 		C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692452D1925FC007FD9FD /* FirebaseAuth.swift */; };
+		C6F3AE372D2940FC0091E381 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */; };
 		C6F77C712D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */; };
 		C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */; };
 		C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */; };
@@ -85,6 +86,7 @@
 		C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		C66692412D190A26007FD9FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C66692452D1925FC007FD9FD /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
 		C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				C646D26F2D266A4E00E366E9 /* LoginCompanyViewController.swift */,
 				C646D2712D26756800E366E9 /* CreateCompanyAccountVC.swift */,
 				C646D2732D2780A600E366E9 /* MyProfileViewController.swift */,
+				C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				C6F77C762D1E654B000819EE /* HandymanServicesViewController.swift in Sources */,
 				C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */,
 				C646D2622D26536F00E366E9 /* ProHiring.xcdatamodeld in Sources */,
+				C6F3AE372D2940FC0091E381 /* CompanyProfileViewController.swift in Sources */,
 				C6F77C742D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift in Sources */,
 				C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */,
 				C646D2692D2656E300E366E9 /* HomeCategory+CoreDataClass.swift in Sources */,
