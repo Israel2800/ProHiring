@@ -76,7 +76,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - UITableViewDataSource Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 // Example, only one row for the UICollectionView
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
