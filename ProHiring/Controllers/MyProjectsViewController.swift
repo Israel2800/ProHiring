@@ -12,12 +12,14 @@ class MyProjectsViewController: UIViewController {
 
     @IBOutlet weak var serviceTableView: UITableView!
     @IBOutlet weak var serviceNameTextField: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var serviceColorPicker: UIPickerView!
     
     var serviceList = [Service]()
     var db: Firestore!
     var currentUserID: String?
-    var colors = ["Verde", "Amarillo", "Rojo"] // Colores disponibles para PickerView
+    // Actualiza los nombres de los colores en inglés
+    var colors = ["Searching a Pro", "Currently working", "Job done"] // Colores disponibles para PickerView
     var selectedServiceToEdit: Service?
 
     override func viewDidLoad() {
@@ -26,6 +28,12 @@ class MyProjectsViewController: UIViewController {
         db = Firestore.firestore()
         currentUserID = Auth.auth().currentUser?.uid
         
+        // Obtener el correo electrónico del usuario actual y asignarlo al UILabel
+        if let userEmail = Auth.auth().currentUser?.email {
+            emailLabel.text = userEmail
+        }
+        
+        // Configurar PickerView y TableView
         setupPickerView()
         setupTableView()
         loadServices()
@@ -34,6 +42,8 @@ class MyProjectsViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
+        // Agregar el placeholder al TextField
+        serviceNameTextField.placeholder = "Insert a project"
     }
     
     @objc func dismissKeyboard() {
@@ -74,52 +84,12 @@ class MyProjectsViewController: UIViewController {
         }
     }
 
-    // Agregar botón de eliminar servicio
-    @IBAction func deleteServiceButtonTapped(_ sender: UIButton) {
-        // Mostrar alerta de confirmación antes de eliminar
-        let alertController = UIAlertController(
-            title: "Are you sure?",
-            message: "Do you really want to delete this service?",
-            preferredStyle: .alert
-        )
-        
-        // Acción de eliminar
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
-            // Asegurarse de que hay un servicio seleccionado
-            guard let selectedService = self.selectedServiceToEdit else {
-                return
-            }
-            
-            // Eliminar servicio de Firebase
-            self.deleteService(selectedService)
-            
-            // Eliminar servicio de la lista local
-            if let index = self.serviceList.firstIndex(where: { $0.id == selectedService.id }) {
-                self.serviceList.remove(at: index)
-                self.serviceTableView.reloadData()
-            }
-            
-            // Limpiar los campos de texto después de eliminar
-            self.clearFields()
-        }
-        
-        // Acción de cancelar
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        // Añadir las acciones a la alerta
-        alertController.addAction(deleteAction)
-        alertController.addAction(cancelAction)
-        
-        // Mostrar la alerta
-        present(alertController, animated: true, completion: nil)
-    }
-
-    
-    
     // Agregar un nuevo servicio
     @IBAction func addServiceButtonTapped(_ sender: UIButton) {
         guard let serviceName = serviceNameTextField.text, !serviceName.isEmpty else {
-            print("El campo de nombre del servicio está vacío.")
+            let alert = UIAlertController(title: "No Project Inserted", message: "Please insert a project before adding a service.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
             return
         }
         
@@ -136,6 +106,7 @@ class MyProjectsViewController: UIViewController {
             addService(serviceData)
         }
     }
+
 
     private func addService(_ serviceData: [String: Any]) {
         guard let currentUserID = currentUserID else { return }
@@ -182,9 +153,9 @@ class MyProjectsViewController: UIViewController {
 
     private func getServiceStatus(color: String) -> String {
         switch color {
-        case "Verde": return "En proceso"
-        case "Amarillo": return "Pensando"
-        case "Rojo": return "Terminado"
+        case "Searching a Pro": return "Searching"
+        case "Currently working": return "Working"
+        case "Job done": return "Done"
         default: return "Desconocido"
         }
     }
@@ -207,9 +178,9 @@ extension MyProjectsViewController: UITableViewDataSource, UITableViewDelegate {
 
     private func getColorForStatus(color: String) -> UIColor {
         switch color {
-        case "Verde": return .green
-        case "Amarillo": return .yellow
-        case "Rojo": return .red
+        case "Searching a Pro": return .green
+        case "Currently working": return .yellow
+        case "Job done": return .red
         default: return .white
         }
     }
