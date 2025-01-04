@@ -86,6 +86,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             popularProject.inicializaCon(dict)
         }
     }
+    
+    func cargarCategories() {
+        // URL del API de Categories
+        let urlString = "https://private-a68b0b-homecategory.apiary-mock.com/Categories/listAllCategories"
+        
+        // Usar el método `llenaBD` para llenar la base de datos con las categorías
+        DataManager.shared.llenaBD(from: urlString, entityName: "Categories") { object, dict in
+            // Usar guard let para evitar el force cast y mejorar la seguridad
+            guard let category = object as? Categories else {
+                print("Error: No se pudo convertir el objeto a Categories.")
+                return
+            }
+            // Inicializar el objeto Categories con los datos recibidos
+            category.inicializaCon(dict)
+        }
+    }
+
+    func cargarInspiration() {
+        // URL del API de Inspiration
+        let urlString = "https://private-0e2a9f-inspiration1.apiary-mock.com/Inspirations/getAllInspirations"
+        
+        // Usar el método `llenaBD` para llenar la base de datos con la inspiración
+        DataManager.shared.llenaBD(from: urlString, entityName: "Inspiration") { object, dict in
+            // Usar guard let para evitar el force cast y mejorar la seguridad
+            guard let inspiration = object as? Inspiration else {
+                print("Error: No se pudo convertir el objeto a Inspiration.")
+                return
+            }
+            // Inicializar el objeto Inspiration con los datos recibidos
+            inspiration.inicializaCon(dict)
+        }
+    }
+
 
     @available(iOS 9.0, *) 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool { return GIDSignIn.sharedInstance.handle(url)

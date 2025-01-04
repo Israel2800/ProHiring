@@ -127,31 +127,6 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         return NetworkReachability.shared.isConnected
     }
     
-    /*
-    @IBAction func loginTapped(_ sender: UIButton) {
-        
-        // Ocultar teclado al presionar el botón de inicio de sesión
-        hideKeyboard()
-        
-        guard let email = accountField.text, isValidEmail(email),
-              let password = passwordField.text, isValidPassword(password) else {
-            showAlert(message: "Por favor, ingresa un correo y contraseña válidos.")
-            return
-        }
-        
-        showActivityIndicator()
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            self.hideActivityIndicator()
-            if let error = error {
-                self.showAlert(message: "Error al iniciar sesión: \(error.localizedDescription)")
-                return
-            }
-            self.storeUserDetails(email: email)
-            self.performSegue(withIdentifier: "loginOK", sender: nil)
-        }
-    }
-    */
-    
     
     @IBAction func loginTapped(_ sender: UIButton) {
            hideKeyboard()

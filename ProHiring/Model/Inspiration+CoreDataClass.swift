@@ -1,16 +1,16 @@
 //
-//  HomeCategory+CoreDataClass.swift
+//  Inspiration+CoreDataClass.swift
 //  ProHiring
 //
-//  Created by Paola Delgadillo on 1/1/25.
+//  Created by Paola Delgadillo on 1/4/25.
 //
 //
 
 import Foundation
 import CoreData
 
-@objc(HomeCategory)
-public class HomeCategory: NSManagedObject {
+@objc(Inspiration)
+public class Inspiration: NSManagedObject {
     func inicializaCon(_ dict: Dictionary<String, Any>) {
         let id = (dict["id"] as? String) ?? ""
         let title = (dict["title"] as? String) ?? ""

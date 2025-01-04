@@ -18,7 +18,6 @@ class MyProjectsViewController: UIViewController {
     var serviceList = [Service]()
     var db: Firestore!
     var currentUserID: String?
-    // Actualiza los nombres de los colores en inglés
     var colors = ["Searching a Pro", "Currently working", "Job done"] // Colores disponibles para PickerView
     var selectedServiceToEdit: Service?
 
@@ -61,7 +60,6 @@ class MyProjectsViewController: UIViewController {
         serviceTableView.register(UITableViewCell.self, forCellReuseIdentifier: "ServiceCell")
     }
 
-    // Cargar los servicios desde Firestore
     private func loadServices() {
         guard let currentUserID = currentUserID else { return }
         
@@ -84,7 +82,6 @@ class MyProjectsViewController: UIViewController {
         }
     }
 
-    // Agregar un nuevo servicio
     @IBAction func addServiceButtonTapped(_ sender: UIButton) {
         guard let serviceName = serviceNameTextField.text, !serviceName.isEmpty else {
             let alert = UIAlertController(title: "No Project Inserted", message: "Please insert a project before adding a service.", preferredStyle: .alert)
@@ -106,7 +103,6 @@ class MyProjectsViewController: UIViewController {
             addService(serviceData)
         }
     }
-
 
     private func addService(_ serviceData: [String: Any]) {
         guard let currentUserID = currentUserID else { return }
@@ -145,6 +141,25 @@ class MyProjectsViewController: UIViewController {
         }
     }
 
+    @IBAction func deleteServiceButtonTapped(_ sender: UIButton) {
+        // Verificar si hay un servicio seleccionado
+        guard let selectedService = selectedServiceToEdit else {
+            let alert = UIAlertController(title: "No Service Selected", message: "Please select a service before trying to delete.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
+
+        // Confirmar la eliminación
+        let alert = UIAlertController(title: "Are you sure?", message: "Are you sure you want to delete this service?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
+            self?.deleteService(selectedService)
+            self?.clearFields()
+        }))
+        present(alert, animated: true)
+    }
+
     private func clearFields() {
         serviceNameTextField.text = ""
         serviceColorPicker.selectRow(0, inComponent: 0, animated: false)
@@ -156,7 +171,7 @@ class MyProjectsViewController: UIViewController {
         case "Searching a Pro": return "Searching"
         case "Currently working": return "Working"
         case "Job done": return "Done"
-        default: return "Desconocido"
+        default: return "Unknown"
         }
     }
 }

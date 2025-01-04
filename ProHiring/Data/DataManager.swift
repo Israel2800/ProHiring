@@ -356,20 +356,38 @@ class DataManager: NSObject {
     }
 
     // MARK: - Categories Methods
-    func todasLasCategorias() -> [HomeCategory] {
-        return fetchAll(for: HomeCategory.self)
+    func todasLasCategories() -> [Categories] {
+        return fetchAll(for: Categories.self)
     }
 
-    func buscaCategoriaConNombre(_ nombre: String) -> HomeCategory? {
-        return fetchByName(nombre, for: HomeCategory.self, attributeName: "title")
+    func buscaCategoriaConNombre(_ nombre: String) -> Categories? {
+        return fetchByName(nombre, for: Categories.self, attributeName: "title")
     }
 
     func llenaBDCategorias() {
         llenaBD(
-            from: "https://private-a68b0b-homecategory.apiary-mock.com/HomeCategory/listAllHomeCategories",
-            entityName: "HomeCategory"
+            from: "https://private-a68b0b-homecategory.apiary-mock.com/Categories/listAllCategories",
+            entityName: "Categories"
         ) { object, dict in
-            (object as! HomeCategory).inicializaCon(dict)
+            (object as! Categories).inicializaCon(dict)
+        }
+    }
+    
+    // MARK: - Categories Methods
+    func todasLasInspirations() -> [Inspiration] {
+        return fetchAll(for: Inspiration.self)
+    }
+
+    func buscaInspirationConNombre(_ nombre: String) -> Inspiration? {
+        return fetchByName(nombre, for: Inspiration.self, attributeName: "title")
+    }
+
+    func llenaBDInspirations() {
+        llenaBD(
+            from: "https://private-0e2a9f-inspiration1.apiary-mock.com/Inspirations/getAllInspirations",
+            entityName: "Inspiration"
+        ) { object, dict in
+            (object as! Inspiration).inicializaCon(dict)
         }
     }
 }

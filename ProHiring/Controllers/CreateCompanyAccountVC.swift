@@ -39,9 +39,31 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
         // Configurar el campo de contraseña para usar asteriscos
         passwordField.isSecureTextEntry = true
         
+        // Añadir el botón del ojito al campo de contraseña
+        let eyeButton = UIButton(type: .custom)
+        eyeButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        eyeButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .selected)
+        eyeButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        eyeButton.tintColor = .gray
+        eyeButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        passwordField.rightView = eyeButton
+        passwordField.rightViewMode = .always
+        
+        
         // Agregar gesture recognizer para ocultar el teclado al tocar fuera
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func togglePasswordVisibility(_ sender: UIButton) {
+        sender.isSelected.toggle() // Cambia el estado seleccionado del botón
+        passwordField.isSecureTextEntry.toggle() // Alterna la visibilidad del texto
+        
+        // Evita que el cursor salte al final al alternar
+        if let existingText = passwordField.text, passwordField.isSecureTextEntry {
+            passwordField.deleteBackward() // Borra el último carácter
+            passwordField.insertText(existingText) // Restaura el texto
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
