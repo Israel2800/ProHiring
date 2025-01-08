@@ -1469,7 +1469,7 @@
                             <constraint firstItem="JaN-UU-jnf" firstAttribute="leading" secondItem="Ho2-ju-bQM" secondAttribute="leading" constant="16" id="zfl-Hl-hnv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Profile" selectedImage="person.fill" catalog="system" id="LX7-tF-chU"/>
+                    <tabBarItem key="tabBarItem" title="My Profile" image="person.fill" catalog="system" selectedImage="person.fill" id="LX7-tF-chU"/>
                     <connections>
                         <outlet property="companyNameLabel" destination="rxL-4y-JL3" id="l9K-Zd-d8g"/>
                         <outlet property="contactLabel" destination="caX-eU-7Wg" id="9K7-HM-T6N"/>
@@ -1935,7 +1935,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="dFH-oX-gNP"/>
         <segue reference="b06-Pj-ozg"/>
-        <segue reference="k7J-iM-sFN"/>
+        <segue reference="WRR-3H-fiT"/>
         <segue reference="S1S-h2-JZK"/>
     </inferredMetricsTieBreakers>
     <resources>
