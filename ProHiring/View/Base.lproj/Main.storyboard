@@ -65,16 +65,8 @@
                                             <action selector="loginTapped:" destination="yg0-m8-fQN" eventType="touchUpInside" id="hOz-pb-rmo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwh-2d-M6h">
-                                        <rect key="frame" x="19" y="259" width="354" height="35"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Google"/>
-                                        <connections>
-                                            <action selector="signInWithGoogleTapped:" destination="yg0-m8-fQN" eventType="touchUpInside" id="cQa-8d-6Tn"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ike-zq-Tc2">
-                                        <rect key="frame" x="177" y="362" width="168" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ike-zq-Tc2">
+                                        <rect key="frame" x="177" y="313" width="168" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Create an account."/>
                                         <connections>
@@ -82,17 +74,14 @@
                                             <segue destination="cKQ-20-NhV" kind="modal" identifier="CreateAccountSegue" id="2bq-eK-M9x"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New to ProHiring?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WR-uV-CcT">
-                                        <rect key="frame" x="19" y="362" width="138" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="138" id="DQO-m6-AxI"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to ProHiring?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WR-uV-CcT">
+                                        <rect key="frame" x="19" y="313" width="138" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxE-Ff-yr5">
-                                        <rect key="frame" x="8" y="319" width="160" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxE-Ff-yr5">
+                                        <rect key="frame" x="8" y="270" width="160" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                                         <connections>
@@ -100,7 +89,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMO-GD-h6Z">
-                                        <rect key="frame" x="129.66666666666666" y="405" width="133.99999999999997" height="35"/>
+                                        <rect key="frame" x="129.66666666666666" y="356" width="133.99999999999997" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Are you a Pro?"/>
                                         <connections>
@@ -110,30 +99,25 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="bwh-2d-M6h" firstAttribute="centerX" secondItem="WMO-GD-h6Z" secondAttribute="centerX" id="1Ja-y5-ELC"/>
-                                    <constraint firstItem="bwh-2d-M6h" firstAttribute="top" secondItem="Evg-pY-SZe" secondAttribute="bottom" constant="21" id="2Az-aa-M7u"/>
-                                    <constraint firstItem="ike-zq-Tc2" firstAttribute="leading" secondItem="0WR-uV-CcT" secondAttribute="trailing" constant="20" id="4ab-kG-Tiz"/>
-                                    <constraint firstItem="lxE-Ff-yr5" firstAttribute="leading" secondItem="e1b-HP-333" secondAttribute="leadingMargin" id="4js-Mw-InP"/>
                                     <constraint firstItem="Ddd-Uu-hAr" firstAttribute="centerX" secondItem="e1b-HP-333" secondAttribute="centerX" id="4r7-At-He2"/>
                                     <constraint firstItem="Ddd-Uu-hAr" firstAttribute="trailing" secondItem="fTs-OU-J1g" secondAttribute="trailing" id="77k-MG-7Vt"/>
                                     <constraint firstItem="BFo-AH-aS9" firstAttribute="top" secondItem="e1b-HP-333" secondAttribute="top" constant="20" id="7rd-Vq-qaS"/>
-                                    <constraint firstItem="WMO-GD-h6Z" firstAttribute="top" secondItem="0WR-uV-CcT" secondAttribute="bottom" constant="8" symbolic="YES" id="Am5-LF-MSf"/>
+                                    <constraint firstItem="WMO-GD-h6Z" firstAttribute="top" secondItem="ike-zq-Tc2" secondAttribute="bottom" constant="8" id="ELa-dW-6B0"/>
                                     <constraint firstItem="Ddd-Uu-hAr" firstAttribute="top" secondItem="BFo-AH-aS9" secondAttribute="bottom" constant="28" id="HUl-k0-7Dn"/>
                                     <constraint firstItem="Ddd-Uu-hAr" firstAttribute="leading" secondItem="fTs-OU-J1g" secondAttribute="leading" id="Hyr-CC-4yP"/>
                                     <constraint firstItem="Ddd-Uu-hAr" firstAttribute="leading" secondItem="e1b-HP-333" secondAttribute="leading" constant="20" id="PVL-fa-25e"/>
-                                    <constraint firstItem="bwh-2d-M6h" firstAttribute="trailing" secondItem="Evg-pY-SZe" secondAttribute="trailing" id="PY2-2Y-7NP"/>
-                                    <constraint firstItem="bwh-2d-M6h" firstAttribute="centerX" secondItem="Evg-pY-SZe" secondAttribute="centerX" id="SCw-Pm-bBu"/>
-                                    <constraint firstItem="lxE-Ff-yr5" firstAttribute="centerX" secondItem="0WR-uV-CcT" secondAttribute="centerX" id="VGm-IV-5FE"/>
+                                    <constraint firstItem="0WR-uV-CcT" firstAttribute="bottom" secondItem="ike-zq-Tc2" secondAttribute="bottom" id="QGW-fM-5JX"/>
+                                    <constraint firstItem="0WR-uV-CcT" firstAttribute="top" secondItem="lxE-Ff-yr5" secondAttribute="bottom" constant="8" id="TqJ-ha-pB3"/>
+                                    <constraint firstItem="WMO-GD-h6Z" firstAttribute="centerX" secondItem="Evg-pY-SZe" secondAttribute="centerX" id="VUB-Rc-sMm"/>
                                     <constraint firstItem="fTs-OU-J1g" firstAttribute="trailing" secondItem="Evg-pY-SZe" secondAttribute="trailing" id="Vvx-yV-97I"/>
-                                    <constraint firstItem="0WR-uV-CcT" firstAttribute="top" secondItem="lxE-Ff-yr5" secondAttribute="bottom" constant="8" symbolic="YES" id="ZUc-D5-hpQ"/>
+                                    <constraint firstItem="lxE-Ff-yr5" firstAttribute="leading" secondItem="e1b-HP-333" secondAttribute="leadingMargin" id="WgY-mz-rvu"/>
                                     <constraint firstItem="Evg-pY-SZe" firstAttribute="top" secondItem="fTs-OU-J1g" secondAttribute="bottom" constant="24.999999999999943" id="bvT-fD-fep"/>
                                     <constraint firstItem="BFo-AH-aS9" firstAttribute="leading" secondItem="e1b-HP-333" secondAttribute="leading" constant="22" id="cOv-sM-GAD"/>
-                                    <constraint firstItem="0WR-uV-CcT" firstAttribute="top" secondItem="ike-zq-Tc2" secondAttribute="top" id="epZ-VI-Jbh"/>
+                                    <constraint firstItem="0WR-uV-CcT" firstAttribute="top" secondItem="ike-zq-Tc2" secondAttribute="top" id="eMS-Je-Hjj"/>
                                     <constraint firstItem="fTs-OU-J1g" firstAttribute="leading" secondItem="Evg-pY-SZe" secondAttribute="leading" id="fIp-av-0w6"/>
-                                    <constraint firstAttribute="trailing" secondItem="ike-zq-Tc2" secondAttribute="trailing" constant="48" id="j1W-vd-zO2"/>
-                                    <constraint firstItem="WMO-GD-h6Z" firstAttribute="top" secondItem="ike-zq-Tc2" secondAttribute="bottom" constant="8" symbolic="YES" id="r7N-zr-DeP"/>
-                                    <constraint firstItem="bwh-2d-M6h" firstAttribute="leading" secondItem="0WR-uV-CcT" secondAttribute="leading" id="twx-N5-tTY"/>
-                                    <constraint firstItem="lxE-Ff-yr5" firstAttribute="top" secondItem="bwh-2d-M6h" secondAttribute="bottom" constant="25" id="uCi-Tu-hrf"/>
+                                    <constraint firstItem="lxE-Ff-yr5" firstAttribute="top" secondItem="Evg-pY-SZe" secondAttribute="bottom" constant="32" id="fXI-fK-34Z"/>
+                                    <constraint firstItem="lxE-Ff-yr5" firstAttribute="centerX" secondItem="0WR-uV-CcT" secondAttribute="centerX" id="oMU-Cp-Gyq"/>
+                                    <constraint firstItem="ike-zq-Tc2" firstAttribute="leading" secondItem="0WR-uV-CcT" secondAttribute="trailing" constant="20" id="pbc-C9-cf8"/>
                                     <constraint firstItem="fTs-OU-J1g" firstAttribute="top" secondItem="Ddd-Uu-hAr" secondAttribute="bottom" constant="25" id="yBq-hn-98t"/>
                                 </constraints>
                             </view>
@@ -219,22 +203,14 @@
                                 <color key="textColor" red="0.094117647060000004" green="0.45882352939999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQN-df-0Bv">
-                                <rect key="frame" x="22" y="434" width="349" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Google"/>
-                                <connections>
-                                    <action selector="signInWithGoogleTapped:" destination="gff-XO-4Pa" eventType="touchUpInside" id="WeP-EO-2fk"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQ5-BY-idh">
-                                <rect key="frame" x="22" y="495" width="195" height="35"/>
+                                <rect key="frame" x="20" y="447" width="195" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-Xl-zf8">
-                                <rect key="frame" x="237" y="495" width="76" height="35"/>
+                                <rect key="frame" x="235" y="447" width="76" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
                                 <connections>
@@ -246,34 +222,30 @@
                         <viewLayoutGuide key="safeArea" id="wUn-FN-mMk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gQN-df-0Bv" firstAttribute="centerX" secondItem="iD3-Wn-Y9h" secondAttribute="centerX" id="0u9-Xb-jPn"/>
-                            <constraint firstItem="gQN-df-0Bv" firstAttribute="leading" secondItem="wUn-FN-mMk" secondAttribute="leading" constant="22" id="9HZ-e3-y6C"/>
-                            <constraint firstItem="gQN-df-0Bv" firstAttribute="top" secondItem="iD3-Wn-Y9h" secondAttribute="bottom" constant="23" id="Dfe-ya-Enn"/>
+                            <constraint firstItem="DQ5-BY-idh" firstAttribute="bottom" secondItem="jqe-Xl-zf8" secondAttribute="bottom" id="2yw-Yf-aQL"/>
                             <constraint firstItem="cma-xX-b2i" firstAttribute="top" secondItem="IjL-fF-m2c" secondAttribute="bottom" constant="60" id="Efq-qS-HoC"/>
                             <constraint firstItem="6Hm-Qn-0vl" firstAttribute="leading" secondItem="wUn-FN-mMk" secondAttribute="leading" constant="20" id="F3n-n1-wmN"/>
                             <constraint firstItem="6Hm-Qn-0vl" firstAttribute="top" secondItem="cma-xX-b2i" secondAttribute="bottom" constant="25" id="Is1-0b-0TK"/>
-                            <constraint firstItem="jqe-Xl-zf8" firstAttribute="leading" secondItem="DQ5-BY-idh" secondAttribute="trailing" constant="20" id="JlW-VU-wNP"/>
                             <constraint firstItem="wUn-FN-mMk" firstAttribute="trailing" secondItem="6Hm-Qn-0vl" secondAttribute="trailing" constant="20" id="MRz-4V-8ye"/>
                             <constraint firstItem="wUn-FN-mMk" firstAttribute="trailing" secondItem="cma-xX-b2i" secondAttribute="trailing" constant="20" id="ORQ-dE-tso"/>
+                            <constraint firstItem="DQ5-BY-idh" firstAttribute="top" secondItem="iD3-Wn-Y9h" secondAttribute="bottom" constant="36" id="Oea-1v-bZt"/>
                             <constraint firstItem="cma-xX-b2i" firstAttribute="leading" secondItem="wUn-FN-mMk" secondAttribute="leading" constant="20" id="Ox6-KA-Ina"/>
                             <constraint firstItem="iD3-Wn-Y9h" firstAttribute="top" secondItem="u8M-RK-100" secondAttribute="bottom" constant="25" id="SN4-CY-B1J"/>
                             <constraint firstItem="wUn-FN-mMk" firstAttribute="trailing" secondItem="u8M-RK-100" secondAttribute="trailing" constant="20" id="SOK-Zr-SeN"/>
-                            <constraint firstItem="gQN-df-0Bv" firstAttribute="leading" secondItem="DQ5-BY-idh" secondAttribute="leading" id="Y1L-Ed-Gxx"/>
+                            <constraint firstItem="DQ5-BY-idh" firstAttribute="top" secondItem="jqe-Xl-zf8" secondAttribute="top" id="Ybd-HR-Vr2"/>
+                            <constraint firstItem="DQ5-BY-idh" firstAttribute="leading" secondItem="iD3-Wn-Y9h" secondAttribute="leading" id="e2R-Ei-8me"/>
                             <constraint firstItem="iD3-Wn-Y9h" firstAttribute="leading" secondItem="wUn-FN-mMk" secondAttribute="leading" constant="20" id="hV5-WP-dIS"/>
                             <constraint firstItem="u8M-RK-100" firstAttribute="leading" secondItem="wUn-FN-mMk" secondAttribute="leading" constant="20" id="lv6-Qp-CYT"/>
-                            <constraint firstItem="DQ5-BY-idh" firstAttribute="top" secondItem="gQN-df-0Bv" secondAttribute="bottom" constant="26" id="s6V-Ql-BQR"/>
-                            <constraint firstItem="DQ5-BY-idh" firstAttribute="bottom" secondItem="jqe-Xl-zf8" secondAttribute="bottom" id="tNn-zz-vEm"/>
                             <constraint firstItem="IjL-fF-m2c" firstAttribute="leading" secondItem="cma-xX-b2i" secondAttribute="leading" id="uto-wn-b91"/>
                             <constraint firstItem="u8M-RK-100" firstAttribute="top" secondItem="6Hm-Qn-0vl" secondAttribute="bottom" constant="25" id="vNH-MG-CO7"/>
                             <constraint firstItem="wUn-FN-mMk" firstAttribute="trailing" secondItem="iD3-Wn-Y9h" secondAttribute="trailing" constant="20" id="yRr-dI-Vy3"/>
                             <constraint firstItem="IjL-fF-m2c" firstAttribute="top" secondItem="wUn-FN-mMk" secondAttribute="top" constant="30" id="yoY-27-Mmz"/>
-                            <constraint firstItem="DQ5-BY-idh" firstAttribute="top" secondItem="jqe-Xl-zf8" secondAttribute="top" id="ztv-1t-jI3"/>
+                            <constraint firstItem="jqe-Xl-zf8" firstAttribute="leading" secondItem="DQ5-BY-idh" secondAttribute="trailing" constant="20" id="yp4-N8-itj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vbJ-zt-AGr"/>
                     <connections>
                         <outlet property="createAccountBtn" destination="iD3-Wn-Y9h" id="8Uj-ut-Iwu"/>
-                        <outlet property="createAccountGoogleBtn" destination="gQN-df-0Bv" id="Ggr-94-fGX"/>
                         <outlet property="emailField" destination="6Hm-Qn-0vl" id="40D-oP-cQ6"/>
                         <outlet property="passwordField" destination="u8M-RK-100" id="lHe-3q-SFX"/>
                         <outlet property="signInBtn" destination="jqe-Xl-zf8" id="2y2-t6-rjR"/>
@@ -705,15 +677,15 @@
                                 <size key="shadowOffset" width="0.0" height="9"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7J-Pf-0OP">
-                                <rect key="frame" x="208" y="504" width="85" height="35"/>
+                                <rect key="frame" x="208" y="504" width="90" height="35"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Bvf-io-jMl"/>
-                                    <constraint firstAttribute="width" constant="85" id="JqY-DN-a5t"/>
+                                    <constraint firstAttribute="width" constant="90" id="JqY-DN-a5t"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
                                 <connections>
                                     <action selector="deleteServiceButtonTapped:" destination="HPf-aR-kpp" eventType="touchUpInside" id="9jt-Qi-OVY"/>
                                 </connections>
@@ -730,7 +702,6 @@
                             <constraint firstItem="tZM-GC-VjJ" firstAttribute="top" secondItem="wRH-QT-Zgu" secondAttribute="bottom" constant="22" id="FHZ-1F-Rai"/>
                             <constraint firstItem="D6l-6N-cUV" firstAttribute="leading" secondItem="VKV-j3-BLJ" secondAttribute="leading" constant="20" id="HSJ-S0-sw1"/>
                             <constraint firstItem="wRH-QT-Zgu" firstAttribute="top" secondItem="NiA-cV-RMG" secondAttribute="bottom" constant="10" id="HVX-jU-1ql"/>
-                            <constraint firstItem="VKV-j3-BLJ" firstAttribute="trailing" secondItem="r7J-Pf-0OP" secondAttribute="trailing" constant="100" id="IvR-Tt-bLG"/>
                             <constraint firstItem="3HA-DV-bS8" firstAttribute="leading" secondItem="VKV-j3-BLJ" secondAttribute="leading" constant="20" id="Lgs-WJ-d34"/>
                             <constraint firstItem="tZM-GC-VjJ" firstAttribute="leading" secondItem="VKV-j3-BLJ" secondAttribute="leading" id="OTT-Ix-Hhx"/>
                             <constraint firstItem="tZM-GC-VjJ" firstAttribute="trailing" secondItem="VKV-j3-BLJ" secondAttribute="trailing" id="PkU-PE-OXY"/>
