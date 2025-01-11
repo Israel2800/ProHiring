@@ -439,7 +439,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Lwt-pY-8SE">
                                         <rect key="frame" x="20" y="35" width="353" height="105"/>
-                                        <string key="text">Discover top rated tree care services tailored to your needs! 🌲 Click on any service to explore what local companies offer, compare options, and book the perfect solution for your trees. 🌳</string>
+                                        <string key="text">Discover top rated tree care services tailored to your needs! 🌲 View all the services that local companies offer, compare options, and book the perfect solution for your trees. 🌳</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
