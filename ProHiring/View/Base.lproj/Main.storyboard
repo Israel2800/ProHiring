@@ -390,11 +390,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-00-2pJ">
-                                                    <rect key="frame" x="215" y="16" width="33" height="20"/>
+                                                    <rect key="frame" x="215" y="16" width="36.333333333333343" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="955-PY-5y0"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
