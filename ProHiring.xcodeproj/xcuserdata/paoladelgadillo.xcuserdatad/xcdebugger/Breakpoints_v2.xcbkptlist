@@ -80,7 +80,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "359"
             endingLineNumber = "359"
-            landmarkName = "todasLasCategorias()"
+            landmarkName = "todasLasCategories()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -96,7 +96,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "360"
             endingLineNumber = "360"
-            landmarkName = "todasLasCategorias()"
+            landmarkName = "todasLasCategories()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

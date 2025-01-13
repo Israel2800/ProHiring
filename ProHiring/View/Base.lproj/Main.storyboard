@@ -490,6 +490,70 @@
             </objects>
             <point key="canvasLocation" x="7543" y="1670"/>
         </scene>
+        <!--Tree Services Detail View Controller-->
+        <scene sceneID="cff-CH-PCA">
+            <objects>
+                <viewController storyboardIdentifier="TreeServicesDetailViewController" id="uvR-bu-fDw" customClass="TreeServicesDetailViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mQA-e2-uGp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProHiring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoL-as-KT7">
+                                <rect key="frame" x="20" y="74" width="179" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ETa-8Q-WYW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <color key="textColor" red="0.094117647060000004" green="0.45882352939999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq1-yJ-zfi">
+                                <rect key="frame" x="157.66666666666666" y="149" width="77.666666666666657" height="25.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oe9-jl-mnq">
+                                <rect key="frame" x="46.666666666666657" y="190.33333333333337" width="300" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="L9E-PW-o2E"/>
+                                    <constraint firstAttribute="width" constant="300" id="m2S-KV-rgM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u93-ts-gfe">
+                                <rect key="frame" x="46.666666666666657" y="425.33333333333331" width="300" height="19.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KRL-4e-aVb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hlp-7o-8Ec"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UoL-as-KT7" firstAttribute="leading" secondItem="hlp-7o-8Ec" secondAttribute="leading" constant="20" id="1wW-eY-Cws"/>
+                            <constraint firstItem="UoL-as-KT7" firstAttribute="top" secondItem="hlp-7o-8Ec" secondAttribute="top" constant="15" id="40G-Gs-qlF"/>
+                            <constraint firstItem="Oe9-jl-mnq" firstAttribute="top" secondItem="hq1-yJ-zfi" secondAttribute="bottom" constant="16" id="GcX-vn-WbC"/>
+                            <constraint firstItem="Oe9-jl-mnq" firstAttribute="centerX" secondItem="mQA-e2-uGp" secondAttribute="centerX" id="Kjx-o7-ux0"/>
+                            <constraint firstItem="u93-ts-gfe" firstAttribute="centerX" secondItem="mQA-e2-uGp" secondAttribute="centerX" id="Vzi-9y-pXK"/>
+                            <constraint firstItem="hq1-yJ-zfi" firstAttribute="top" secondItem="UoL-as-KT7" secondAttribute="bottom" constant="25" id="WMo-fu-oix"/>
+                            <constraint firstItem="hq1-yJ-zfi" firstAttribute="centerX" secondItem="mQA-e2-uGp" secondAttribute="centerX" id="Wse-Pm-Lpy"/>
+                            <constraint firstItem="u93-ts-gfe" firstAttribute="top" secondItem="Oe9-jl-mnq" secondAttribute="bottom" constant="25" id="tlf-SZ-hhS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cnb-CH-ZSn"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="u93-ts-gfe" id="YTw-BY-W4g"/>
+                        <outlet property="titleLabel" destination="hq1-yJ-zfi" id="hk4-5P-DMd"/>
+                        <outlet property="treeImageView" destination="Oe9-jl-mnq" id="8hO-Oo-YJx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iA8-th-nYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8475.5725190839694" y="1669.7183098591549"/>
+        </scene>
         <!--Services View Controller-->
         <scene sceneID="hV0-CB-j15">
             <objects>
