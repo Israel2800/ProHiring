@@ -48,6 +48,7 @@
 		C6F3AE3E2D29750D0091E381 /* Inspiration+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE3C2D29750D0091E381 /* Inspiration+CoreDataClass.swift */; };
 		C6F3AE3F2D29750D0091E381 /* Inspiration+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE3D2D29750D0091E381 /* Inspiration+CoreDataProperties.swift */; };
 		C6F3AE412D349ADB0091E381 /* TreeServicesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE402D349ADB0091E381 /* TreeServicesDetailViewController.swift */; };
+		C6F3AE432D34A2720091E381 /* HandymanServicesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE422D34A2720091E381 /* HandymanServicesDetailViewController.swift */; };
 		C6F77C712D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */; };
 		C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */; };
 		C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */; };
@@ -93,6 +94,7 @@
 		C6F3AE3C2D29750D0091E381 /* Inspiration+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inspiration+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6F3AE3D2D29750D0091E381 /* Inspiration+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inspiration+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C6F3AE402D349ADB0091E381 /* TreeServicesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeServicesDetailViewController.swift; sourceTree = "<group>"; };
+		C6F3AE422D34A2720091E381 /* HandymanServicesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandymanServicesDetailViewController.swift; sourceTree = "<group>"; };
 		C6F77C6D2D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				C646D2732D2780A600E366E9 /* MyProfileViewController.swift */,
 				C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */,
 				C6F3AE402D349ADB0091E381 /* TreeServicesDetailViewController.swift */,
+				C6F3AE422D34A2720091E381 /* HandymanServicesDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				C646D26D2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift in Sources */,
 				C646D26E2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift in Sources */,
 				C646D2702D266A4E00E366E9 /* LoginCompanyViewController.swift in Sources */,
+				C6F3AE432D34A2720091E381 /* HandymanServicesDetailViewController.swift in Sources */,
 				C6F77C712D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift in Sources */,
 				C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */,
 				C6F77C762D1E654B000819EE /* HandymanServicesViewController.swift in Sources */,
