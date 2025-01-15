@@ -112,20 +112,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.deselectRow(at: indexPath, animated: true)
             
-        /*
-            // Obtener el servicio seleccionado
-            let selectedService = popularProjects[indexPath.row]
-            
-            // Cargar el storyboard y crear el controlador
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let detailVC = storyboard.instantiateViewController(withIdentifier: "PopularProjectsDetailsViewController") as? PopularProjectsDetailsViewController else { return }
-            
-            // Pasar el ID al controlador de detalle
-            detailVC.serviceId = selectedService.id
-            
-            // Navegar al controlador de detalle
-            navigationController?.pushViewController(detailVC, animated: true)
-         */
     }
 }
 
