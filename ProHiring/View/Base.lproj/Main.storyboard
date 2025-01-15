@@ -603,7 +603,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hob-et-Qod" kind="relationship" relationship="viewControllers" id="2Rn-G6-5hh"/>
+                        <segue destination="UIH-8r-ipp" kind="relationship" relationship="viewControllers" id="2Rn-G6-5hh"/>
                         <segue destination="dZS-Uf-c3w" kind="relationship" relationship="viewControllers" id="7v0-n5-4pC"/>
                         <segue destination="ftv-og-Qjw" kind="relationship" relationship="viewControllers" id="LVF-u4-0KC"/>
                         <segue destination="HPf-aR-kpp" kind="relationship" relationship="viewControllers" id="l95-JS-rgx"/>
@@ -1634,7 +1634,7 @@
             </objects>
             <point key="canvasLocation" x="4697" y="2654"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="JKF-9A-Hdz">
             <objects>
                 <viewController id="hob-et-Qod" customClass="HomeViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
@@ -1643,7 +1643,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="klC-oh-XFS">
-                                <rect key="frame" x="0.0" y="85" width="393" height="767"/>
+                                <rect key="frame" x="0.0" y="129" width="393" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeDataTableViewCell" rowHeight="240" id="3Dp-9M-vtr" customClass="HomeDataTableViewCell" customModule="ProHiring" customModuleProvider="target">
@@ -1726,7 +1726,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="32r-Fh-u1C">
-                                <rect key="frame" x="333" y="20.333333333333336" width="40" height="39.666666666666671"/>
+                                <rect key="frame" x="333" y="64.333333333333314" width="40" height="39.666666666666686"/>
                                 <color key="tintColor" red="0.0" green="0.59215686270000001" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="TdO-w3-Snp"/>
@@ -1734,7 +1734,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProHiring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaV-Wq-Jll">
-                                <rect key="frame" x="20" y="20" width="179" height="50"/>
+                                <rect key="frame" x="20" y="64" width="179" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Bzl-bD-w3Z"/>
                                 </constraints>
@@ -1757,7 +1757,7 @@
                             <constraint firstItem="npx-qd-Wtf" firstAttribute="trailing" secondItem="32r-Fh-u1C" secondAttribute="trailing" constant="20" id="z93-cn-6zR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="QCv-AJ-6lo"/>
+                    <navigationItem key="navigationItem" id="4ib-lt-gPC"/>
                     <connections>
                         <outlet property="HomeViewTable" destination="klC-oh-XFS" id="Ege-H0-OKi"/>
                         <outlet property="logoutBtn" destination="32r-Fh-u1C" id="Sht-aq-9XF"/>
@@ -1765,7 +1765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwa-tx-ZyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6319.8473282442746" y="277.46478873239437"/>
+            <point key="canvasLocation" x="7246.5648854961828" y="277.46478873239437"/>
         </scene>
         <!--Home-->
         <scene sceneID="BGa-NH-qUj">
@@ -2038,7 +2038,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5E-G7-1ps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8283" y="265"/>
+            <point key="canvasLocation" x="9208.3969465648843" y="264.78873239436621"/>
         </scene>
         <!--Tree Services Detail View Controller-->
         <scene sceneID="aXd-7O-da7">
@@ -2222,10 +2222,10 @@
             </objects>
             <point key="canvasLocation" x="9401" y="2396"/>
         </scene>
-        <!--View Controller-->
+        <!--PopularProjectsDetailsViewController-->
         <scene sceneID="yEP-Wd-mp4">
             <objects>
-                <viewController id="Oq1-rg-Xjg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopularProjectsDetailsViewController" title="PopularProjectsDetailsViewController" id="Oq1-rg-Xjg" customClass="PopularProjectsDetailsViewController" customModule="ProHiring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lCR-Xl-bkc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2311,7 +2311,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xz7-fG-weE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7285" y="265"/>
+            <point key="canvasLocation" x="8211.4503816793895" y="264.78873239436621"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="TRv-yX-Iq5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UIH-8r-ipp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="QCv-AJ-6lo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vhP-pZ-EAn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hob-et-Qod" kind="relationship" relationship="rootViewController" id="vgq-Ma-Zf5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTm-no-Qh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6319.8473282442746" y="277.46478873239437"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

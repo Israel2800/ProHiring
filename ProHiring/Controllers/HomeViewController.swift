@@ -5,13 +5,24 @@
 //  Created by Paola Delgadillo on 12/17/24.
 //
 
+
 import UIKit
 import SDWebImage
 import GoogleSignIn
 import FirebaseAuth
 
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, HomeDataTableViewCellDelegate {
+    
+    func didSelectPopularProject(withId id: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let detailVC = storyboard.instantiateViewController(withIdentifier: "PopularProjectsDetailsViewController") as? PopularProjectsDetailsViewController {
+                detailVC.serviceId = id
+                navigationController?.pushViewController(detailVC, animated: true)
+            }
+    }
+    
+
     
     @IBOutlet weak var logoutBtn: UIImageView!  // IBOutlet for the logout image
     @IBOutlet weak var HomeViewTable: UITableView!
@@ -84,8 +95,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return UITableViewCell()
         }
         
+        cell.delegate = self // Set the delegate
+
         // Pass data to the UICollectionView inside the cell
         cell.configurePopularProjects(popularProjects: popularProjects)
+        
+        //cell.delegate = self // Set the delegate
+
         
         return cell
     }
@@ -93,11 +109,29 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - UITableViewDelegate Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
+            
+        /*
+            // Obtener el servicio seleccionado
+            let selectedService = popularProjects[indexPath.row]
+            
+            // Cargar el storyboard y crear el controlador
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let detailVC = storyboard.instantiateViewController(withIdentifier: "PopularProjectsDetailsViewController") as? PopularProjectsDetailsViewController else { return }
+            
+            // Pasar el ID al controlador de detalle
+            detailVC.serviceId = selectedService.id
+            
+            // Navegar al controlador de detalle
+            navigationController?.pushViewController(detailVC, animated: true)
+         */
     }
 }
 
 class HomeDataTableViewCell: UITableViewCell, UICollectionViewDelegate {
+    
+    weak var delegate: HomeDataTableViewCellDelegate?
     
     @IBOutlet weak var collectionView: UICollectionView! // The UICollectionView inside the cell
     
@@ -117,6 +151,18 @@ class HomeDataTableViewCell: UITableViewCell, UICollectionViewDelegate {
     func configurePopularProjects(popularProjects: [PopularProjects]) {
         self.popularProjects = popularProjects
         collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedProject = popularProjects[indexPath.item]
+        // Validar que el ID no sea nulo o vacío
+         if let id = selectedProject.id, !id.isEmpty {
+             delegate?.didSelectPopularProject(withId: id)
+         } else {
+             print("Error: El ID del proyecto es nulo o vacío.")
+         }
+        print("Selected item at index: \(indexPath.item), ID: \(selectedProject.id ?? "No ID")")
+
     }
 }
 
@@ -157,3 +203,10 @@ extension HomeDataTableViewCell: UICollectionViewDataSource {
         return cell
     }
 }
+
+
+protocol HomeDataTableViewCellDelegate: AnyObject {
+    func didSelectPopularProject(withId id: String)
+}
+
+
