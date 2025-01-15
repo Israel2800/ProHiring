@@ -43,6 +43,7 @@
 		C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */; };
 		C66692422D190A26007FD9FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66692412D190A26007FD9FD /* GoogleService-Info.plist */; };
 		C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692452D1925FC007FD9FD /* FirebaseAuth.swift */; };
+		C6F20A352D379CC60014B6EB /* .gitignore.md in Resources */ = {isa = PBXBuildFile; fileRef = C6F20A342D379CC60014B6EB /* .gitignore.md */; };
 		C6F3AE372D2940FC0091E381 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */; };
 		C6F3AE3A2D2972140091E381 /* Categories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE382D2972140091E381 /* Categories+CoreDataClass.swift */; };
 		C6F3AE3B2D2972140091E381 /* Categories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE392D2972140091E381 /* Categories+CoreDataProperties.swift */; };
@@ -90,6 +91,7 @@
 		C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		C66692412D190A26007FD9FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C66692452D1925FC007FD9FD /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		C6F20A342D379CC60014B6EB /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
 		C6F3AE382D2972140091E381 /* Categories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6F3AE392D2972140091E381 /* Categories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				C62F59D32D0FDAA10075849F /* Info.plist */,
 				C66692412D190A26007FD9FD /* GoogleService-Info.plist */,
 				C66692192D161BA1007FD9FD /* Constants.swift */,
+				C6F20A342D379CC60014B6EB /* .gitignore.md */,
 			);
 			path = ProHiring;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			files = (
 				C62F59CF2D0FDAA10075849F /* Assets.xcassets in Resources */,
 				C62F59D22D0FDAA10075849F /* Base in Resources */,
+				C6F20A352D379CC60014B6EB /* .gitignore.md in Resources */,
 				C66692422D190A26007FD9FD /* GoogleService-Info.plist in Resources */,
 				C62F59CD2D0FDAA00075849F /* Base in Resources */,
 			);
