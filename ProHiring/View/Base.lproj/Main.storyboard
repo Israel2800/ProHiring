@@ -488,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6V-ag-zmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8469.4656488549608" y="1669.7183098591549"/>
+            <point key="canvasLocation" x="8468" y="1551"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cgi-IF-KT3">
@@ -799,7 +799,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="8469" y="2363"/>
+            <point key="canvasLocation" x="8468" y="2229"/>
         </scene>
         <!--Login Company View Controller-->
         <scene sceneID="on2-6p-rkW">
@@ -1546,7 +1546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQG-ht-Izb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9402" y="1670"/>
+            <point key="canvasLocation" x="9401" y="1551"/>
         </scene>
         <!--Handyman Services Detail View Controller-->
         <scene sceneID="w08-hZ-cvz">
@@ -1637,7 +1637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lK5-Ke-jbi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9401" y="2363"/>
+            <point key="canvasLocation" x="9401" y="2229"/>
         </scene>
         <!--PopularProjectsDetailsViewController-->
         <scene sceneID="yEP-Wd-mp4">
