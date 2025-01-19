@@ -71,9 +71,9 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
         
         // Detectar la conexión a internet
         if isInternetAvailable() {
-            print("Sí hay conexión a internet")
+            print("There is an internet connection.")
         } else {
-            showMessage("No hay conexión a Internet.")
+            showMessage("There is no internet connection.")
         }
     }
 
@@ -101,7 +101,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
             case .denied, .restricted:
                 // El usuario denegó el acceso, muestra un mensaje o toma otra acción
                 DispatchQueue.main.async {
-                    self.showMessage("No tienes acceso a la galería de fotos. Ve a Configuración para habilitarlo.")
+                    self.showMessage("You do not have access to the photo gallery. Go to Settings to enable it.")
                 }
             case .notDetermined:
                 // El usuario aún no ha respondido a la solicitud, solicita permiso
@@ -136,7 +136,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
         ]
         db.collection("companies").document(userID).setData(companyData) { error in
             if let error = error {
-                self.showMessage("Error al guardar datos en Firestore: \(error.localizedDescription)")
+                self.showMessage("Error saving data to Firestore: \(error.localizedDescription)")
                 completion(false)
             } else {
                 completion(true)
@@ -153,14 +153,14 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
               let socialMedia = socialMediaField.text, !socialMedia.isEmpty,
               let contact = contactField.text, !contact.isEmpty,
               let logoImage = logoImageView.image else {
-            showMessage("Por favor, completa todos los campos y selecciona un logo.")
+            showMessage("Please complete all the fields and select a logo.")
             return
         }
 
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
             guard let self = self else { return }
             if let error = error {
-                self.showMessage("Error al crear la cuenta: \(error.localizedDescription)")
+                self.showMessage("Error creating the account: \(error.localizedDescription)")
                 return
             }
             guard let userID = authResult?.user.uid else { return }
@@ -171,7 +171,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
                         // Iniciar sesión con el usuario recién creado
                         Auth.auth().signIn(withEmail: email, password: password) { _, error in
                             if let error = error {
-                                self.showMessage("Error al autenticar después de la creación de la cuenta: \(error.localizedDescription)")
+                                self.showMessage("Error authenticating after account creation: \(error.localizedDescription)")
                                 return
                             }
                             self.navigateToProfile()
@@ -186,20 +186,20 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
 
     private func uploadLogoToStorage(userID: String, logoImage: UIImage, completion: @escaping (String?) -> Void) {
         guard let imageData = logoImage.jpegData(compressionQuality: 0.8) else {
-            showMessage("Error al procesar la imagen seleccionada.")
+            showMessage("Error processing the selected image.")
             completion(nil)
             return
         }
         let storageRef = Storage.storage().reference().child("logos/\(userID).jpg")
         storageRef.putData(imageData, metadata: nil) { _, error in
             if let error = error {
-                self.showMessage("Error al subir el logo: \(error.localizedDescription)")
+                self.showMessage("Error uploading the logo: \(error.localizedDescription)")
                 completion(nil)
                 return
             }
             storageRef.downloadURL { url, error in
                 if let error = error {
-                    self.showMessage("Error al obtener URL del logo: \(error.localizedDescription)")
+                    self.showMessage("Error obtaining logo URL: \(error.localizedDescription)")
                     completion(nil)
                     return
                 }
@@ -221,7 +221,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
 
     // Función para mostrar mensajes de alerta
     func showMessage(_ message: String) {
-        let alert = UIAlertController(title: "Información", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Information", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -229,14 +229,14 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
     // IBAction para iniciar sesión con Google
     @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
         if !isInternetAvailable() {
-            showMessage("No hay conexión a Internet.")
+            showMessage("There is no internet connection.")
             return
         }
         showActivityIndicator()
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
             self.hideActivityIndicator()
             if let error = error {
-                self.showMessage("Error al iniciar sesión con Google: \(error.localizedDescription)")
+                self.showMessage("Error logging in with Google: \(error.localizedDescription)")
                 return
             }
             
@@ -247,7 +247,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
             
             Auth.auth().signIn(with: credential) { authResult, error in
                 if let error = error {
-                    self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
+                    self.showMessage("Error authenticating with Firebase: \(error.localizedDescription)")
                     return
                 }
                 self.navigateToProfile()

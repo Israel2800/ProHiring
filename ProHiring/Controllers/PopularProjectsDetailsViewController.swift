@@ -31,11 +31,11 @@ class PopularProjectsDetailsViewController: UIViewController {
         
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             if let error = error {
-                print("Error al obtener detalles: \(error)")
+                print("Error obtaining details: \(error)")
                 return
             }
             guard let data = data else {
-                print("No se recibieron datos")
+                print("The data was not received.")
                 return
             }
             do {
@@ -46,7 +46,7 @@ class PopularProjectsDetailsViewController: UIViewController {
                     self?.updateUI(with: detail)
                 }
             } catch {
-                print("Error al decodificar datos: \(error)")
+                print("Error decoding data: \(error)")
             }
         }
         task.resume()

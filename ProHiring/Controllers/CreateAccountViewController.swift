@@ -48,7 +48,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
         if let clientID = FirebaseApp.app()?.options.clientID {
             googleSignInConfig = GIDConfiguration(clientID: clientID)
         } else {
-            showMessage("No se encontró el clientID de Google.")
+            showMessage("The Google clientID was not found.")
         }
         
         // Agregar gesture recognizer para ocultar el teclado al tocar fuera
@@ -83,9 +83,9 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
         
         // Detectar la conexión a internet
         if isInternetAvailable() {
-            print("Sí hay conexión a internet")
+            print("There is internet connection.")
         } else {
-            showMessage("No hay conexión a Internet.")
+            showMessage("There is no internet connection.")
         }
     }
     
@@ -114,7 +114,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
 
         guard let email = emailField.text, isValidEmail(email),
               let password = passwordField.text, isValidPassword(password) else {
-            showMessage("Por favor, ingresa un correo y contraseña válidos.")
+            showMessage("Please enter a valid email and password.")
             return
         }
 
@@ -122,7 +122,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             self.hideActivityIndicator()
             if let error = error {
-                self.showMessage("Error al crear la cuenta: \(error.localizedDescription)")
+                self.showMessage("Error creating the account: \(error.localizedDescription)")
                 return
             }
             
@@ -135,9 +135,9 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
                 "createdAt": Timestamp(date: Date())
             ]) { error in
                 if let error = error {
-                    self.showMessage("Error al guardar datos del usuario: \(error.localizedDescription)")
+                    self.showMessage("Error saving user data: \(error.localizedDescription)")
                 } else {
-                    self.showMessage("Cuenta creada exitosamente.")
+                    self.showMessage("Account created successfully.")
                 }
             }
 
@@ -163,14 +163,14 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
     // IBAction para iniciar sesión con Google
     @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
         if !isInternetAvailable() {
-            showMessage("No hay conexión a Internet.")
+            showMessage("There is no internet connection.")
             return
         }
         showActivityIndicator()
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
             self.hideActivityIndicator()
             if let error = error {
-                self.showMessage("Error al iniciar sesión con Google: \(error.localizedDescription)")
+                self.showMessage("Error logging in with Google: \(error.localizedDescription)")
                 return
             }
             
@@ -181,7 +181,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
             
             Auth.auth().signIn(with: credential) { authResult, error in
                 if let error = error {
-                    self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
+                    self.showMessage("Error authenticating with Firebase: \(error.localizedDescription)")
                     return
                 }
                 self.presentLoginViewController()
@@ -192,7 +192,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
     // IBAction para iniciar sesión con Apple ID
     @IBAction func signInWithAppleTapped(_ sender: UIButton) {
         if !isInternetAvailable() {
-            showMessage("No hay conexión a Internet.")
+            showMessage("There is no internet connection.")
             return
         }
         
@@ -223,7 +223,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
 
     // Mostrar mensajes
     private func showMessage(_ message: String) {
-        let alert = UIAlertController(title: "Información", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Information", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }

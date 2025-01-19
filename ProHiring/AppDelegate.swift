@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DataManager.shared.llenaBD(from: urlString, entityName: "TreeServices") { object, dict in
             // Usar guard let para evitar el force cast y mejorar la seguridad
             guard let treeService = object as? TreeServices else {
-                print("Error: No se pudo convertir el objeto a TreeServices.")
+                print("Error: Could not convert the object to TreeServices.")
                 return
             }
             // Inicializar el objeto TreeServices con los datos recibidos
@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DataManager.shared.llenaBD(from: urlString, entityName: "HandymanServices") { object, dict in
             // Usar guard let para evitar el force cast y mejorar la seguridad
             guard let handymanService = object as? HandymanServices else {
-                print("Error: No se pudo convertir el objeto a HandymanServices.")
+                print("Error: Could not convert the object to HandymanServices.")
                 return
             }
             // Inicializar el objeto HandymanServices con los datos recibidos
@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DataManager.shared.llenaBD(from: urlString, entityName: "PopularProjects") { object, dict in
             // Usar guard let para evitar el force cast y mejorar la seguridad
             guard let popularProject = object as? PopularProjects else {
-                print("Error: No se pudo convertir el objeto a HandymanServices.")
+                print("Error: Could not convert the object to PopularProjects.")
                 return
             }
             // Inicializar el objeto HandymanServices con los datos recibidos
@@ -95,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DataManager.shared.llenaBD(from: urlString, entityName: "Categories") { object, dict in
             // Usar guard let para evitar el force cast y mejorar la seguridad
             guard let category = object as? Categories else {
-                print("Error: No se pudo convertir el objeto a Categories.")
+                print("Error: Could not convert the object to Categories.")
                 return
             }
             // Inicializar el objeto Categories con los datos recibidos
@@ -111,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DataManager.shared.llenaBD(from: urlString, entityName: "Inspiration") { object, dict in
             // Usar guard let para evitar el force cast y mejorar la seguridad
             guard let inspiration = object as? Inspiration else {
-                print("Error: No se pudo convertir el objeto a Inspiration.")
+                print("Error: Could not convert the object to Inspiration.")
                 return
             }
             // Inicializar el objeto Inspiration con los datos recibidos

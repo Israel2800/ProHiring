@@ -145,7 +145,7 @@ class HomeDataTableViewCell: UITableViewCell, UICollectionViewDelegate {
          if let id = selectedProject.id, !id.isEmpty {
              delegate?.didSelectPopularProject(withId: id)
          } else {
-             print("Error: El ID del proyecto es nulo o vacío.")
+             print("Error: The project ID is null or empty.")
          }
         print("Selected item at index: \(indexPath.item), ID: \(selectedProject.id ?? "No ID")")
 
@@ -194,5 +194,3 @@ extension HomeDataTableViewCell: UICollectionViewDataSource {
 protocol HomeDataTableViewCellDelegate: AnyObject {
     func didSelectPopularProject(withId id: String)
 }
-
-

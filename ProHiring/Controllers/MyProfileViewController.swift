@@ -23,7 +23,6 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var companyNameLabel: UILabel!
 
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,10 +38,10 @@ class MyProfileViewController: UIViewController {
     
 
     @objc func logout() {
-        let alert = UIAlertController(title: "Cerrar Sesión", message: "¿Está seguro de que desea cerrar sesión?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Log Out", message: "Are you sure you want to log out?", preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Cerrar Sesión", style: .destructive) { _ in
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Log Out", style: .destructive) { _ in
             // Limpiar UserDefaults
                     let defaults = UserDefaults.standard
                     defaults.removeObject(forKey: "loggedInUserUID")
@@ -54,7 +53,7 @@ class MyProfileViewController: UIViewController {
             do {
                 try Auth.auth().signOut()
             } catch {
-                print("Error al cerrar sesión en Firebase: \(error.localizedDescription)")
+                print("Error when logging out of Firebase: \(error.localizedDescription)")
             }
 
             if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
@@ -72,7 +71,7 @@ class MyProfileViewController: UIViewController {
             let db = Firestore.firestore()
             db.collection("companies").document(userID).getDocument { document, error in
                 if let error = error {
-                    print("Error al cargar datos: \(error.localizedDescription)")
+                    print("Error loading data: \(error.localizedDescription)")
                     return
                 }
                 guard let data = document?.data() else { return }
@@ -85,10 +84,6 @@ class MyProfileViewController: UIViewController {
                     self.loadLogoImage(from: logoURL)
                 }
             }
-        
-        
-        
-        
         }
 
         private func loadLogoImage(from url: String) {

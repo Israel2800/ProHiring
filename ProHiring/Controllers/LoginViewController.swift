@@ -50,7 +50,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         if let clientID = FirebaseApp.app()?.options.clientID {
             googleSignInConfig = GIDConfiguration(clientID: clientID)
         } else {
-            showMessage("No se encontró el clientID de Google.")
+            showMessage("Google clientID not found.")
         }
         
         // Agregar gesture recognizer para ocultar el teclado al tocar fuera
@@ -78,9 +78,9 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         
         // Detectar la conexión a internet
         if isInternetAvailable() {
-            print("Sí hay conexión a internet")
+            print("There is an internet connection.")
         } else {
-            showMessage("No hay conexión a Internet.")
+            showMessage("There is no internet connection.")
         }
         
         // Verificar si el usuario ya está autenticado
@@ -133,7 +133,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
            
            guard let email = accountField.text, isValidEmail(email),
                  let password = passwordField.text, isValidPassword(password) else {
-               showAlert(message: "Por favor, ingresa un correo y contraseña válidos.")
+               showAlert(message: "Please enter a valid email and password.")
                return
            }
            
@@ -141,7 +141,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                self.hideActivityIndicator()
                if let error = error {
-                   self.showAlert(message: "Error al iniciar sesión: \(error.localizedDescription)")
+                   self.showAlert(message: "Error logging in: \(error.localizedDescription)")
                    return
                }
                if let user = authResult?.user {
@@ -153,14 +153,14 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     // IBAction para iniciar sesión con Google
     @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
         if !isInternetAvailable() {
-            showMessage("No hay conexión a Internet.")
+            showMessage("No Internet connection.")
             return
         }
         showActivityIndicator()
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
             self.hideActivityIndicator()
             if let error = error {
-                self.showMessage("Error al iniciar sesión con Google: \(error.localizedDescription)")
+                self.showMessage("Error signing in with Google: \(error.localizedDescription)")
                 return
             }
             
@@ -171,7 +171,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
             
             Auth.auth().signIn(with: credential) { authResult, error in
                 if let error = error {
-                    self.showMessage("Error al autenticar con Firebase: \(error.localizedDescription)")
+                    self.showMessage("Error authenticating with Firebase: \(error.localizedDescription)")
                     return
                 }
                 if let user = authResult?.user {
@@ -185,7 +185,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     // IBAction para iniciar sesión con Apple ID
     @IBAction func signInWithAppleTapped(_ sender: UIButton) {
         if !isInternetAvailable() {
-            showMessage("No hay conexión a Internet.")
+            showMessage("No Internet connection.")
             return
         }
         
@@ -216,7 +216,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
                         if let companyDocument = companyDocument, companyDocument.exists {
                             self.performSegue(withIdentifier: "loginCompanyOK", sender: nil)
                         } else {
-                            self.showAlert(message: "No se pudo identificar al usuario.")
+                            self.showAlert(message: "The user could not be identified.")
                         }
                     }
                 }
@@ -228,21 +228,21 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
         hideKeyboard()
 
         guard let email = accountField.text, isValidEmail(email) else {
-            showAlert(message: "Por favor, ingresa un correo válido para recuperar la contraseña.")
+            showAlert(message: "Please enter a valid email to recover your password.")
             return
         }
         
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
-                self.showAlert(message: "Error al enviar el correo de recuperación: \(error.localizedDescription)")
+                self.showAlert(message: "Error sending the recovery email: \(error.localizedDescription)")
                 return
             }
-            self.showAlert(message: "Correo de recuperación enviado. Revisa tu bandeja de entrada.")
+            self.showAlert(message: "Recovery email sent. Check your inbox.")
         }
     }
 
     func showAlert(message: String) {
-        let alert = UIAlertController(title: "Información", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Information", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -275,7 +275,7 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     
     // Mostrar mensajes
     private func showMessage(_ message: String) {
-        let alert = UIAlertController(title: "Información", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Information", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }

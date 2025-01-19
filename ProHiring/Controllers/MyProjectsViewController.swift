@@ -65,7 +65,7 @@ class MyProjectsViewController: UIViewController {
         
         db.collection("users").document(currentUserID).collection("services").addSnapshotListener { [weak self] (snapshot, error) in
             if let error = error {
-                print("Error al cargar los servicios: \(error.localizedDescription)")
+                print("Error loading services: \(error.localizedDescription)")
             } else {
                 self?.serviceList.removeAll()
                 for document in snapshot!.documents {
@@ -109,7 +109,7 @@ class MyProjectsViewController: UIViewController {
         
         db.collection("users").document(currentUserID).collection("services").addDocument(data: serviceData) { [weak self] error in
             if let error = error {
-                print("Error al agregar servicio: \(error.localizedDescription)")
+                print("Error adding service: \(error.localizedDescription)")
             } else {
                 self?.clearFields()
             }
@@ -121,7 +121,7 @@ class MyProjectsViewController: UIViewController {
         
         db.collection("users").document(currentUserID).collection("services").document(service.id).updateData(data) { [weak self] error in
             if let error = error {
-                print("Error al actualizar servicio: \(error.localizedDescription)")
+                print("Error updating service: \(error.localizedDescription)")
             } else {
                 self?.clearFields()
                 self?.selectedServiceToEdit = nil

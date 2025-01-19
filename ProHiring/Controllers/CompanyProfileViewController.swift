@@ -23,7 +23,7 @@ class CompanyProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        setupGestureRecognizers() // Configuramos los gestos
+        setupGestureRecognizers() // Configurar los gestos
     }
 
     private func configureUI() {
@@ -65,7 +65,7 @@ class CompanyProfileViewController: UIViewController {
             UIApplication.shared.open(phoneURL)
         } else {
             // Mostrar alerta si no se puede realizar la llamada
-            showAlert(message: "No se puede realizar la llamada")
+            showAlert(message: "It is not possible to make the call.")
         }
     }
     
@@ -78,7 +78,7 @@ class CompanyProfileViewController: UIViewController {
             UIApplication.shared.open(emailURL)
         } else {
             // Mostrar alerta si no se puede enviar el correo
-            showAlert(message: "No se puede enviar el correo")
+            showAlert(message: "It is not possible to send the email.")
         }
     }
     
