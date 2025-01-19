@@ -1920,8 +1920,8 @@
                                                     <action selector="selectLogoTapped:" destination="6dq-Mg-rUO" eventType="touchUpInside" id="Wpm-vf-7F2"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperclip" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xoh-ml-5GA">
-                                                <rect key="frame" x="20" y="480" width="36" height="36.666666666666742"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="company" translatesAutoresizingMaskIntoConstraints="NO" id="Xoh-ml-5GA">
+                                                <rect key="frame" x="20" y="480" width="36" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="co5-lx-RcQ"/>
                                                     <constraint firstAttribute="width" constant="36" id="yzg-un-Kyu"/>
@@ -2065,11 +2065,11 @@
         <image name="applepencil.and.scribble" catalog="system" width="128" height="91"/>
         <image name="building.columns.fill" catalog="system" width="128" height="112"/>
         <image name="comingSoon" width="640" height="640"/>
+        <image name="company" width="850" height="850"/>
         <image name="envelope.fill" catalog="system" width="128" height="85"/>
         <image name="hammer.fill" catalog="system" width="128" height="117"/>
         <image name="handymanServicesBG" width="875" height="395"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="paperclip" catalog="system" width="121" height="128"/>
         <image name="person.crop.rectangle.stack.fill" catalog="system" width="126" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
