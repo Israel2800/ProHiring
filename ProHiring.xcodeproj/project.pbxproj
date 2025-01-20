@@ -44,7 +44,7 @@
 		C6CB2CC42D3DF0B000BD058B /* HandymanServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CC32D3DF0B000BD058B /* HandymanServicesViewController.swift */; };
 		C6CB2CC82D3DF10800BD058B /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CC72D3DF10800BD058B /* ServicesViewController.swift */; };
 		C6CB2CCC2D3DF13A00BD058B /* TreeServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CCB2D3DF13A00BD058B /* TreeServicesViewController.swift */; };
-		C6CB2CD02D3DF17000BD058B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6CB2CCF2D3DF17000BD058B /* GoogleService-Info.plist */; };
+		C6CB2CD82D3DF42300BD058B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6CB2CD72D3DF42300BD058B /* GoogleService-Info.plist */; };
 		C6F20A372D379FE20014B6EB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6F20A362D379FE20014B6EB /* README.md */; };
 		C6F3AE372D2940FC0091E381 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */; };
 		C6F3AE3A2D2972140091E381 /* Categories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE382D2972140091E381 /* Categories+CoreDataClass.swift */; };
@@ -91,7 +91,7 @@
 		C6CB2CC32D3DF0B000BD058B /* HandymanServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandymanServicesViewController.swift; sourceTree = "<group>"; };
 		C6CB2CC72D3DF10800BD058B /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		C6CB2CCB2D3DF13A00BD058B /* TreeServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeServicesViewController.swift; sourceTree = "<group>"; };
-		C6CB2CCF2D3DF17000BD058B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Test/Test/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6CB2CD72D3DF42300BD058B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6F20A362D379FE20014B6EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
 		C6F3AE382D2972140091E381 /* Categories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 				C62F59C52D0FDAA00075849F /* AppDelegate.swift */,
 				C62F59C72D0FDAA00075849F /* SceneDelegate.swift */,
 				C62F59CE2D0FDAA10075849F /* Assets.xcassets */,
+				C6CB2CD72D3DF42300BD058B /* GoogleService-Info.plist */,
 				C62F59D32D0FDAA10075849F /* Info.plist */,
-				C6CB2CCF2D3DF17000BD058B /* GoogleService-Info.plist */,
 				C66692192D161BA1007FD9FD /* Constants.swift */,
 			);
 			path = ProHiring;
@@ -321,7 +321,7 @@
 			files = (
 				C62F59CF2D0FDAA10075849F /* Assets.xcassets in Resources */,
 				C62F59D22D0FDAA10075849F /* Base in Resources */,
-				C6CB2CD02D3DF17000BD058B /* GoogleService-Info.plist in Resources */,
+				C6CB2CD82D3DF42300BD058B /* GoogleService-Info.plist in Resources */,
 				C6F20A372D379FE20014B6EB /* README.md in Resources */,
 				C62F59CD2D0FDAA00075849F /* Base in Resources */,
 			);
