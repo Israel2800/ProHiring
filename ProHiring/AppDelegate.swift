@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let _ = InternetMonitor.shared
-        // Asegúrate de que los parámetros sean correctos al invocar llenaBD
         
         // Cargar servicios de TreeServices y HandymanServices
         cargarTreeServices()

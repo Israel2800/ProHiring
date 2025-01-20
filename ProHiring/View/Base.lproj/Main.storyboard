@@ -282,17 +282,14 @@
                                                         <constraint firstAttribute="height" constant="165" id="Scn-fO-oEM"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQG-zY-1XA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQG-zY-1XA">
                                                     <rect key="frame" x="204" y="21" width="159" height="14.333333333333336"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Services" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6e-PA-1HS">
-                                                    <rect key="frame" x="204" y="45.333333333333343" width="159" height="113"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="113" id="M6A-cb-RJa"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="204" y="55.333333333333336" width="159" height="14.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -300,10 +297,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="oQG-zY-1XA" firstAttribute="top" secondItem="oho-4E-T8M" secondAttribute="topMargin" constant="10" id="06o-8A-j3s"/>
-                                                <constraint firstItem="N6e-PA-1HS" firstAttribute="top" secondItem="oQG-zY-1XA" secondAttribute="bottom" constant="10" id="1Ah-9L-Hc8"/>
                                                 <constraint firstItem="A5I-Vf-MB0" firstAttribute="leading" secondItem="oho-4E-T8M" secondAttribute="leading" constant="10" id="8Gp-DX-fe3"/>
                                                 <constraint firstItem="oQG-zY-1XA" firstAttribute="leading" secondItem="A5I-Vf-MB0" secondAttribute="trailing" constant="10" id="GYz-n4-nZs"/>
                                                 <constraint firstItem="A5I-Vf-MB0" firstAttribute="top" secondItem="oho-4E-T8M" secondAttribute="top" constant="10" id="K6L-kj-FXX"/>
+                                                <constraint firstItem="N6e-PA-1HS" firstAttribute="top" secondItem="oQG-zY-1XA" secondAttribute="bottom" constant="20" id="LoL-fj-61T"/>
                                                 <constraint firstAttribute="bottom" secondItem="A5I-Vf-MB0" secondAttribute="bottom" constant="10" id="WkQ-mr-QD9"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="oQG-zY-1XA" secondAttribute="trailing" constant="10" id="p93-cZ-mWQ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="N6e-PA-1HS" secondAttribute="trailing" constant="10" id="u3r-gA-Go1"/>
