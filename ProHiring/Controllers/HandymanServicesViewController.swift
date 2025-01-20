@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HandymanServicesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var HandymanServicesTable: UITableView!
     
+    // Llamar a HandymanServices
     var servicios: [HandymanServices] = []
     
     override func viewDidLoad() {
@@ -51,18 +53,14 @@ class HandymanServicesViewController: UIViewController, UITableViewDelegate, UIT
         cell.titleLabel.text = servicio.title
         cell.descriptionLabel.text = servicio.descrip
         
+        // Usar SDWebImage para cargar la imagen desde la URL
         if let thumbnailURL = servicio.thumbnail, let url = URL(string: thumbnailURL) {
-            // Cargar la imagen desde la URL
-            DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        cell.thumbnailImageView.image = image
-                    }
-                }
-            }
+            cell.thumbnailImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
         } else {
             cell.thumbnailImageView.image = UIImage(named: "placeholder") // Imagen por defecto
         }
+        
+        
         
         return cell
     }
@@ -70,8 +68,21 @@ class HandymanServicesViewController: UIViewController, UITableViewDelegate, UIT
     // MARK: - Métodos de UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         tableView.deselectRow(at: indexPath, animated: true)
-        // Manejar selección si es necesario
+            
+            // Obtén el servicio seleccionado
+            let selectedService = servicios[indexPath.row]
+            
+            // Carga el storyboard y crea el controlador
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let detailVC = storyboard.instantiateViewController(withIdentifier: "HandymanServicesDetailViewController") as? HandymanServicesDetailViewController else { return }
+            
+            // Pasa el ID al controlador de detalle
+            detailVC.serviceId = selectedService.id
+            
+            // Navega al controlador de detalle
+            navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 

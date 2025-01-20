@@ -26,7 +26,6 @@ class ServicesViewController: UIViewController {
         handymanImageView.isUserInteractionEnabled = true
     }
 
-    // Navigation Methods
     @objc func navigateToLandscaping() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let treeServicesVC = storyboard.instantiateViewController(withIdentifier: "TreeServicesViewController") as? TreeServicesViewController {

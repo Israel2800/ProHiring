@@ -40,8 +40,11 @@
 		C666923A2D18F41F007FD9FD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C66692392D18F41F007FD9FD /* GoogleSignIn */; };
 		C666923C2D18F41F007FD9FD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C666923B2D18F41F007FD9FD /* GoogleSignInSwift */; };
 		C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */; };
-		C66692422D190A26007FD9FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66692412D190A26007FD9FD /* GoogleService-Info.plist */; };
 		C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692452D1925FC007FD9FD /* FirebaseAuth.swift */; };
+		C6CB2CC42D3DF0B000BD058B /* HandymanServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CC32D3DF0B000BD058B /* HandymanServicesViewController.swift */; };
+		C6CB2CC82D3DF10800BD058B /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CC72D3DF10800BD058B /* ServicesViewController.swift */; };
+		C6CB2CCC2D3DF13A00BD058B /* TreeServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CCB2D3DF13A00BD058B /* TreeServicesViewController.swift */; };
+		C6CB2CD02D3DF17000BD058B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6CB2CCF2D3DF17000BD058B /* GoogleService-Info.plist */; };
 		C6F20A372D379FE20014B6EB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6F20A362D379FE20014B6EB /* README.md */; };
 		C6F3AE372D2940FC0091E381 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */; };
 		C6F3AE3A2D2972140091E381 /* Categories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3AE382D2972140091E381 /* Categories+CoreDataClass.swift */; };
@@ -54,9 +57,6 @@
 		C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */; };
 		C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */; };
 		C6F77C742D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C702D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift */; };
-		C6F77C762D1E654B000819EE /* HandymanServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C752D1E654A000819EE /* HandymanServicesViewController.swift */; };
-		C6F77C7A2D1E6579000819EE /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C792D1E6578000819EE /* ServicesViewController.swift */; };
-		C6F77C7C2D1E6581000819EE /* TreeServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F77C7B2D1E6581000819EE /* TreeServicesViewController.swift */; };
 		C6F77C962D234A6C000819EE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C6F77C952D234A6C000819EE /* SDWebImage */; };
 		C6F77C982D234A6C000819EE /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6F77C972D234A6C000819EE /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
@@ -87,8 +87,11 @@
 		C66692212D168951007FD9FD /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		C66692362D18EF1A007FD9FD /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
-		C66692412D190A26007FD9FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C66692452D1925FC007FD9FD /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		C6CB2CC32D3DF0B000BD058B /* HandymanServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandymanServicesViewController.swift; sourceTree = "<group>"; };
+		C6CB2CC72D3DF10800BD058B /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		C6CB2CCB2D3DF13A00BD058B /* TreeServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeServicesViewController.swift; sourceTree = "<group>"; };
+		C6CB2CCF2D3DF17000BD058B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Test/Test/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6F20A362D379FE20014B6EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		C6F3AE362D2940FC0091E381 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
 		C6F3AE382D2972140091E381 /* Categories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -101,9 +104,6 @@
 		C6F77C6E2D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandymanServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C6F77C6F2D1E2AEB000819EE /* TreeServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6F77C702D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreeServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C6F77C752D1E654A000819EE /* HandymanServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HandymanServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/HandymanServicesViewController.swift"; sourceTree = "<group>"; };
-		C6F77C792D1E6578000819EE /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/ServicesViewController.swift"; sourceTree = "<group>"; };
-		C6F77C7B2D1E6581000819EE /* TreeServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeServicesViewController.swift; path = "../../../../../../Downloads/ProHiring-main/ProHiring/Controllers/TreeServicesViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,7 @@
 				C62F59C72D0FDAA00075849F /* SceneDelegate.swift */,
 				C62F59CE2D0FDAA10075849F /* Assets.xcassets */,
 				C62F59D32D0FDAA10075849F /* Info.plist */,
-				C66692412D190A26007FD9FD /* GoogleService-Info.plist */,
+				C6CB2CCF2D3DF17000BD058B /* GoogleService-Info.plist */,
 				C66692192D161BA1007FD9FD /* Constants.swift */,
 			);
 			path = ProHiring;
@@ -187,10 +187,7 @@
 		C62F59DB2D0FDD830075849F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C6F77C752D1E654A000819EE /* HandymanServicesViewController.swift */,
-				C6F77C792D1E6578000819EE /* ServicesViewController.swift */,
 				C66691F12D10BCCA007FD9FD /* LoginViewController.swift */,
-				C6F77C7B2D1E6581000819EE /* TreeServicesViewController.swift */,
 				C66691F32D129340007FD9FD /* HomeViewController.swift */,
 				C666920F2D13D255007FD9FD /* InternetMonitor.swift */,
 				C666921D2D168409007FD9FD /* CompanyTableViewController.swift */,
@@ -204,6 +201,9 @@
 				C6F3AE402D349ADB0091E381 /* TreeServicesDetailViewController.swift */,
 				C6F3AE422D34A2720091E381 /* HandymanServicesDetailViewController.swift */,
 				C652B3FD2D37837C00813F3D /* PopularProjectsDetailsViewController.swift */,
+				C6CB2CC32D3DF0B000BD058B /* HandymanServicesViewController.swift */,
+				C6CB2CC72D3DF10800BD058B /* ServicesViewController.swift */,
+				C6CB2CCB2D3DF13A00BD058B /* TreeServicesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -321,8 +321,8 @@
 			files = (
 				C62F59CF2D0FDAA10075849F /* Assets.xcassets in Resources */,
 				C62F59D22D0FDAA10075849F /* Base in Resources */,
+				C6CB2CD02D3DF17000BD058B /* GoogleService-Info.plist in Resources */,
 				C6F20A372D379FE20014B6EB /* README.md in Resources */,
-				C66692422D190A26007FD9FD /* GoogleService-Info.plist in Resources */,
 				C62F59CD2D0FDAA00075849F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,16 +338,16 @@
 				C66691F42D129340007FD9FD /* HomeViewController.swift in Sources */,
 				C666921A2D161BA1007FD9FD /* Constants.swift in Sources */,
 				C652B3FE2D37837C00813F3D /* PopularProjectsDetailsViewController.swift in Sources */,
-				C6F77C7C2D1E6581000819EE /* TreeServicesViewController.swift in Sources */,
 				C6F3AE3E2D29750D0091E381 /* Inspiration+CoreDataClass.swift in Sources */,
+				C6CB2CC42D3DF0B000BD058B /* HandymanServicesViewController.swift in Sources */,
 				C6F3AE3F2D29750D0091E381 /* Inspiration+CoreDataProperties.swift in Sources */,
 				C646D26D2D265C8100E366E9 /* PopularProjects+CoreDataClass.swift in Sources */,
 				C646D26E2D265C8100E366E9 /* PopularProjects+CoreDataProperties.swift in Sources */,
 				C646D2702D266A4E00E366E9 /* LoginCompanyViewController.swift in Sources */,
 				C6F3AE432D34A2720091E381 /* HandymanServicesDetailViewController.swift in Sources */,
 				C6F77C712D1E2AEB000819EE /* HandymanServices+CoreDataClass.swift in Sources */,
+				C6CB2CCC2D3DF13A00BD058B /* TreeServicesViewController.swift in Sources */,
 				C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */,
-				C6F77C762D1E654B000819EE /* HandymanServicesViewController.swift in Sources */,
 				C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */,
 				C646D2622D26536F00E366E9 /* ProHiring.xcdatamodeld in Sources */,
 				C6F3AE372D2940FC0091E381 /* CompanyProfileViewController.swift in Sources */,
@@ -357,8 +357,8 @@
 				C6F3AE3B2D2972140091E381 /* Categories+CoreDataProperties.swift in Sources */,
 				C646D2742D2780A600E366E9 /* MyProfileViewController.swift in Sources */,
 				C66691F62D1295BE007FD9FD /* DataManager.swift in Sources */,
-				C6F77C7A2D1E6579000819EE /* ServicesViewController.swift in Sources */,
 				C6F3AE412D349ADB0091E381 /* TreeServicesDetailViewController.swift in Sources */,
+				C6CB2CC82D3DF10800BD058B /* ServicesViewController.swift in Sources */,
 				C66691F22D10BCCA007FD9FD /* LoginViewController.swift in Sources */,
 				C66692102D13D255007FD9FD /* InternetMonitor.swift in Sources */,
 				C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */,

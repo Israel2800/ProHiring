@@ -183,7 +183,7 @@ extension HomeDataTableViewCell: UICollectionViewDataSource {
         if let imageName = popularProject.thumbnail, let url = URL(string: imageName) {
             cell.imageNameView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
         } else {
-            cell.imageNameView.image = UIImage(named: "placeholder") // Default image
+            cell.imageNameView.image = UIImage(named: "placeholder")
         }
         
         return cell
