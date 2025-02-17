@@ -145,7 +145,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
             self.emailField.text = ""
             self.passwordField.text = ""
 
-            // Presentar LoginViewController
+            // Presentar HomeViewController
             self.presentHomeViewController()
         }
     }

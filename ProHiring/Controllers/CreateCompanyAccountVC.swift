@@ -174,7 +174,17 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
                                 self.showMessage("Error authenticating after account creation: \(error.localizedDescription)")
                                 return
                             }
-                            self.navigateToProfile()
+                        
+                            self.emailField.text = ""
+                            self.passwordField.text = ""
+                            self.companyNameField.text = ""
+                            self.servicesField.text = ""
+                            self.socialMediaField.text = ""
+                            self.contactField.text = ""
+                            self.logoImageView.image = nil
+                            
+                            self.showMessage("Account created successfully!")
+                            self.navigateToTabBarProfile()
                         }
                     }
                 }
@@ -209,14 +219,20 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
     }
 
 
-    private func navigateToProfile() {
-        DispatchQueue.main.async {
-            if let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "MyProfileViewController") as? MyProfileViewController {
-                profileVC.modalPresentationStyle = .fullScreen
-                self.present(profileVC, animated: true, completion: nil)
+    private func navigateToTabBarProfile() {
+        /*DispatchQueue.main.async {
+            if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "CompanyProfileTabBar") {
+                print("Instanciado CompanyProfileTabBar")
+                loginVC.modalPresentationStyle = .fullScreen
+                self.present(loginVC, animated: true, completion: nil)
+            } else {
+                print("No se pudo instanciar el view controller CompanyProfileTabBar")
             }
-        }
+        }*/
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "CompanyProfileTabBar")
+
     }
+
     
 
     // Función para mostrar mensajes de alerta
@@ -250,7 +266,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
                     self.showMessage("Error authenticating with Firebase: \(error.localizedDescription)")
                     return
                 }
-                self.navigateToProfile()
+                self.navigateToTabBarProfile()
             }
         }
     }

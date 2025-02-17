@@ -946,7 +946,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Bbx-c1-23z">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="h66-rS-546" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CompanyProfileTabBar" automaticallyAdjustsScrollViewInsets="NO" id="h66-rS-546" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="roJ-DN-LhE">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -2175,7 +2175,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Delete Account"/>
                                 <connections>
-                                    <action selector="deleteAccountTapped:" destination="CZp-r4-4J7" eventType="touchUpInside" id="w4F-Ns-Tvc"/>
+                                    <action selector="deleteAccountTapped:" destination="CZp-r4-4J7" eventType="touchUpInside" id="hL4-wY-TN8"/>
+                                    <segue destination="yg0-m8-fQN" kind="presentation" identifier="LoginViewController" modalPresentationStyle="fullScreen" id="5Cr-8x-UEf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2197,20 +2198,20 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="account-settings" selectedImage="account-settings" id="0Q1-4E-7jp"/>
                     <connections>
-                        <outlet property="deleteAccountBtn" destination="JVs-K6-REJ" id="DDK-0N-yXy"/>
-                        <outlet property="userLabel" destination="ORl-6F-QQU" id="abc-Wu-uPt"/>
+                        <outlet property="deleteAccountButton" destination="JVs-K6-REJ" id="VSk-oX-EsB"/>
+                        <outlet property="userLabel" destination="ORl-6F-QQU" id="onF-yj-pHr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgg-2W-6VA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="3015"/>
+            <point key="canvasLocation" x="1933.5877862595419" y="3014.7887323943664"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ln3-Ya-d4D"/>
-        <segue reference="L8Q-NB-5Dc"/>
-        <segue reference="k7J-iM-sFN"/>
-        <segue reference="w0b-Dm-pxp"/>
+        <segue reference="lde-pQ-I0s"/>
+        <segue reference="xbS-5v-v20"/>
+        <segue reference="6Yx-L8-MBM"/>
+        <segue reference="XoV-K3-m3s"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="742" height="550"/>
