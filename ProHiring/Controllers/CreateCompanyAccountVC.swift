@@ -184,12 +184,13 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
                             self.logoImageView.image = nil
                             
                             self.showMessage("Account created successfully!")
-                            self.navigateToTabBarProfile()
                         }
                     }
                 }
+                self.navigateToTabBarProfile()
             }
         }
+
     }
 
 
@@ -220,7 +221,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
 
 
     private func navigateToTabBarProfile() {
-        /*DispatchQueue.main.async {
+        DispatchQueue.main.async {
             if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "CompanyProfileTabBar") {
                 print("Instanciado CompanyProfileTabBar")
                 loginVC.modalPresentationStyle = .fullScreen
@@ -228,8 +229,7 @@ class CreateCompanyAccountVC: UIViewController, UIImagePickerControllerDelegate,
             } else {
                 print("No se pudo instanciar el view controller CompanyProfileTabBar")
             }
-        }*/
-        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "CompanyProfileTabBar")
+        }
 
     }
 
