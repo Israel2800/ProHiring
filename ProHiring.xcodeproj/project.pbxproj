@@ -41,6 +41,8 @@
 		C666923C2D18F41F007FD9FD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C666923B2D18F41F007FD9FD /* GoogleSignInSwift */; };
 		C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */; };
 		C66692462D1925FC007FD9FD /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66692452D1925FC007FD9FD /* FirebaseAuth.swift */; };
+		C67E877B2D629C7F0025727F /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E877A2D629C7F0025727F /* UserSettingsViewController.swift */; };
+		C67E877D2D62CFAF0025727F /* CompanySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E877C2D62CFAF0025727F /* CompanySettingsViewController.swift */; };
 		C6CB2CC42D3DF0B000BD058B /* HandymanServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CC32D3DF0B000BD058B /* HandymanServicesViewController.swift */; };
 		C6CB2CC82D3DF10800BD058B /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CC72D3DF10800BD058B /* ServicesViewController.swift */; };
 		C6CB2CCC2D3DF13A00BD058B /* TreeServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CB2CCB2D3DF13A00BD058B /* TreeServicesViewController.swift */; };
@@ -88,6 +90,8 @@
 		C66692362D18EF1A007FD9FD /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		C666923D2D18FBE9007FD9FD /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		C66692452D1925FC007FD9FD /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		C67E877A2D629C7F0025727F /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		C67E877C2D62CFAF0025727F /* CompanySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanySettingsViewController.swift; sourceTree = "<group>"; };
 		C6CB2CC32D3DF0B000BD058B /* HandymanServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandymanServicesViewController.swift; sourceTree = "<group>"; };
 		C6CB2CC72D3DF10800BD058B /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		C6CB2CCB2D3DF13A00BD058B /* TreeServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeServicesViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				C6CB2CC32D3DF0B000BD058B /* HandymanServicesViewController.swift */,
 				C6CB2CC72D3DF10800BD058B /* ServicesViewController.swift */,
 				C6CB2CCB2D3DF13A00BD058B /* TreeServicesViewController.swift */,
+				C67E877A2D629C7F0025727F /* UserSettingsViewController.swift */,
+				C67E877C2D62CFAF0025727F /* CompanySettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				C6F77C722D1E2AEB000819EE /* HandymanServices+CoreDataProperties.swift in Sources */,
 				C6F77C732D1E2AEB000819EE /* TreeServices+CoreDataClass.swift in Sources */,
 				C646D2622D26536F00E366E9 /* ProHiring.xcdatamodeld in Sources */,
+				C67E877B2D629C7F0025727F /* UserSettingsViewController.swift in Sources */,
 				C6F3AE372D2940FC0091E381 /* CompanyProfileViewController.swift in Sources */,
 				C6F77C742D1E2AEB000819EE /* TreeServices+CoreDataProperties.swift in Sources */,
 				C666921E2D168409007FD9FD /* CompanyTableViewController.swift in Sources */,
@@ -366,6 +373,7 @@
 				C62F59C82D0FDAA00075849F /* SceneDelegate.swift in Sources */,
 				C646D2722D26756800E366E9 /* CreateCompanyAccountVC.swift in Sources */,
 				C66692202D1688FF007FD9FD /* MyProjectsViewController.swift in Sources */,
+				C67E877D2D62CFAF0025727F /* CompanySettingsViewController.swift in Sources */,
 				C66692222D168951007FD9FD /* CompanyViewController.swift in Sources */,
 				C666923E2D18FBE9007FD9FD /* NetworkReachability.swift in Sources */,
 			);

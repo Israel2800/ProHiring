@@ -146,19 +146,20 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
             self.passwordField.text = ""
 
             // Presentar LoginViewController
-            self.presentLoginViewController()
+            self.presentHomeViewController()
         }
     }
     
     // Presentar LoginViewController
-    private func presentLoginViewController() {
+    private func presentHomeViewController() {
         DispatchQueue.main.async {
-            if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
+            if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") {
                 loginVC.modalPresentationStyle = .fullScreen
                 self.present(loginVC, animated: true, completion: nil)
             }
         }
     }
+    
 
     // IBAction para iniciar sesión con Google
     @IBAction func signInWithGoogleTapped(_ sender: UIButton) {
@@ -184,7 +185,7 @@ class CreateAccountViewController: UIViewController, ASAuthorizationControllerPr
                     self.showMessage("Error authenticating with Firebase: \(error.localizedDescription)")
                     return
                 }
-                self.presentLoginViewController()
+                self.presentHomeViewController()
             }
         }
     }
