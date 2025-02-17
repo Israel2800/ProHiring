@@ -17,7 +17,7 @@ class UserSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        deleteAccountBtn.layer.cornerRadius = 10
+        deleteAccountBtn.layer.cornerRadius = 8
         deleteAccountBtn.clipsToBounds = true
         
         currentUserID = Auth.auth().currentUser?.uid

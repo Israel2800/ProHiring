@@ -14,6 +14,9 @@ class MyProjectsViewController: UIViewController {
     @IBOutlet weak var serviceNameTextField: UITextField!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var serviceColorPicker: UIPickerView!
+    @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var deleteBtn: UIButton!
+    
     
     var serviceList = [Service]()
     var db: Firestore!
@@ -23,6 +26,12 @@ class MyProjectsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addBtn.layer.cornerRadius = 8
+        addBtn.clipsToBounds = true
+        deleteBtn.layer.cornerRadius = 8
+        deleteBtn.clipsToBounds = true
+        
         
         db = Firestore.firestore()
         currentUserID = Auth.auth().currentUser?.uid

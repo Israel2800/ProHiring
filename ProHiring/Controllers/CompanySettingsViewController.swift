@@ -20,7 +20,7 @@ class CompanySettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        deleteAccountButton.layer.cornerRadius = 10
+        deleteAccountButton.layer.cornerRadius = 8
         deleteAccountButton.clipsToBounds = true
         
         currentUserID = Auth.auth().currentUser?.uid
